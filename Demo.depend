@@ -977,7 +977,9 @@
 1431538925 source:/home/kenystev/keny++/TopGearTry/Step.cpp
 	"Step.h"
 
-1432678462 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ListImage.cpp
+1430363027 D
+
+1432681044 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ListImage.cpp
 	"ListImage.h"
 	<cmath>
 
@@ -986,39 +988,37 @@
 	"Nodo.h"
 
 1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Nodo.h
+
+1432678728 source:/media/kenystev/Datos/keny++/TopGearTry/ListImage.cpp
+	"ListImage.h"
+	<cmath>
+
+1431539043 /media/kenystev/Datos/keny++/TopGearTry/ListImage.h
+	<iostream>
+	"Nodo.h"
+
+1431475098 /media/kenystev/Datos/keny++/TopGearTry/Nodo.h
+
+1432680306 8309bc39a96183d61d90f51dcc2a78cf9767d
 	"SDL2/SDL.h"
 	"Rosalila/RosalilaUtility/RosalilaUtility.h"
 	"Rosalila/RosalilaInputs/RosalilaInputs.h"
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 	"Rosalila/RosalilaSound/RosalilaSound.h"
 	"Step.h"
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaUtility/RosalilaUtility.h
 	<iostream>
 	<fstream>
 	<cmath>
 	<vector>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/RosalilaInputs.h
 	"../system.h"
 	"../RosalilaInputs/Boton.h"
 	"../RosalilaAI/RosalilaAI.h"
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/system.h
-	<iostream>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/Boton.h
-	"../RosalilaInputs/Receiver.h"
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/Receiver.h
 	<iostream>
 	<fstream>
 	<vector>
 	<stdarg.h>
 	"../TinyXml/tinyxml.h"
 	"SDL2/SDL.h"
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/TinyXml/tinyxml.h
 	<ctype.h>
 	<stdio.h>
 	<stdlib.h>
@@ -1028,35 +1028,21 @@
 	<iostream>
 	<sstream>
 	"tinystr.h"
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/TinyXml/tinystr.h
-	<assert.h>
-	<string.h>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaAI/RosalilaAI.h
 	"Automata.h"
 	<cstdlib>
 	<iostream>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaAI/Automata.h
 	"Estado.h"
 	"../TinyXml/tinyxml.h"
 	"../RosalilaUtility/RosalilaUtility.h"
 	<vector>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaAI/Estado.h
 	"Transicion.h"
 	<cstdlib>
 	<iostream>
 	<vector>
 	"Estado.h"
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaAI/Transicion.h
 	<map>
 	<vector>
 	<iostream>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/RosalilaGraphics.h
 	<iostream>
 	<list>
 	"../system.h"
@@ -1078,17 +1064,11 @@
 	"../RosalilaUtility/RosalilaUtility.h"
 	<iostream>
 	<fstream>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Image.h
 	<SDL2/SDL_image.h>
 	<SDL2_image/SDL_image.h>
 	<GL/freeglut.h>
 	<GL/gl.h>
 	<stdio.h>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Timer.h
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Explosion.h
 	<SDL2/SDL_image.h>
 	<SDL2/SDL_image.h>
 	<SDL2_image/SDL_image.h>
@@ -1096,16 +1076,12 @@
 	<GL/gl.h>
 	<stdio.h>
 	<math.h>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Cube.h
 	<SDL2/SDL_image.h>
 	<SDL2_image/SDL_image.h>
 	<GL/freeglut.h>
 	<GL/gl.h>
 	<stdio.h>
 	<math.h>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Object3D.h
 	<SDL2/SDL_image.h>
 	<SDL2_image/SDL_image.h>
 	<GL/freeglut.h>
@@ -1117,8 +1093,6 @@
 	<fstream>
 	<sstream>
 	<string>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaSound/RosalilaSound.h
 	"../system.h"
 	<string>
 	<vector>
@@ -1129,15 +1103,11 @@
 	<SDL2_mixer/SDL_mixer.h>
 	"../RosalilaUtility/RosalilaUtility.h"
 	<map>
-
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.h
 	"SDL2/SDL.h"
 	"Rosalila/RosalilaUtility/RosalilaUtility.h"
 	"Rosalila/RosalilaInputs/RosalilaInputs.h"
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 	"Rosalila/RosalilaSound/RosalilaSound.h"
-
-1432678411 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/main.cpp
 	<GL/freeglut.h>
 	<GL/gl.h>
 	<stdio.h>
@@ -1163,6 +1133,123 @@
 	<SDL2_ttf/SDL_ttf.h>
 	<SDL2_mixer/SDL_mixer.h>
 	"ListImage.h"
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"../TinyXml/tinyxml.h"
+	"RosalilaGraphics.h"
+	"../RosalilaSound/RosalilaSound.h"
+	"../RosalilaInputs/RosalilaInputs.h"
+	"Elemento.h"
+	"MenuLista.h"
+	"MenuBarra.h"
+	"MenuBoton.h"
+	"MenuImagen.h"
+	"MenuTexto.h"
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+	"Step.h"
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaUtility/RosalilaUtility.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaUtility/RosalilaUtility.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/RosalilaInputs.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/RosalilaInputs.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/system.h
+	<iostream>
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/Boton.h
+	"../RosalilaInputs/Receiver.h"
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/Receiver.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/system.h
+	<iostream>
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/Boton.h
+	"../RosalilaInputs/Receiver.h"
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/Receiver.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/TinyXml/tinyxml.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/TinyXml/tinyxml.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/TinyXml/tinystr.h
+	<assert.h>
+	<string.h>
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaAI/RosalilaAI.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/TinyXml/tinystr.h
+	<assert.h>
+	<string.h>
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaAI/RosalilaAI.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaAI/Automata.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaAI/Automata.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaAI/Estado.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaAI/Estado.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaAI/Transicion.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaAI/Transicion.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/RosalilaGraphics.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/RosalilaGraphics.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Image.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Image.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Timer.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Explosion.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Timer.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Explosion.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Cube.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Cube.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Object3D.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Object3D.h
+
+1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaSound/RosalilaSound.h
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaSound/RosalilaSound.h
+
+1432681044 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.h
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+
+1432680062 /media/kenystev/Datos/keny++/TopGearTry/Step.h
+
+1432678411 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/main.cpp
+
+1432678658 source:/media/kenystev/Datos/keny++/TopGearTry/main.cpp
 
 1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Nodo.cpp
 	"Nodo.h"
@@ -1183,15 +1270,26 @@
 	"Animation.h"
 
 1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Animation.h
-	<SDL2/SDL_image.h>
-	<SDL2_image/SDL_image.h>
-	<GL/freeglut.h>
-	<GL/gl.h>
-	<stdio.h>
-	"../TinyXml/tinyxml.h"
-	"RosalilaGraphics.h"
-	"../RosalilaSound/RosalilaSound.h"
-	"../RosalilaInputs/RosalilaInputs.h"
+
+1431479157 source:/media/kenystev/Datos/keny++/TopGearTry/Nodo.cpp
+	"Nodo.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaAI/Automata.cpp
+	"Automata.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaAI/Estado.cpp
+	"Estado.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaAI/RosalilaAI.cpp
+	"RosalilaAI.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaAI/Transicion.cpp
+	"Transicion.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Animation.cpp
+	"Animation.h"
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Animation.h
 
 1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Cube.cpp
 	"Cube.h"
@@ -1251,12 +1349,65 @@
 	"MenuContenedor.h"
 
 1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaMenus/MenuContenedor.h
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Cube.cpp
+	"Cube.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Explosion.cpp
+	"Explosion.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Image.cpp
+	"RosalilaGraphics.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Object3D.cpp
+	"Object3D.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/RosalilaGraphics.cpp
+	"RosalilaGraphics.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Timer.cpp
+	"SDL2/SDL.h"
+	"Timer.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/Boton.cpp
+	"Boton.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/Receiver.cpp
+	"RosalilaInputs.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/RosalilaInputs.cpp
+	"RosalilaInputs.h"
+	<sstream>
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/Elemento.cpp
 	"Elemento.h"
-	"MenuLista.h"
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/Elemento.h
+	"../RosalilaGraphics/RosalilaGraphics.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuBarra.cpp
 	"MenuBarra.h"
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuBarra.h
+	"Elemento.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuBoton.cpp
 	"MenuBoton.h"
-	"MenuImagen.h"
-	"MenuTexto.h"
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuBoton.h
+	"Elemento.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuCharSelect.cpp
+	"MenuCharSelect.h"
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuCharSelect.h
+	<vector>
+	"Elemento.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuContenedor.cpp
+	"MenuContenedor.h"
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuContenedor.h
 
 1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaMenus/MenuLista.h
 	<vector>
@@ -1296,20 +1447,58 @@
 	"tinystr.h"
 
 1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/TinyXml/tinyxml.cpp
-	<ctype.h>
-	<sstream>
-	<iostream>
-	"tinyxml.h"
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuLista.h
+	<vector>
+	"Elemento.h"
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuImagen.h
+	"Elemento.h"
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuTexto.h
+	"Elemento.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuGallery.cpp
+	"MenuGallery.h"
+
+1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuGallery.h
+	<vector>
+	"Elemento.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuImagen.cpp
+	"MenuImagen.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuLista.cpp
+	"MenuLista.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuTexto.cpp
+	"MenuTexto.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaNetwork/RosalilaNetwork.cpp
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaSound/RosalilaSound.cpp
+	"RosalilaSound.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaUtility/RosalilaUtility.cpp
+	"RosalilaUtility.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/TinyXml/tinystr.cpp
+	"tinystr.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/TinyXml/tinyxml.cpp
 
 1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/TinyXml/tinyxmlerror.cpp
 	"tinyxml.h"
 
 1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/TinyXml/tinyxmlparser.cpp
-	<ctype.h>
-	<stddef.h>
-	"tinyxml.h"
-	<windows.h>
 
-1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.cpp
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/TinyXml/tinyxmlerror.cpp
+	"tinyxml.h"
+
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/TinyXml/tinyxmlparser.cpp
+
+1432681044 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.cpp
 	"Step.h"
+
+1432680306 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
 

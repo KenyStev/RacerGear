@@ -31,14 +31,14 @@ float Step::getScale()
     return scale;
 }
 
-float Step::getRight()
+float Step::getOff_X()
 {
-    return right;
+    return off_set_x;
 }
 
-float Step::getLeft()
+float Step::getOff_Y()
 {
-    return left;
+    return off_set_y;
 }
 
 void Step::setX(float x)
@@ -56,14 +56,14 @@ void Step::setScale(float scale)
     this->scale = scale;
 }
 
-void Step::setRight(float right)
+void Step::setOff_X(float off_set_x)
 {
-    this->right = right;
+    this->off_set_x = off_set_x;
 }
 
-void Step::setLeft(float left)
+void Step::setOff_Y(float off_set_y)
 {
-    this->left = left;
+    this->off_set_y = off_set_y;
 }
 
 void Step::addX(float x)
@@ -81,14 +81,14 @@ void Step::addScale(float scale)
     this->scale += scale;
 }
 
-void Step::addRight(float right)
+void Step::addOff_X(float off_set_x)
 {
-    this->right += right;
+    this->off_set_x += off_set_x;
 }
 
-void Step::addLeft(float left)
+void Step::addOff_Y(float off_set_y)
 {
-    this->left += left;
+    this->off_set_y += off_set_y;
 }
 
 void Step::draw(RosalilaGraphics* painter)

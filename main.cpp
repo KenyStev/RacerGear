@@ -94,9 +94,10 @@ int main(int argc, char *argv[])
     {
 
         if(receiver->isKeyDown(SDL_SCANCODE_UP))
-            off_set+=1.0;
+            off_set+=0.5;
         if(receiver->isKeyDown(SDL_SCANCODE_DOWN))
-            off_set-=1.0;
+            off_set-=0.5;
+
 //        else
 //            off_set-=1.0;
 
