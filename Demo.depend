@@ -1,0 +1,979 @@
+# depslib dependency file v1.0
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaAI/Automata.cpp
+	"Automata.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaAI/Automata.h
+	"Estado.h"
+	"../TinyXml/tinyxml.h"
+	"../RosalilaUtility/RosalilaUtility.h"
+	<vector>
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaAI/Estado.h
+	"Transicion.h"
+	<cstdlib>
+	<iostream>
+	<vector>
+	"Estado.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaAI/Transicion.h
+	<map>
+	<vector>
+	<iostream>
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/TinyXml/tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/TinyXml/tinystr.h
+	<assert.h>
+	<string.h>
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaUtility/RosalilaUtility.h
+	<iostream>
+	<fstream>
+	<cmath>
+	<vector>
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaAI/Estado.cpp
+	"Estado.h"
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaAI/RosalilaAI.cpp
+	"RosalilaAI.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaAI/RosalilaAI.h
+	"Automata.h"
+	<cstdlib>
+	<iostream>
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaAI/Transicion.cpp
+	"Transicion.h"
+
+1428119016 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Animation.cpp
+	"Animation.h"
+
+1428275128 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Animation.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"../TinyXml/tinyxml.h"
+	"RosalilaGraphics.h"
+	"../RosalilaSound/RosalilaSound.h"
+	"../RosalilaInputs/RosalilaInputs.h"
+
+1428277068 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/RosalilaGraphics.h
+	<iostream>
+	<list>
+	"../system.h"
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2_image/SDL_image.h>
+	<SDL2_ttf/SDL_ttf.h>
+	"../TinyXml/tinyxml.h"
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"../RosalilaGraphics/Image.h"
+	"../RosalilaGraphics/Timer.h"
+	"../RosalilaGraphics/Explosion.h"
+	"../RosalilaGraphics/Cube.h"
+	"../RosalilaGraphics/Object3D.h"
+	"../RosalilaUtility/RosalilaUtility.h"
+	<iostream>
+	<fstream>
+
+1428281775 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/system.h
+	<iostream>
+
+1428275314 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Image.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Timer.h
+
+1428278231 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Explosion.h
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+
+1428275152 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Cube.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+
+1428275238 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Object3D.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+	<vector>
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+
+1428276679 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaSound/RosalilaSound.h
+	"../system.h"
+	<string>
+	<vector>
+	<iostream>
+	"SDL2/SDL.h"
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2_mixer/SDL_mixer.h>
+	"../RosalilaUtility/RosalilaUtility.h"
+	<map>
+
+1428965245 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaInputs/RosalilaInputs.h
+	"../system.h"
+	"../RosalilaInputs/Boton.h"
+	"../RosalilaAI/RosalilaAI.h"
+
+1428489185 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaInputs/Boton.h
+	"../RosalilaInputs/Receiver.h"
+
+1428105419 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaInputs/Receiver.h
+	<iostream>
+	<fstream>
+	<vector>
+	<stdarg.h>
+	"../TinyXml/tinyxml.h"
+	"SDL2/SDL.h"
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Cube.cpp
+	"Cube.h"
+
+1428278413 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Explosion.cpp
+	"Explosion.h"
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Image.cpp
+	"RosalilaGraphics.h"
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Object3D.cpp
+	"Object3D.h"
+
+1430356641 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/RosalilaGraphics.cpp
+	"RosalilaGraphics.h"
+
+1428103648 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaGraphics/Timer.cpp
+	"SDL2/SDL.h"
+	"Timer.h"
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaInputs/Boton.cpp
+	"Boton.h"
+
+1428299402 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaInputs/Receiver.cpp
+	"RosalilaInputs.h"
+
+1430095813 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaInputs/RosalilaInputs.cpp
+	"RosalilaInputs.h"
+	<sstream>
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/Elemento.cpp
+	"Elemento.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/Elemento.h
+	"../RosalilaGraphics/RosalilaGraphics.h"
+
+1428119049 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuBarra.cpp
+	"MenuBarra.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuBarra.h
+	"Elemento.h"
+
+1428957256 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuBoton.cpp
+	"MenuBoton.h"
+
+1428957827 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuBoton.h
+	"Elemento.h"
+
+1428291466 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuCharSelect.cpp
+	"MenuCharSelect.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuCharSelect.h
+	<vector>
+	"Elemento.h"
+
+1428959736 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuContenedor.cpp
+	"MenuContenedor.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuContenedor.h
+	"Elemento.h"
+	"MenuLista.h"
+	"MenuBarra.h"
+	"MenuBoton.h"
+	"MenuImagen.h"
+	"MenuTexto.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuLista.h
+	<vector>
+	"Elemento.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuImagen.h
+	"Elemento.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuTexto.h
+	"Elemento.h"
+
+1428119119 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuGallery.cpp
+	"MenuGallery.h"
+
+1427158917 /home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuGallery.h
+	<vector>
+	"Elemento.h"
+
+1428119124 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuImagen.cpp
+	"MenuImagen.h"
+
+1428119136 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuLista.cpp
+	"MenuLista.h"
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaMenus/MenuTexto.cpp
+	"MenuTexto.h"
+
+1428278094 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaNetwork/RosalilaNetwork.cpp
+
+1430092557 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaSound/RosalilaSound.cpp
+	"RosalilaSound.h"
+
+1429981820 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/RosalilaUtility/RosalilaUtility.cpp
+	"RosalilaUtility.h"
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/TinyXml/tinystr.cpp
+	"tinystr.h"
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/TinyXml/tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/TinyXml/tinyxmlerror.cpp
+	"tinyxml.h"
+
+1427158917 source:/home/turupawn/Projects/DemoRosalila/Demo/Rosalila/TinyXml/tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1430358540 source:/home/turupawn/Projects/DemoRosalila/Demo/main.cpp
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"Rosalila/system.h"
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<sstream>
+	<string>
+	<iostream>
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2_image/SDL_image.h>
+	<SDL2_ttf/SDL_ttf.h>
+	<SDL2_mixer/SDL_mixer.h>
+
+1431479027 source:/home/kenystev/keny++/RosalilaDemoTemp/main.cpp
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"Rosalila/system.h"
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<sstream>
+	<string>
+	<iostream>
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2_image/SDL_image.h>
+	<SDL2_ttf/SDL_ttf.h>
+	<SDL2_mixer/SDL_mixer.h>
+	"ListImage.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/system.h
+	<iostream>
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaUtility/RosalilaUtility.h
+	<iostream>
+	<fstream>
+	<cmath>
+	<vector>
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaInputs/RosalilaInputs.h
+	"../system.h"
+	"../RosalilaInputs/Boton.h"
+	"../RosalilaAI/RosalilaAI.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaInputs/Boton.h
+	"../RosalilaInputs/Receiver.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaInputs/Receiver.h
+	<iostream>
+	<fstream>
+	<vector>
+	<stdarg.h>
+	"../TinyXml/tinyxml.h"
+	"SDL2/SDL.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/TinyXml/tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/TinyXml/tinystr.h
+	<assert.h>
+	<string.h>
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaAI/RosalilaAI.h
+	"Automata.h"
+	<cstdlib>
+	<iostream>
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaAI/Automata.h
+	"Estado.h"
+	"../TinyXml/tinyxml.h"
+	"../RosalilaUtility/RosalilaUtility.h"
+	<vector>
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaAI/Estado.h
+	"Transicion.h"
+	<cstdlib>
+	<iostream>
+	<vector>
+	"Estado.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaAI/Transicion.h
+	<map>
+	<vector>
+	<iostream>
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/RosalilaGraphics.h
+	<iostream>
+	<list>
+	"../system.h"
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2_image/SDL_image.h>
+	<SDL2_ttf/SDL_ttf.h>
+	"../TinyXml/tinyxml.h"
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"../RosalilaGraphics/Image.h"
+	"../RosalilaGraphics/Timer.h"
+	"../RosalilaGraphics/Explosion.h"
+	"../RosalilaGraphics/Cube.h"
+	"../RosalilaGraphics/Object3D.h"
+	"../RosalilaUtility/RosalilaUtility.h"
+	<iostream>
+	<fstream>
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Image.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Timer.h
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Explosion.h
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Cube.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Object3D.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+	<vector>
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaSound/RosalilaSound.h
+	"../system.h"
+	<string>
+	<vector>
+	<iostream>
+	"SDL2/SDL.h"
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2_mixer/SDL_mixer.h>
+	"../RosalilaUtility/RosalilaUtility.h"
+	<map>
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaAI/Automata.cpp
+	"Automata.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaAI/Estado.cpp
+	"Estado.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaAI/RosalilaAI.cpp
+	"RosalilaAI.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaAI/Transicion.cpp
+	"Transicion.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Animation.cpp
+	"Animation.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Animation.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"../TinyXml/tinyxml.h"
+	"RosalilaGraphics.h"
+	"../RosalilaSound/RosalilaSound.h"
+	"../RosalilaInputs/RosalilaInputs.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Cube.cpp
+	"Cube.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Explosion.cpp
+	"Explosion.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Image.cpp
+	"RosalilaGraphics.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Object3D.cpp
+	"Object3D.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/RosalilaGraphics.cpp
+	"RosalilaGraphics.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaGraphics/Timer.cpp
+	"SDL2/SDL.h"
+	"Timer.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaInputs/Boton.cpp
+	"Boton.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaInputs/Receiver.cpp
+	"RosalilaInputs.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaInputs/RosalilaInputs.cpp
+	"RosalilaInputs.h"
+	<sstream>
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/Elemento.cpp
+	"Elemento.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/Elemento.h
+	"../RosalilaGraphics/RosalilaGraphics.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuBarra.cpp
+	"MenuBarra.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuBarra.h
+	"Elemento.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuBoton.cpp
+	"MenuBoton.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuBoton.h
+	"Elemento.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuCharSelect.cpp
+	"MenuCharSelect.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuCharSelect.h
+	<vector>
+	"Elemento.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuContenedor.cpp
+	"MenuContenedor.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuContenedor.h
+	"Elemento.h"
+	"MenuLista.h"
+	"MenuBarra.h"
+	"MenuBoton.h"
+	"MenuImagen.h"
+	"MenuTexto.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuLista.h
+	<vector>
+	"Elemento.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuImagen.h
+	"Elemento.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuTexto.h
+	"Elemento.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuGallery.cpp
+	"MenuGallery.h"
+
+1430363027 /home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuGallery.h
+	<vector>
+	"Elemento.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuImagen.cpp
+	"MenuImagen.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuLista.cpp
+	"MenuLista.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaMenus/MenuTexto.cpp
+	"MenuTexto.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaNetwork/RosalilaNetwork.cpp
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaSound/RosalilaSound.cpp
+	"RosalilaSound.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/RosalilaUtility/RosalilaUtility.cpp
+	"RosalilaUtility.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/TinyXml/tinystr.cpp
+	"tinystr.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/TinyXml/tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/TinyXml/tinyxmlerror.cpp
+	"tinyxml.h"
+
+1430363027 source:/home/kenystev/keny++/RosalilaDemoTemp/Rosalila/TinyXml/tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1431529868 source:/home/kenystev/keny++/RosalilaDemoTemp/ListImage.cpp
+	"ListImage.h"
+	<cmath>
+
+1431120032 /home/kenystev/keny++/RosalilaDemoTemp/ListImage.h
+	<iostream>
+	"Nodo.h"
+
+1431479157 source:/home/kenystev/keny++/RosalilaDemoTemp/Nodo.cpp
+	"Nodo.h"
+
+1431475098 /home/kenystev/keny++/RosalilaDemoTemp/Nodo.h
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+	"Step.h"
+
+1431479400 source:/home/kenystev/keny++/RosalilaDemoTemp/Step.cpp
+	"Step.h"
+
+1431479238 /home/kenystev/keny++/RosalilaDemoTemp/Step.h
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+
+1431646937 source:/home/kenystev/keny++/TopGearTry/ListImage.cpp
+	"ListImage.h"
+	<cmath>
+
+1431539043 /home/kenystev/keny++/TopGearTry/ListImage.h
+	<iostream>
+	"Nodo.h"
+
+1431475098 /home/kenystev/keny++/TopGearTry/Nodo.h
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+	"Step.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaUtility/RosalilaUtility.h
+	<iostream>
+	<fstream>
+	<cmath>
+	<vector>
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaInputs/RosalilaInputs.h
+	"../system.h"
+	"../RosalilaInputs/Boton.h"
+	"../RosalilaAI/RosalilaAI.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/system.h
+	<iostream>
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaInputs/Boton.h
+	"../RosalilaInputs/Receiver.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaInputs/Receiver.h
+	<iostream>
+	<fstream>
+	<vector>
+	<stdarg.h>
+	"../TinyXml/tinyxml.h"
+	"SDL2/SDL.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/TinyXml/tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/TinyXml/tinystr.h
+	<assert.h>
+	<string.h>
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaAI/RosalilaAI.h
+	"Automata.h"
+	<cstdlib>
+	<iostream>
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaAI/Automata.h
+	"Estado.h"
+	"../TinyXml/tinyxml.h"
+	"../RosalilaUtility/RosalilaUtility.h"
+	<vector>
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaAI/Estado.h
+	"Transicion.h"
+	<cstdlib>
+	<iostream>
+	<vector>
+	"Estado.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaAI/Transicion.h
+	<map>
+	<vector>
+	<iostream>
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/RosalilaGraphics.h
+	<iostream>
+	<list>
+	"../system.h"
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2_image/SDL_image.h>
+	<SDL2_ttf/SDL_ttf.h>
+	"../TinyXml/tinyxml.h"
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"../RosalilaGraphics/Image.h"
+	"../RosalilaGraphics/Timer.h"
+	"../RosalilaGraphics/Explosion.h"
+	"../RosalilaGraphics/Cube.h"
+	"../RosalilaGraphics/Object3D.h"
+	"../RosalilaUtility/RosalilaUtility.h"
+	<iostream>
+	<fstream>
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Image.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Timer.h
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Explosion.h
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Cube.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Object3D.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	<math.h>
+	<vector>
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaSound/RosalilaSound.h
+	"../system.h"
+	<string>
+	<vector>
+	<iostream>
+	"SDL2/SDL.h"
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2_mixer/SDL_mixer.h>
+	"../RosalilaUtility/RosalilaUtility.h"
+	<map>
+
+1431479238 /home/kenystev/keny++/TopGearTry/Step.h
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+
+1431645098 source:/home/kenystev/keny++/TopGearTry/main.cpp
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"Rosalila/system.h"
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<sstream>
+	<string>
+	<iostream>
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2_image/SDL_image.h>
+	<SDL2_ttf/SDL_ttf.h>
+	<SDL2_mixer/SDL_mixer.h>
+	"ListImage.h"
+
+1431479157 source:/home/kenystev/keny++/TopGearTry/Nodo.cpp
+	"Nodo.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaAI/Automata.cpp
+	"Automata.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaAI/Estado.cpp
+	"Estado.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaAI/RosalilaAI.cpp
+	"RosalilaAI.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaAI/Transicion.cpp
+	"Transicion.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Animation.cpp
+	"Animation.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Animation.h
+	<SDL2/SDL_image.h>
+	<SDL2_image/SDL_image.h>
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"../TinyXml/tinyxml.h"
+	"RosalilaGraphics.h"
+	"../RosalilaSound/RosalilaSound.h"
+	"../RosalilaInputs/RosalilaInputs.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Cube.cpp
+	"Cube.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Explosion.cpp
+	"Explosion.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Image.cpp
+	"RosalilaGraphics.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Object3D.cpp
+	"Object3D.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/RosalilaGraphics.cpp
+	"RosalilaGraphics.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaGraphics/Timer.cpp
+	"SDL2/SDL.h"
+	"Timer.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaInputs/Boton.cpp
+	"Boton.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaInputs/Receiver.cpp
+	"RosalilaInputs.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaInputs/RosalilaInputs.cpp
+	"RosalilaInputs.h"
+	<sstream>
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/Elemento.cpp
+	"Elemento.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/Elemento.h
+	"../RosalilaGraphics/RosalilaGraphics.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuBarra.cpp
+	"MenuBarra.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuBarra.h
+	"Elemento.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuBoton.cpp
+	"MenuBoton.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuBoton.h
+	"Elemento.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuCharSelect.cpp
+	"MenuCharSelect.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuCharSelect.h
+	<vector>
+	"Elemento.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuContenedor.cpp
+	"MenuContenedor.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuContenedor.h
+	"Elemento.h"
+	"MenuLista.h"
+	"MenuBarra.h"
+	"MenuBoton.h"
+	"MenuImagen.h"
+	"MenuTexto.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuLista.h
+	<vector>
+	"Elemento.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuImagen.h
+	"Elemento.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuTexto.h
+	"Elemento.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuGallery.cpp
+	"MenuGallery.h"
+
+1430363027 /home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuGallery.h
+	<vector>
+	"Elemento.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuImagen.cpp
+	"MenuImagen.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuLista.cpp
+	"MenuLista.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaMenus/MenuTexto.cpp
+	"MenuTexto.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaNetwork/RosalilaNetwork.cpp
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaSound/RosalilaSound.cpp
+	"RosalilaSound.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/RosalilaUtility/RosalilaUtility.cpp
+	"RosalilaUtility.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/TinyXml/tinystr.cpp
+	"tinystr.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/TinyXml/tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/TinyXml/tinyxmlerror.cpp
+	"tinyxml.h"
+
+1430363027 source:/home/kenystev/keny++/TopGearTry/Rosalila/TinyXml/tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1431538925 source:/home/kenystev/keny++/TopGearTry/Step.cpp
+	"Step.h"
+
