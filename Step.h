@@ -11,7 +11,7 @@
 class Step : public Image
 {
     public:
-        float x, y, scale, right, left, off_set_y;
+        float x, y, scale, off_set_x, off_set_y;
 
         Step(RosalilaGraphics* painter, std::string path);
         virtual ~Step();
@@ -19,20 +19,20 @@ class Step : public Image
         float getX();
         float getY();
         float getScale();
-        float getRight();
-        float getLeft();
+        float getOff_X();
+        float getOff_Y();
 
         void setX(float x);
         void setY(float y);
         void setScale(float scale);
-        void setRight(float right);
-        void setLeft(float left);
+        void setOff_X(float right);
+        void setOff_Y(float left);
 
         void addX(float x);
         void addY(float y);
         void addScale(float scale);
-        void addRight(float right);
-        void addLeft(float left);
+        void addOff_X(float right);
+        void addOff_Y(float left);
 
         void draw(RosalilaGraphics* painter);
     protected:

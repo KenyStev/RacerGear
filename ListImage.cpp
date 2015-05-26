@@ -44,7 +44,7 @@ void ListImage::draw(float off_set)
     Nodo *tmp = root;
     float y_temp=painter->screen_height;
     float scale_temp=1;
-    for(int i=0, s=off_set; i<7; i+=1.0)
+    for(int i=0; i<7; i+=1.0)
     {
         if(tmp)
         {
@@ -62,7 +62,7 @@ void ListImage::draw(float off_set)
 //            x = painter->screen_width*0.5 - w*0.5*scale;
 //            y = painter->screen_height - h*(i+1);
 
-            y = y_temp - h*scale + off_set;
+            y = y_temp - h*scale + off_set*10;
 //            y_temp = y;
 
             scale_temp = (y - 432.27)/223.92;

@@ -92,108 +92,11 @@ int main(int argc, char *argv[])
     float off_set=0;
     while(true)
     {
-    //Inicio Prueba Scale
-        //img-1
-        /*float x1, y1, scale1;
-        if(first)
-        {
-            scale1 = 1;
-            x1 = x - image1->getWidth()*0.5;
-            y1 = y - image1->getHeight();
-        }
-        rosalila_graphics->draw2DImage
-        (   image1,
-            image1->getWidth(),image1->getHeight(),
-            x1,y1,
-            scale,
-            rotation,
-            horizontal_flip,
-            0,0,
-            Color(red_effect,green_effect,blue_effect,alpha_effect),
-            0,0,
-            false);
-        //img-2
-        float x2, y2, scale2;
-        if(first)
-        {
-            scale2 = 0.66;
-            x2 = x - image2->getWidth()*0.5*scale2;
-            y2 = y1 - image2->getHeight()*scale2;
-        }
-        rosalila_graphics->draw2DImage
-        (   image2,
-            image2->getWidth(),image2->getHeight(),
-            x2,y2,
-            scale2,
-            rotation,
-            horizontal_flip,
-            0,0,
-            Color(red_effect,green_effect,blue_effect,alpha_effect),
-            0,0,
-            false);
-        //img-3
-        float x3, y3, scale3;
-        if(first)
-        {
-            scale3 = 0.44;
-            x3 = x - image3->getWidth()*0.5*scale3;
-            y3 = y2 - image3->getHeight()*scale3;
-        }
-        rosalila_graphics->draw2DImage
-        (   image3,
-            image3->getWidth(),image3->getHeight(),
-            x3,y3,
-            scale3,
-            rotation,
-            horizontal_flip,
-            0,0,
-            Color(red_effect,green_effect,blue_effect,alpha_effect),
-            0,0,
-            false);
-        //img-4
-        float x4, y4, scale4;
-        if(first)
-        {
-            scale4 = 0.29;
-            x4 = x - image4->getWidth()*0.5*scale4;
-            y4 = y3 - image4->getHeight()*scale4;
-        }
-        rosalila_graphics->draw2DImage
-        (   image4,
-            image4->getWidth(),image4->getHeight(),
-            x4,y4,
-            scale4,
-            rotation,
-            horizontal_flip,
-            0,0,
-            Color(red_effect,green_effect,blue_effect,alpha_effect),
-            0,0,
-            false);
-        //img-5
-        float x5, y5, scale5;
-        if(first)
-        {
-            scale5 = 0.19;
-            x5 = x - image5->getWidth()*0.5*scale5;
-            y5 = y4 - image5->getHeight()*scale5;
-        }
-        rosalila_graphics->draw2DImage
-        (   image5,
-            image5->getWidth(),image5->getHeight(),
-            x5,y5,
-            scale5,
-            rotation,
-            horizontal_flip,
-            0,0,
-            Color(red_effect,green_effect,blue_effect,alpha_effect),
-            0,0,
-            false);
-            first=false;
-    //Fin Prueba Scale
-*/
 
         if(receiver->isKeyDown(SDL_SCANCODE_UP))
-            off_set+=1.0;
+            off_set+=0.5;
+        if(receiver->isKeyDown(SDL_SCANCODE_DOWN))
+            off_set-=0.5;
 //        else
 //            off_set-=1.0;
 
