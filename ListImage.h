@@ -10,7 +10,7 @@ class ListImage
 {
     public:
         Nodo *root;
-        float scale, off_set;
+        float scale, off_set,acu;
 
         ListImage(RosalilaGraphics *paint);
         virtual ~ListImage();
