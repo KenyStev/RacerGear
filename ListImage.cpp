@@ -54,7 +54,6 @@ void ListImage::draw(float off_set)
             Image *image = tmp->frame;
 //                scale = (float)(pow(0.66,i));
             scale = (float)(pow(0.66,i));
-//            scale =
 
             //change
 //            float w0 = image->getWidth()*0.66956;
