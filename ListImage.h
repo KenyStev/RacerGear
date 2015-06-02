@@ -14,8 +14,9 @@ class ListImage
 
         ListImage(RosalilaGraphics *paint);
         virtual ~ListImage();
-        void add(string path);
-        Image* pop();
+        void add(string path, float scale);
+        void add(Nodo *nuevo);
+        Step* pop();
         void draw(float off_set);
     protected:
 

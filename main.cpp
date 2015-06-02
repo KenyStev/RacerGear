@@ -39,6 +39,7 @@ using namespace std;
 #endif
 
 #include "ListImage.h"
+#include <math.h>
 
 int main(int argc, char *argv[])
 {
@@ -62,10 +63,11 @@ int main(int argc, char *argv[])
 
     ListImage *MyList = new ListImage(rosalila_graphics);
     ListImage *MyList2 = new ListImage(rosalila_graphics);
-    for(int i=0; i<10; i++)
-        MyList->add(assets_directory+"rect.png");
-    for(int i=0; i<10; i++)
-        MyList2->add(assets_directory+"flags.png");
+    for(int i=0; i<8; i++)
+        MyList->add(assets_directory+"rect.png", pow(0.66,i));
+
+    for(int i=0; i<8; i++)
+        MyList2->add(assets_directory+"flags.png", pow(0.66,i));
 
     //Texture load
     Image *image=rosalila_graphics->getTexture(assets_directory+"image.png");
@@ -89,14 +91,16 @@ int main(int argc, char *argv[])
     bool alpha_effect_activated=false;
 
     bool first = true;
-    float off_set=0;
+    float off_set=1;
     while(true)
     {
 
         if(receiver->isKeyDown(SDL_SCANCODE_UP))
-            off_set+=0.5;
-        if(receiver->isKeyDown(SDL_SCANCODE_DOWN))
-            off_set-=0.5;
+            off_set=10.5;
+        else if(receiver->isKeyDown(SDL_SCANCODE_DOWN))
+            off_set=0.5;
+        else
+            off_set=0;
 
 //        else
 //            off_set-=1.0;

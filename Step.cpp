@@ -2,13 +2,20 @@
 
 Step::Step(RosalilaGraphics* painter, std::string path)
 {
+    this->painter = painter;
+
     Image* img = painter->getTexture(path);
     this->setTexture(img->getTexture());
     this->setWidth(img->getWidth());
     this->setHeight(img->getHeight());
+    this->setX(0);
+    this->setY(0);
+    this->setOff_X(0);
+    this->setOff_Y(0);
+    this->setScale(1);
 
     //probando
-    delete img;
+//    delete img;
 }
 
 Step::~Step()
@@ -49,6 +56,7 @@ void Step::setX(float x)
 void Step::setY(float y)
 {
     this->y = y;
+//    scale = (this->y - 432.27)/223.92;
 }
 
 void Step::setScale(float scale)
@@ -73,7 +81,17 @@ void Step::addX(float x)
 
 void Step::addY(float y)
 {
-    this->y += y;
+//    float scale_anterior = scale;
+    scale = ((this->y) - 432.27)/223.92;
+//    this->y = scale*223.92 - y + 432.27;
+//    this->y = (this->y + y) - height*(scale);
+////    scale = (this->y - 432.27)/223.92;
+//    if(y!=0)
+//    {
+        this->y+=y*scale;
+//        this->scale*=y;
+        setX(painter->screen_width*0.5 - width*0.5*scale);
+//    }
 }
 
 void Step::addScale(float scale)
@@ -91,8 +109,16 @@ void Step::addOff_Y(float off_set_y)
     this->off_set_y += off_set_y;
 }
 
+void Step::init()
+{
+    scale=0.0826539;
+    x=621.629;
+    y=456.558;
+}
+
 void Step::draw(RosalilaGraphics* painter)
 {
+
     painter->draw2DImage(   this,
                             this->getWidth(),this->getHeight(),
                             x,y,
@@ -103,4 +129,15 @@ void Step::draw(RosalilaGraphics* painter)
                             Color(255,255,255,255),
                             0,0,
                             false);
+//    cout<<"x: "<<x<<endl;
+    cout<<"a: "<<scale<<endl;
+//    exit(0);
+}
+
+void queryData(Step *s, float *w, float *h, float *x, float *y)
+{
+    *w = s->getWidth();
+    *h = s->getHeight();
+    *x = s->getX();
+    *y = s->getY();
 }
