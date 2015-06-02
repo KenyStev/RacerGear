@@ -989,11 +989,11 @@
 
 1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Nodo.h
 
-1433213899 source:/media/kenystev/Datos/keny++/TopGearTry/ListImage.cpp
+1433285122 source:/media/kenystev/Datos/keny++/TopGearTry/ListImage.cpp
 	"ListImage.h"
 	<cmath>
 
-1433212405 /media/kenystev/Datos/keny++/TopGearTry/ListImage.h
+1433285122 /media/kenystev/Datos/keny++/TopGearTry/ListImage.h
 	<iostream>
 	"Nodo.h"
 
@@ -1251,7 +1251,7 @@
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 	"Rosalila/RosalilaSound/RosalilaSound.h"
 
-1433211085 /media/kenystev/Datos/keny++/TopGearTry/Step.h
+1433268640 /media/kenystev/Datos/keny++/TopGearTry/Step.h
 	"SDL2/SDL.h"
 	"Rosalila/RosalilaUtility/RosalilaUtility.h"
 	"Rosalila/RosalilaInputs/RosalilaInputs.h"
@@ -1260,7 +1260,7 @@
 
 1432678411 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/main.cpp
 
-1433214106 source:/media/kenystev/Datos/keny++/TopGearTry/main.cpp
+1433288169 source:/media/kenystev/Datos/keny++/TopGearTry/main.cpp
 	<GL/freeglut.h>
 	<GL/gl.h>
 	<stdio.h>
@@ -1537,6 +1537,6 @@
 1432681044 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.cpp
 	"Step.h"
 
-1433213590 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
+1433282964 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
 	"Step.h"
 

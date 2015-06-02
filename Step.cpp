@@ -111,9 +111,23 @@ void Step::addOff_Y(float off_set_y)
 
 void Step::init()
 {
-    scale=0.0826539;
-    x=621.629;
-    y=456.558;
+    scale*=0.66;//0.0826539;
+    x=painter->screen_width*0.5 - width*0.5*scale;//621.629;
+    y=y - height*scale;//456.558;
+}
+
+void Step::init(float scale, float x, float y)
+{
+    this->scale=scale;
+    this->x=x;
+    this->y=y;
+}
+
+void Step::init(Step *tmp)
+{
+    scale = tmp->scale*0.66;//0.0826539;
+    x=painter->screen_width*0.5 - width*0.5*scale;//621.629;
+    y=tmp->y - height*scale;//456.558;
 }
 
 void Step::draw(RosalilaGraphics* painter)

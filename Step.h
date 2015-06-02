@@ -36,6 +36,8 @@ class Step : public Image
         void addOff_Y(float left);
 
         void init();
+        void init(float scale, float x, float y);
+        void init(Step *tmp);
 
         void draw(RosalilaGraphics* painter);
     protected:
