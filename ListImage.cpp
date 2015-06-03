@@ -5,6 +5,7 @@ ListImage::ListImage(RosalilaGraphics *paint)
 {
     root = NULL;
     this->painter = paint;
+    root_scale=0.66;
 }
 
 ListImage::~ListImage()
@@ -17,21 +18,51 @@ void ListImage::add(std::string path)
 {
     if(root==NULL)
     {
-        root = new Nodo(painter->getTexture(path));
+//        this->scale = scale;
+        root = new Nodo(new Step(painter,path));
+        float w, h, x, y;
+        queryData(root->frame, &w, &h, &x, &y);
+
+        root->frame->setX(painter->screen_width*0.5 - w*0.5);
+        root->frame->setY(painter->screen_height - h);
+        root->frame->setScale(1);
+
         return;
     }
     Nodo *temp = root;
     while(temp->next!=NULL)
         temp = temp->next;
-    temp->next = new Nodo(painter->getTexture(path));
+    temp->next = new Nodo(new Step(painter,path));
+
+    Nodo *temp2 = temp->next;
+
+    float w, h, x, y;
+    queryData(temp2->frame, &w, &h, &x, &y);
+
+    temp2->frame->setX(painter->screen_width*0.5 - w*0.5*temp->frame->scale*root_scale);
+    temp2->frame->setY(temp->frame->getY() - h*temp->frame->scale*root_scale);
+    temp2->frame->setScale(temp->frame->scale*root_scale);
 }
 
-Image* ListImage::pop()
+void ListImage::add(Nodo *nuevo)
+{
+    if(root==NULL)
+    {
+        root = nuevo;
+        return;
+    }
+    Nodo *temp = root;
+    while(temp->next!=NULL)
+        temp = temp->next;
+    temp->next = nuevo;
+}
+
+Nodo* ListImage::pop()
 {
     Nodo* temp = root;
     root = temp->next;
     temp->next = NULL;
-    return temp->frame;
+    return temp;
 }
 
 void ListImage::draw(float off_set)
@@ -42,66 +73,145 @@ void ListImage::draw(float off_set)
 //    float scale_before=scale;
 
     Nodo *tmp = root;
+    Nodo *last = root;
     float y_temp=painter->screen_height;
     float scale_temp=1;
-    for(int i=0; i<7; i+=1.0)
+    int c = 0;
+
+    //try_init
+//    for(int i=0; i<8; i+=1.0)
+//    {
+    while(tmp)
     {
-        if(tmp)
+        Step *image = tmp->frame;
+        tmp->frame->addY(off_set);
+
+        if(c<8)
         {
-            int x, y, w, h;
-            Image *image = tmp->frame;
-//            scale -= 0.119; //0.015;//0.119;//0.1000005;
-
-//            scale = (float)(1.2*pow(10,-0.178*i));
-            scale = (float)(pow(10,-0.178*i));
-//            scale = (float)(1.2*pow(0.66666667,abs(i-off_set)));
-//            scale = (float)(1.2*pow(0.66666667,i));
-
-            w = image->getWidth();
-            h = image->getHeight();
-//            x = painter->screen_width*0.5 - w*0.5*scale;
-//            y = painter->screen_height - h*(i+1);
-
-            y = y_temp - h*scale + off_set*10;
-//            y_temp = y;
-
-            scale_temp = (y - 432.27)/223.92;
-
-            x = painter->screen_width*0.5 - w*0.5*scale_temp;
-
-            y_temp = y;
-
-//            y = y_temp + off_set*scale_temp*scale;
-           /* scale_temp = (y - 432.27)/223.92;
-
-            x = painter->screen_width*0.5 - w*0.5*scale_temp;
-            y = y + scale_temp;*/
-//            y = painter->screen_height - h*(i+1);
-
-//            y = y_temp - h*scale;
-
-            std::cout<<"Scale "<<i<<": "<<scale<<", y: "<<y<<endl;
-
-//            scale -= 0.015; //scale -= 0.1000005; //(float)(1.0/(i+1.0));
-
-//            scale = (float)(1.0/(scale-0.3));
-//            scale_before = scale;
-
-            painter->draw2DImage
-            (   image,
-                w,h,
-                x,y,
-                scale_temp,
-                0,
-                true,
-                0,0,
-                Color(255,255,255,255),
-                0,0,
-                false);
-//            scale = (float)(w / (w * (s+3.0)/2.0));
-
-            tmp = tmp->next;
-
+            tmp->frame->draw(painter);
+            last = tmp;
         }
+
+        tmp = tmp->next;
+        c++;
+    }
+//    }
+    //try_done
+//    Nodo *last = root;
+//    while(last->next!=NULL)
+//        last=last->next;
+
+//    Nodo *last = root;
+//    int c=0;
+//    while(last->next!=NULL && c<7)
+//    {
+//        last=last->next;
+//        c++;
+//    }
+
+
+//    Nodo *last = NULL;
+//    for(int i=0; i<8; i++)
+//    {
+//        last = last->next;
+//    }
+    cout<<"Scale: "<<last->frame->scale<<endl;
+    if(last->frame->scale>=0.108468)//0.14981)//0.0631744)
+//    if(root->frame->getY()>=656.999)
+    {
+//        last->frame->init();
+         Nodo *n = pop();
+
+         while(last->next!=NULL)
+            last=last->next;
+
+         n->frame->init(last->frame);
+         add(n);
+//         reset();
+    }
+}
+
+void ListImage::reset()
+{
+    float s = root->frame->getScale();
+    int cont=1;
+    Nodo *tmp = root;
+
+    while(tmp->next!=NULL)
+    {
+        Nodo *tmp2 = tmp->next;
+        float ss = pow(s,cont);
+        float x = painter->screen_width*0.5 - tmp2->frame->getWidth()*0.5*ss;
+        float y = tmp->frame->getY() - tmp2->frame->getHeight()*ss;
+
+        tmp2->frame->init(ss, x, y);
+        tmp = tmp->next;
+        cont++;
+    }
+}
+
+void ListImage::flush(float flu)
+{
+    //    float scales[7] = {1, 0.66, 0.44, 0.29, 0.19, 0.125, 0.082};
+//    float scales[7] = {1.2, 1.2*0.66, 1.2*0.44, 1.2*0.29, 1.2*0.19, 1.2*0.125, 1.2*0.082};
+//    scale=1;
+//    float scale_before=scale;
+
+    Nodo *tmp = root;
+    Nodo *last = root;
+    float y_temp=painter->screen_height;
+    float scale_temp=1;
+    int c = 0;
+
+    //try_init
+//    for(int i=0; i<8; i+=1.0)
+//    {
+    while(tmp)
+    {
+        Step *image = tmp->frame;
+        tmp->frame->addY(flu);
+
+        if(c<8)
+        {
+//            tmp->frame->draw(painter);
+            last = tmp;
+        }
+
+        tmp = tmp->next;
+        c++;
+    }
+//    }
+    //try_done
+//    Nodo *last = root;
+//    while(last->next!=NULL)
+//        last=last->next;
+
+//    Nodo *last = root;
+//    int c=0;
+//    while(last->next!=NULL && c<7)
+//    {
+//        last=last->next;
+//        c++;
+//    }
+
+
+//    Nodo *last = NULL;
+//    for(int i=0; i<8; i++)
+//    {
+//        last = last->next;
+//    }
+    cout<<"Scale: "<<last->frame->scale<<endl;
+    if(last->frame->scale>=0.108468)//0.14981)//0.0631744)
+//    if(root->frame->getY()>=656.999)
+    {
+//        last->frame->init();
+         Nodo *n = pop();
+
+         while(last->next!=NULL)
+            last=last->next;
+
+         n->frame->init(last->frame);
+         add(n);
+//         reset();
     }
 }

@@ -1,6 +1,6 @@
 #include "Nodo.h"
 
-Nodo::Nodo(Image *texture)
+Nodo::Nodo(Step *texture)
 {
     this->frame = texture;
     this->next = NULL;
