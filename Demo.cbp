@@ -34,6 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Car.cpp" />
+		<Unit filename="Car.h" />
 		<Unit filename="ListImage.cpp" />
 		<Unit filename="ListImage.h" />
 		<Unit filename="Nodo.cpp" />

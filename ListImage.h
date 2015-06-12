@@ -10,17 +10,18 @@ class ListImage
 {
     public:
         Nodo *root;
-        float root_scale, off_set;
+        double root_scale, off_set;
+        int Size;
 
         ListImage(RosalilaGraphics *paint);
         virtual ~ListImage();
         void add(string path);
         void add(Nodo *nuevo);
         Nodo* pop();
-        void draw(float off_set);
+        void draw(double off_set_x, double off_set_y);
 
         void reset();
-        void flush(float flu);
+        void flush(double flu);
     protected:
 
     private:
