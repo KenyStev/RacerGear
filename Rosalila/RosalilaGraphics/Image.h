@@ -16,7 +16,6 @@ public:
     GLuint texture;
     int width;
     int height;
-
     Image();
     ~Image();
     int getWidth();

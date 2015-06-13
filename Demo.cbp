@@ -34,10 +34,24 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BackButton.cpp" />
+		<Unit filename="BackButton.h" />
+		<Unit filename="Button.cpp" />
+		<Unit filename="Button.h" />
+		<Unit filename="ExitButton.cpp" />
+		<Unit filename="ExitButton.h" />
+		<Unit filename="InstrButton.cpp" />
+		<Unit filename="InstrButton.h" />
 		<Unit filename="ListImage.cpp" />
 		<Unit filename="ListImage.h" />
 		<Unit filename="Nodo.cpp" />
 		<Unit filename="Nodo.h" />
+		<Unit filename="Pista.cpp" />
+		<Unit filename="Pista.h" />
+		<Unit filename="PlayButton.cpp" />
+		<Unit filename="PlayButton.h" />
+		<Unit filename="RankButton.cpp" />
+		<Unit filename="RankButton.h" />
 		<Unit filename="Rosalila/RosalilaAI/Automata.cpp" />
 		<Unit filename="Rosalila/RosalilaAI/Automata.h" />
 		<Unit filename="Rosalila/RosalilaAI/Estado.cpp" />

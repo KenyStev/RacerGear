@@ -1,0 +1,53 @@
+#ifndef BUTTON_H
+#define BUTTON_H
+#include <GL/freeglut.h>
+#include <GL/gl.h>
+#include <stdio.h>
+
+#include "Rosalila/system.h"
+
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sstream>
+#include <string>
+#include<iostream>
+using namespace std;
+//SDL
+#include "SDL2/SDL.h"
+#include "Rosalila/RosalilaUtility/RosalilaUtility.h"
+#include "Rosalila/RosalilaInputs/RosalilaInputs.h"
+#include "Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+#include "Rosalila/RosalilaSound/RosalilaSound.h"
+
+class Button
+{
+    public:
+    RosalilaGraphics* painter;
+    Image* img_up;
+    Image* img_dwn;
+    SDL_Rect rect_img;
+    bool clickLeft;
+    int mouse_x;
+    int mouse_y;
+    int x;
+    int y;
+    float xMinima; // Estos atributos sirven para poner las coordenadas para pulsar el botón.
+    float yMinima;
+	float xMaxima;
+	float yMaxima;
+	bool quit;
+	void update(int x, int y, bool click);
+	void setMouse(int x, int y, bool click);
+	bool sePulsaBoton(int x, int y, bool click);
+	bool mouseEncima(int x, int y, bool click);
+	void draw(int x, int y, bool click);
+	virtual void funcionamiento()=0;
+        Button(int x_position, int y_position, Image* up, Image* down, RosalilaGraphics* painter);
+        Button();
+        virtual ~Button();
+    protected:
+    private:
+};
+
+#endif // BUTTON_H

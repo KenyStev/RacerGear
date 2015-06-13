@@ -11,7 +11,7 @@ class ListImage
     public:
         Nodo *root;
         float root_scale, off_set;
-
+        ListImage();
         ListImage(RosalilaGraphics *paint);
         virtual ~ListImage();
         void add(string path);
