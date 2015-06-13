@@ -17,7 +17,7 @@ class Pista
     public:
     BackButton* back_button;
     Receiver* receiver;
-    float off_set;
+    float off_set_y, off_set_x;
     ListImage* miLista1;
     ListImage* miLista2;
     Image* background, *bu, *bd;
