@@ -65,18 +65,17 @@ int main(int argc, char *argv[])
     ListImage *MyList = new ListImage(rosalila_graphics);
     ListImage *MyList2 = new ListImage(rosalila_graphics);
     MyList->add(assets_directory+"rect2.png");
-    for(int i=1; i<96; i++)
+    for(int i=1; i<90; i++)
         MyList->add(assets_directory+"rect.png");
     for(int i=0; i<8; i++)
         MyList2->add(assets_directory+"flags.png");
 
     Car *car = new Car(rosalila_graphics);
-
-//    for(int i=0; i<160; i++)
-//    {
-//        MyList->flush(96*110);
-//        MyList2->flush(100);
-//    }
+    for(int i=0; i<10; i++)
+    {
+        MyList->flush(5*110);
+        MyList2->flush(5*112);
+    }
 
     double off_set_y=0, off_set_x;
     while(true)

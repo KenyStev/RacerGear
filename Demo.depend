@@ -989,7 +989,7 @@
 
 1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Nodo.h
 
-1434148825 source:/media/kenystev/Datos/keny++/TopGearTry/ListImage.cpp
+1434153639 source:/media/kenystev/Datos/keny++/TopGearTry/ListImage.cpp
 	"ListImage.h"
 	<cmath>
 
@@ -1260,7 +1260,7 @@
 
 1432678411 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/main.cpp
 
-1433810245 source:/media/kenystev/Datos/keny++/TopGearTry/main.cpp
+1434153631 source:/media/kenystev/Datos/keny++/TopGearTry/main.cpp
 	<GL/freeglut.h>
 	<GL/gl.h>
 	<stdio.h>
@@ -1538,7 +1538,7 @@
 1432681044 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.cpp
 	"Step.h"
 
-1434148635 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
+1434151159 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
 	"Step.h"
 
 1433807128 source:/media/kenystev/Datos/keny++/TopGearTry/Car.cpp

@@ -173,7 +173,8 @@ void ListImage::flush(double flu)
 //    double scales[7] = {1.2, 1.2*0.66, 1.2*0.44, 1.2*0.29, 1.2*0.19, 1.2*0.125, 1.2*0.082};
 //    scale=1;
 //    double scale_before=scale;
-
+//    for(int i=0; i<10; i++)
+//    {
     Nodo *tmp = root;
     Nodo *last = root;
     double y_temp=painter->screen_height;
@@ -231,4 +232,5 @@ void ListImage::flush(double flu)
          add(n);
 //         reset();
     }
+//    }
 }
