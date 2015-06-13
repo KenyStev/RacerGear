@@ -11,32 +11,32 @@
 class Step : public Image
 {
     public:
-        float x, y, scale, off_set_x, off_set_y;
+        double x, y, scale, off_set_x, off_set_y;
         RosalilaGraphics* painter;
 
         Step(RosalilaGraphics* painter, std::string path);
         virtual ~Step();
 
-        float getX();
-        float getY();
-        float getScale();
-        float getOff_X();
-        float getOff_Y();
+        double getX();
+        double getY();
+        double getScale();
+        double getOff_X();
+        double getOff_Y();
 
-        void setX(float x);
-        void setY(float y);
-        void setScale(float scale);
-        void setOff_X(float right);
-        void setOff_Y(float left);
+        void setX(double x);
+        void setY(double y);
+        void setScale(double scale);
+        void setOff_X(double right);
+        void setOff_Y(double left);
 
-        void addX(float x);
-        void addY(float y);
-        void addScale(float scale);
-        void addOff_X(float right);
-        void addOff_Y(float left);
+        void addX(double x);
+        void addY(double y);
+        void addScale(double scale);
+        void addOff_X(double right);
+        void addOff_Y(double left);
 
         void init();
-        void init(float scale, float x, float y);
+        void init(double scale, double x, double y);
         void init(Step *tmp);
 
         void draw(RosalilaGraphics* painter);
@@ -46,4 +46,4 @@ class Step : public Image
 
 #endif // STEP_H
 
-void queryData(Step *s, float *w, float *h, float *x, float *y);
+void queryData(Step *s, double *w, double *h, double *x, double *y);

@@ -40,6 +40,7 @@ using namespace std;
 
 #include "Pista.h"
 #include "ListImage.h"
+#include "Car.h"
 #include <math.h>
 #include "Button.h"
 #include "PlayButton.h"
@@ -142,6 +143,8 @@ int main(int argc, char *argv[])
     sound->addSound("sonido",assets_directory+"sound.ogg");
     MenuScreen* menu_screen = new MenuScreen(rosalila_graphics,receiver);
 
+    //car->draw(rosalila_graphics);
+
     while(true)
     {
         if(receiver->isKeyDown(SDLK_ESCAPE))
@@ -151,7 +154,6 @@ int main(int argc, char *argv[])
         receiver->updateInputs();
         rosalila_graphics->updateScreen();
     }
-
 
     return 0;
 }

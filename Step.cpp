@@ -23,80 +23,80 @@ Step::~Step()
     glDeleteTextures( 1, &texture );
 }
 
-float Step::getX()
+double Step::getX()
 {
     return x;
 }
 
-float Step::getY()
+double Step::getY()
 {
     return y;
 }
 
-float Step::getScale()
+double Step::getScale()
 {
     return scale;
 }
 
-float Step::getOff_X()
+double Step::getOff_X()
 {
     return off_set_x;
 }
 
-float Step::getOff_Y()
+double Step::getOff_Y()
 {
     return off_set_y;
 }
 
-void Step::setX(float x)
+void Step::setX(double x)
 {
     this->x = x;
 }
 
-void Step::setY(float y)
+void Step::setY(double y)
 {
     this->y = y;
 //    scale = (this->y - 432.27)/223.92;
 }
 
-void Step::setScale(float scale)
+void Step::setScale(double scale)
 {
     this->scale = scale;
 }
 
-void Step::setOff_X(float off_set_x)
+void Step::setOff_X(double off_set_x)
 {
     this->off_set_x = off_set_x;
 }
 
-void Step::setOff_Y(float off_set_y)
+void Step::setOff_Y(double off_set_y)
 {
     this->off_set_y = off_set_y;
 }
 
-void Step::addX(float x)
+void Step::addX(double x)
 {
     this->x += x;
 }
 
-void Step::addY(float y)
+void Step::addY(double y)
 {
     scale = ((this->y) - 432.27)/223.92;
-        this->y+=y*scale;
-        setX(painter->screen_width*0.5 - width*0.5*scale);
+    this->y+=y*scale;
+    setX(painter->screen_width*0.5 - width*0.5*scale + off_set_x);
 }
 
-void Step::addScale(float scale)
+void Step::addScale(double scale)
 {
     this->scale += scale;
 }
 
-void Step::addOff_X(float off_set_x)
+void Step::addOff_X(double off_set_x)
 {
     this->off_set_x += off_set_x;
 }
 
-void Step::addOff_Y(float off_set_y)
+void Step::addOff_Y(double off_set_y)
 {
     this->off_set_y += off_set_y;
 }
@@ -108,7 +108,7 @@ void Step::init()
     y=y - height*scale;//456.558;
 }
 
-void Step::init(float scale, float x, float y)
+void Step::init(double scale, double x, double y)
 {
     this->scale=scale;
     this->x=x;
@@ -117,7 +117,7 @@ void Step::init(float scale, float x, float y)
 
 void Step::init(Step *tmp)
 {
-    scale = tmp->scale*0.66;//0.0826539;
+    scale = tmp->scale*0.66;//0.0811825;//*0.66;//0.0826539;
     x=painter->screen_width*0.5 - width*0.5*scale;//621.629;
     y=tmp->y - height*scale;//456.558;
 }
@@ -140,7 +140,7 @@ void Step::draw(RosalilaGraphics* painter)
 //    exit(0);
 }
 
-void queryData(Step *s, float *w, float *h, float *x, float *y)
+void queryData(Step *s, double *w, double *h, double *x, double *y)
 {
     *w = s->getWidth();
     *h = s->getHeight();
