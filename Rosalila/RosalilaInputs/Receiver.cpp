@@ -24,7 +24,9 @@ Receiver::Receiver()
     joy_down_pressed_player_2=false;
     joy_left_pressed_player_2=false;
     joy_right_pressed_player_2=false;
-
+    mouse_x=0;
+    mouse_y=0;
+    left_click=false;
 
 //    SDL_EnableKeyRepeat(0,0);
 }
@@ -244,7 +246,15 @@ bool Receiver::isJoyPressed(int joyCode,int joystick)
     }
     return false;
 }
-
+int Receiver::getMouse_X(){
+    return mouse_x;
+}
+int Receiver::getMouse_Y(){
+    return mouse_y;
+}
+bool Receiver:: isLeftClickDown(){
+    return left_click;
+}
 void Receiver::updateInputs()
 {
     //While there's events to handle
@@ -285,6 +295,14 @@ void Receiver::updateInputs()
                 KEYS[event.key.keysym.sym] = false;
             else
                 writeLogLine("Key pressed but not supported:"+toString(event.key.keysym.sym));
+        }
+        if(event.type==SDL_MOUSEMOTION){
+            mouse_x = event.motion.x;
+            mouse_y = event.motion.y;
+        }
+        if(event.type== SDL_MOUSEBUTTONDOWN){
+            if(SDL_BUTTON(SDL_BUTTON_LEFT))
+                left_click=true;
         }
         if( event.type == SDL_JOYBUTTONDOWN )
         {

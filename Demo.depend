@@ -979,15 +979,21 @@
 
 1430363027 D
 
-1432681044 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ListImage.cpp
+1433803560 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ListImage.cpp
 	"ListImage.h"
 	<cmath>
 
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ListImage.h
+1433789909 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ListImage.h
 	<iostream>
 	"Nodo.h"
 
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Nodo.h
+1433290151 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Nodo.h
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+	"Step.h"
 
 1433285122 source:/media/kenystev/Datos/keny++/TopGearTry/ListImage.cpp
 	"ListImage.h"
@@ -1172,13 +1178,19 @@
 
 1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/RosalilaInputs.h
 
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/system.h
+1434156315 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/system.h
 	<iostream>
 
 1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/Boton.h
 	"../RosalilaInputs/Receiver.h"
 
-1432671700 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/Receiver.h
+1434134283 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/Receiver.h
+	<iostream>
+	<fstream>
+	<vector>
+	<stdarg.h>
+	"../TinyXml/tinyxml.h"
+	"SDL2/SDL.h"
 
 1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/system.h
 	<iostream>
@@ -1244,7 +1256,7 @@
 
 1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaSound/RosalilaSound.h
 
-1432681044 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.h
+1433290151 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.h
 	"SDL2/SDL.h"
 	"Rosalila/RosalilaUtility/RosalilaUtility.h"
 	"Rosalila/RosalilaInputs/RosalilaInputs.h"
@@ -1258,7 +1270,41 @@
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 	"Rosalila/RosalilaSound/RosalilaSound.h"
 
-1432678411 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/main.cpp
+1434156026 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/main.cpp
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"Rosalila/system.h"
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<sstream>
+	<string>
+	<iostream>
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2_image/SDL_image.h>
+	<SDL2_ttf/SDL_ttf.h>
+	<SDL2_mixer/SDL_mixer.h>
+	"Pista.h"
+	"ListImage.h"
+	<math.h>
+	"Button.h"
+	"PlayButton.h"
+	"InstrButton.h"
+	"RankButton.h"
+	"ExitButton.h"
+	"BackButton.h"
+	<list>
 
 1433288169 source:/media/kenystev/Datos/keny++/TopGearTry/main.cpp
 	<GL/freeglut.h>
@@ -1288,7 +1334,7 @@
 	"ListImage.h"
 	<math.h>
 
-1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Nodo.cpp
+1433290151 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Nodo.cpp
 	"Nodo.h"
 
 1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaAI/Automata.cpp
@@ -1350,7 +1396,7 @@
 1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/Boton.cpp
 	"Boton.h"
 
-1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/Receiver.cpp
+1434138266 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/Receiver.cpp
 	"RosalilaInputs.h"
 
 1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/RosalilaInputs.cpp
@@ -1534,9 +1580,110 @@
 
 1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/TinyXml/tinyxmlparser.cpp
 
-1432681044 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.cpp
+1433808330 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.cpp
 	"Step.h"
 
 1433282964 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
 	"Step.h"
+
+1434143203 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Pista.cpp
+	"Pista.h"
+	"ListImage.h"
+
+1434142405 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Pista.h
+	"ListImage.h"
+	<iostream>
+	"BackButton.h"
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+
+1434157997 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Button.cpp
+	"Button.h"
+
+1434139589 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Button.h
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"Rosalila/system.h"
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<sstream>
+	<string>
+	<iostream>
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+
+1434156340 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/PlayButton.cpp
+	"PlayButton.h"
+
+1434156139 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/PlayButton.h
+	"Button.h"
+	"Pista.h"
+
+1434156326 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/BackButton.cpp
+	"BackButton.h"
+
+1434156139 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/BackButton.h
+	"Button.h"
+
+1434068975 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ExitButton.cpp
+	"ExitButton.h"
+
+1434063860 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ExitButton.h
+	"Button.h"
+
+1434068975 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/InstrButton.cpp
+	"InstrButton.h"
+
+1434063860 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/InstrButton.h
+	"Button.h"
+
+1434068975 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/RankButton.cpp
+	"RankButton.h"
+
+1434069856 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/RankButton.h
+	"Button.h"
+
+1434142405 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/main.cpp
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"Rosalila/system.h"
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<sstream>
+	<string>
+	<iostream>
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2_image/SDL_image.h>
+	<SDL2_ttf/SDL_ttf.h>
+	<SDL2_mixer/SDL_mixer.h>
+	"Pista.h"
+	"ListImage.h"
+	<math.h>
+	"Button.h"
+	"PlayButton.h"
+	"InstrButton.h"
+	"RankButton.h"
+	"ExitButton.h"
+	"BackButton.h"
+	<list>
 

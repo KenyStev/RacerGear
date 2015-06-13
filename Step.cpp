@@ -81,17 +81,9 @@ void Step::addX(float x)
 
 void Step::addY(float y)
 {
-//    float scale_anterior = scale;
     scale = ((this->y) - 432.27)/223.92;
-//    this->y = scale*223.92 - y + 432.27;
-//    this->y = (this->y + y) - height*(scale);
-////    scale = (this->y - 432.27)/223.92;
-//    if(y!=0)
-//    {
         this->y+=y*scale;
-//        this->scale*=y;
         setX(painter->screen_width*0.5 - width*0.5*scale);
-//    }
 }
 
 void Step::addScale(float scale)
