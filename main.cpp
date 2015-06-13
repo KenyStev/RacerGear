@@ -38,12 +38,92 @@ using namespace std;
 #include <SDL2_mixer/SDL_mixer.h>
 #endif
 
+#include "Pista.h"
 #include "ListImage.h"
 #include "Car.h"
 #include <math.h>
+#include "Button.h"
+#include "PlayButton.h"
+#include "InstrButton.h"
+#include "RankButton.h"
+#include "ExitButton.h"
+#include "BackButton.h"
+#include<list>
+
+class MenuScreen{
+public:
+Image* fondo,*pu,*pd,*iu,*id,*ru,*rd,*eu,*ed;
+PlayButton *Pb;
+InstrButton *Ib;
+RankButton *Rb;
+ExitButton *Eb;
+Receiver* input;
+int mouse_x, mouse_y;
+bool click;
+RosalilaGraphics* painter;
+int centro_x,centro_y;
+
+    MenuScreen(RosalilaGraphics* painter, Receiver *receiver){
+        this->painter = painter;
+        input = receiver;
+        //Fondo init
+        fondo= painter->getTexture(assets_directory+"Menu.png");
+        //Play button init
+        pu = painter->getTexture(assets_directory+"PLAY_UP.png");
+        pd = painter->getTexture(assets_directory+"PLAY_DWN.png");
+        centro_x=painter->screen_width/2-(pu->getWidth()/2);
+        centro_y=painter->screen_height/2-(pu->getHeight()/2);
+        Pb = new PlayButton(centro_x,centro_y-100,pu,pd,painter,input);
+        //Instrctions Button init
+        iu = painter->getTexture(assets_directory+"INSTR_UP.png");
+        id = painter->getTexture(assets_directory+"INSTR_DWN.png");
+        centro_x=painter->screen_width/2-(iu->getWidth()/2);
+        centro_y=painter->screen_height/2-(iu->getHeight()/2);
+        Ib = new InstrButton(centro_x,centro_y,iu,id,painter);
+        //Ranking Button init
+        ru = painter->getTexture(assets_directory+"RANK_UP.png");
+        rd = painter->getTexture(assets_directory+"RANK_DWN.png");
+        centro_x=painter->screen_width/2-(ru->getWidth()/2);
+        centro_y=painter->screen_height/2-(ru->getHeight()/2);
+        Rb = new RankButton(centro_x,centro_y+100,ru,rd,painter);
+        //Exit Button init
+        eu = painter->getTexture(assets_directory+"EXIT_UP.png");
+        ed = painter->getTexture(assets_directory+"EXIT_DWN.png");
+        centro_x=painter->screen_width/2-(eu->getWidth()/2);
+        centro_y=painter->screen_height/2-(eu->getHeight()/2);
+        Eb = new ExitButton(centro_x,centro_y+200,eu,ed,painter);
+        mouse_x=0;
+        mouse_y=0;
+        click=false;
+
+    }
+
+    void act(){
+        painter->draw2DImage(fondo,fondo->getWidth(),fondo->getHeight(),0,0,1,0,false,0,0,Color(255,255,255,255),0,0,false);
+        mouse_x = input->getMouse_X();
+        mouse_y = input->getMouse_Y();
+        click = input->isLeftClickDown();
+         Pb->draw(mouse_x,mouse_y,click);
+         Ib->draw(mouse_x,mouse_y,click);
+         Rb->draw(mouse_x,mouse_y,click);
+         Eb->draw(mouse_x,mouse_y,click);
+
+    }
+    void update(){
+        mouse_x = input->getMouse_X();
+        mouse_y = input->getMouse_Y();
+        click = input->isLeftClickDown();
+        Pb->update(mouse_x,mouse_y,click);
+        Ib->update(mouse_x,mouse_y,click);
+        Rb->update(mouse_x,mouse_y,click);
+        Eb->update(mouse_x,mouse_y,click);
+    }
+
+};
 
 int main(int argc, char *argv[])
 {
+
     //Clean the previous log
     clearLog();
 
@@ -61,46 +141,16 @@ int main(int argc, char *argv[])
     //Sound initialization
     Sound*sound = new Sound();
     sound->addSound("sonido",assets_directory+"sound.ogg");
+    MenuScreen* menu_screen = new MenuScreen(rosalila_graphics,receiver);
 
-    ListImage *MyList = new ListImage(rosalila_graphics);
-    ListImage *MyList2 = new ListImage(rosalila_graphics);
-    MyList->add(assets_directory+"rect2.png");
-    for(int i=1; i<90; i++)
-        MyList->add(assets_directory+"rect.png");
-    for(int i=0; i<8; i++)
-        MyList2->add(assets_directory+"flags.png");
+    //car->draw(rosalila_graphics);
 
-    Car *car = new Car(rosalila_graphics);
-    for(int i=0; i<10; i++)
-    {
-        MyList->flush(5*110);
-        MyList2->flush(5*112);
-    }
-
-    double off_set_y=0, off_set_x;
     while(true)
     {
-
-        if(receiver->isKeyDown(SDL_SCANCODE_UP))
-            off_set_y=20.5;
-        else if(receiver->isKeyDown(SDL_SCANCODE_DOWN))
-            off_set_y=-10.5;
-        else
-            off_set_y=0;
-
-        if(receiver->isKeyDown(SDL_SCANCODE_RIGHT))
-            off_set_x=-10.5;
-        else if(receiver->isKeyDown(SDL_SCANCODE_LEFT))
-            off_set_x=10.5;
-        else
-            off_set_x=0;
-
-        MyList->draw(off_set_x, off_set_y);
-        MyList2->draw(off_set_x, off_set_y);
-        car->draw(rosalila_graphics);
         if(receiver->isKeyDown(SDLK_ESCAPE))
-            break;
-
+            exit(0);
+        menu_screen->act();
+        menu_screen->update();
         receiver->updateInputs();
         rosalila_graphics->updateScreen();
     }

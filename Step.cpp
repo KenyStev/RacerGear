@@ -81,17 +81,9 @@ void Step::addX(double x)
 
 void Step::addY(double y)
 {
-//    double scale_anterior = scale;
     scale = ((this->y) - 432.27)/223.92;
-//    this->y = scale*223.92 - y + 432.27;
-//    this->y = (this->y + y) - height*(scale);
-////    scale = (this->y - 432.27)/223.92;
-//    if(y!=0)
-//    {
-        this->y+=y*scale;
-//        this->scale*=y;
-        setX(painter->screen_width*0.5 - width*0.5*scale + off_set_x);
-//    }
+    this->y+=y*scale;
+    setX(painter->screen_width*0.5 - width*0.5*scale + off_set_x);
 }
 
 void Step::addScale(double scale)

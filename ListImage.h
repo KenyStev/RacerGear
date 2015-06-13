@@ -12,7 +12,7 @@ class ListImage
         Nodo *root;
         double root_scale, off_set;
         int Size;
-
+        ListImage();
         ListImage(RosalilaGraphics *paint);
         virtual ~ListImage();
         void add(string path);

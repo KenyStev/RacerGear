@@ -19,6 +19,11 @@ private:
     int joystick;
 public:
     Receiver();
+    int mouse_x,mouse_y;
+    bool left_click;
+    int getMouse_X();
+    int getMouse_Y();
+    bool isLeftClickDown();
     bool isKeyDown(int keycode);
     bool isKeyPressed(int keycode);
     bool isOuyaDown(char key);

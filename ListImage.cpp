@@ -8,6 +8,12 @@ ListImage::ListImage(RosalilaGraphics *paint)
     root_scale=0.66;
     Size=0;
 }
+ListImage::ListImage()
+{
+    root = NULL;
+    this->painter = NULL;
+    root_scale=0;
+}
 
 ListImage::~ListImage()
 {
@@ -83,20 +89,12 @@ Nodo* ListImage::pop()
 
 void ListImage::draw(double off_set_x, double off_set_y)
 {
-//    double scales[7] = {1, 0.66, 0.44, 0.29, 0.19, 0.125, 0.082};
-//    double scales[7] = {1.2, 1.2*0.66, 1.2*0.44, 1.2*0.29, 1.2*0.19, 1.2*0.125, 1.2*0.082};
-//    scale=1;
-//    double scale_before=scale;
-
     Nodo *tmp = root;
     Nodo *last = root;
     double y_temp=painter->screen_height;
     double scale_temp=1;
     int c = 0;
 
-    //try_init
-//    for(int i=0; i<8; i+=1.0)
-//    {
     while(tmp)
     {
         Step *image = tmp->frame;
@@ -112,31 +110,10 @@ void ListImage::draw(double off_set_x, double off_set_y)
         tmp = tmp->next;
         c++;
     }
-//    }
-    //try_done
-//    Nodo *last = root;
-//    while(last->next!=NULL)
-//        last=last->next;
 
-//    Nodo *last = root;
-//    int c=0;
-//    while(last->next!=NULL && c<7)
-//    {
-//        last=last->next;
-//        c++;
-//    }
-
-
-//    Nodo *last = NULL;
-//    for(int i=0; i<8; i++)
-//    {
-//        last = last->next;
-//    }
     cout<<"Scale: "<<last->frame->scale<<endl;
     if(last->frame->scale>=0.108468)//0.14981)//0.0811825)
-//    if(root->frame->getY()>=656.999)
     {
-//        last->frame->init();
          Nodo *n = pop();
 
          while(last->next!=NULL)
@@ -144,7 +121,6 @@ void ListImage::draw(double off_set_x, double off_set_y)
 
          n->frame->init(last->frame);
          add(n);
-//         reset();
     }
 }
 
@@ -169,21 +145,12 @@ void ListImage::reset()
 
 void ListImage::flush(double flu)
 {
-    //    double scales[7] = {1, 0.66, 0.44, 0.29, 0.19, 0.125, 0.082};
-//    double scales[7] = {1.2, 1.2*0.66, 1.2*0.44, 1.2*0.29, 1.2*0.19, 1.2*0.125, 1.2*0.082};
-//    scale=1;
-//    double scale_before=scale;
-//    for(int i=0; i<10; i++)
-//    {
     Nodo *tmp = root;
     Nodo *last = root;
     double y_temp=painter->screen_height;
     double scale_temp=1;
     int c = 0;
 
-    //try_init
-//    for(int i=0; i<8; i+=1.0)
-//    {
     while(tmp)
     {
         Step *image = tmp->frame;
@@ -191,38 +158,16 @@ void ListImage::flush(double flu)
 
         if(c<8)
         {
-//            tmp->frame->draw(painter);
             last = tmp;
         }
 
         tmp = tmp->next;
         c++;
     }
-//    }
-    //try_done
-//    Nodo *last = root;
-//    while(last->next!=NULL)
-//        last=last->next;
 
-//    Nodo *last = root;
-//    int c=0;
-//    while(last->next!=NULL && c<7)
-//    {
-//        last=last->next;
-//        c++;
-//    }
-
-
-//    Nodo *last = NULL;
-//    for(int i=0; i<8; i++)
-//    {
-//        last = last->next;
-//    }
     cout<<"Scale: "<<last->frame->scale<<endl;
-    if(last->frame->scale>=0.108468)//0.14981)//0.0631744)
-//    if(root->frame->getY()>=656.999)
+    if(last->frame->scale>=0.108468)
     {
-//        last->frame->init();
          Nodo *n = pop();
 
          while(last->next!=NULL)
@@ -230,7 +175,5 @@ void ListImage::flush(double flu)
 
          n->frame->init(last->frame);
          add(n);
-//         reset();
     }
-//    }
 }
