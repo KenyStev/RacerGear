@@ -14,10 +14,12 @@ class Car
         double x, y, scale;
         double a, v;
         Image *car;
+        map<string,Image*> state;
 
         Car(RosalilaGraphics *p);
         virtual ~Car();
 
+        void update(Receiver *r);
         void draw(RosalilaGraphics *painter);
     protected:
     private:

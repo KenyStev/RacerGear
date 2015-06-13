@@ -11,8 +11,8 @@ PlayButton::PlayButton(){
 }
 void PlayButton::funcionamiento(){
 //    if(play_into){
-        pista->draw();
         pista->logica();
+        pista->draw();
 //    }
 }
 PlayButton::~PlayButton()

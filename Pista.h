@@ -3,6 +3,7 @@
 #include "ListImage.h"
 #include<iostream>
 #include"BackButton.h"
+#include "Car.h"
 using namespace std;
 
 //SDL
@@ -21,6 +22,7 @@ class Pista
     ListImage* miLista1;
     ListImage* miLista2;
     Image* background, *bu, *bd;
+    Car *car;
     void logica();
     void draw();
     void init();

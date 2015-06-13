@@ -143,8 +143,6 @@ int main(int argc, char *argv[])
     sound->addSound("sonido",assets_directory+"sound.ogg");
     MenuScreen* menu_screen = new MenuScreen(rosalila_graphics,receiver);
 
-    //car->draw(rosalila_graphics);
-
     while(true)
     {
         if(receiver->isKeyDown(SDLK_ESCAPE))
