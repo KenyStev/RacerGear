@@ -34,14 +34,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Car.cpp" />
-		<Unit filename="Car.h" />
 		<Unit filename="BackButton.cpp" />
 		<Unit filename="BackButton.h" />
 		<Unit filename="Button.cpp" />
 		<Unit filename="Button.h" />
+		<Unit filename="Car.cpp" />
+		<Unit filename="Car.h" />
 		<Unit filename="ExitButton.cpp" />
 		<Unit filename="ExitButton.h" />
+		<Unit filename="Game.cpp" />
+		<Unit filename="Game.h" />
 		<Unit filename="InstrButton.cpp" />
 		<Unit filename="InstrButton.h" />
 		<Unit filename="ListImage.cpp" />

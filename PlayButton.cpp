@@ -2,7 +2,7 @@
 
 PlayButton::PlayButton(int x_position, int y_position, Image* up, Image* down,RosalilaGraphics* painter, Receiver* receiver) :Button(x_position,y_position,up,down,painter)
 {
-    pista= new Pista(painter, receiver);
+    pista= new Pista(new Car(painter), painter, receiver);
     pista->init();
     //ctor
 }

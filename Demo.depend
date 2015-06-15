@@ -162,10 +162,10 @@
 1434161965 source:/media/kenystev/Datos/keny++/TopGearTry/Button.cpp
 	"Button.h"
 
-1434224100 source:/media/kenystev/Datos/keny++/TopGearTry/Car.cpp
+1434336954 source:/media/kenystev/Datos/keny++/TopGearTry/Car.cpp
 	"Car.h"
 
-1434221284 /media/kenystev/Datos/keny++/TopGearTry/Car.h
+1434335703 /media/kenystev/Datos/keny++/TopGearTry/Car.h
 	"SDL2/SDL.h"
 	"Rosalila/RosalilaUtility/RosalilaUtility.h"
 	"Rosalila/RosalilaInputs/RosalilaInputs.h"
@@ -244,7 +244,7 @@
 	"BackButton.h"
 	<list>
 
-1434220422 /media/kenystev/Datos/keny++/TopGearTry/Pista.h
+1434333710 /media/kenystev/Datos/keny++/TopGearTry/Pista.h
 	"ListImage.h"
 	<iostream>
 	"BackButton.h"
@@ -265,11 +265,11 @@
 1433194113 source:/media/kenystev/Datos/keny++/TopGearTry/Nodo.cpp
 	"Nodo.h"
 
-1434221841 source:/media/kenystev/Datos/keny++/TopGearTry/Pista.cpp
+1434334621 source:/media/kenystev/Datos/keny++/TopGearTry/Pista.cpp
 	"Pista.h"
 	"ListImage.h"
 
-1434224060 source:/media/kenystev/Datos/keny++/TopGearTry/PlayButton.cpp
+1434333827 source:/media/kenystev/Datos/keny++/TopGearTry/PlayButton.cpp
 	"PlayButton.h"
 
 1434161965 source:/media/kenystev/Datos/keny++/TopGearTry/RankButton.cpp
@@ -418,6 +418,11 @@
 	"tinyxml.h"
 	<windows.h>
 
-1434162178 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
+1434334149 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
 	"Step.h"
+
+1434333150 source:/media/kenystev/Datos/keny++/TopGearTry/Game.cpp
+	"Game.h"
+
+1434333206 /media/kenystev/Datos/keny++/TopGearTry/Game.h
 

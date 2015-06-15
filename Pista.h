@@ -28,7 +28,7 @@ class Pista
     void init();
 
         Pista();
-        Pista(RosalilaGraphics *paint, Receiver* receiver);
+        Pista(Car*,RosalilaGraphics*, Receiver*);
         virtual ~Pista();
     protected:
     private:
