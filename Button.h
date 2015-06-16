@@ -24,6 +24,7 @@ class Button
 {
     public:
     RosalilaGraphics* painter;
+//    Receiver *receiver;
     Image* img_up;
     Image* img_dwn;
     SDL_Rect rect_img;
@@ -42,6 +43,7 @@ class Button
 	bool sePulsaBoton(int x, int y, bool click);
 	bool mouseEncima(int x, int y, bool click);
 	void draw(int x, int y, bool click);
+	bool clicked(int M_x, int M_y, bool click);
 	virtual void funcionamiento()=0;
         Button(int x_position, int y_position, Image* up, Image* down, RosalilaGraphics* painter);
         Button();

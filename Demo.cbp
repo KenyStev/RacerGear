@@ -40,6 +40,7 @@
 		<Unit filename="Button.h" />
 		<Unit filename="Car.cpp" />
 		<Unit filename="Car.h" />
+		<Unit filename="Data.h" />
 		<Unit filename="ExitButton.cpp" />
 		<Unit filename="ExitButton.h" />
 		<Unit filename="Game.cpp" />
@@ -48,12 +49,18 @@
 		<Unit filename="InstrButton.h" />
 		<Unit filename="ListImage.cpp" />
 		<Unit filename="ListImage.h" />
+		<Unit filename="MenuScreen.cpp" />
+		<Unit filename="MenuScreen.h" />
 		<Unit filename="Nodo.cpp" />
 		<Unit filename="Nodo.h" />
 		<Unit filename="Pista.cpp" />
 		<Unit filename="Pista.h" />
 		<Unit filename="PlayButton.cpp" />
 		<Unit filename="PlayButton.h" />
+		<Unit filename="PlayScreen.cpp" />
+		<Unit filename="PlayScreen.h" />
+		<Unit filename="RaceGear.cpp" />
+		<Unit filename="RaceGear.h" />
 		<Unit filename="RankButton.cpp" />
 		<Unit filename="RankButton.h" />
 		<Unit filename="Rosalila/RosalilaAI/Automata.cpp" />
@@ -115,6 +122,8 @@
 		<Unit filename="Rosalila/TinyXml/tinyxmlerror.cpp" />
 		<Unit filename="Rosalila/TinyXml/tinyxmlparser.cpp" />
 		<Unit filename="Rosalila/system.h" />
+		<Unit filename="Screen.cpp" />
+		<Unit filename="Screen.h" />
 		<Unit filename="Step.cpp" />
 		<Unit filename="Step.h" />
 		<Unit filename="main.cpp" />

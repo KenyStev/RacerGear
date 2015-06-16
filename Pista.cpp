@@ -10,9 +10,9 @@ Pista::Pista(Car *c, RosalilaGraphics *paint, Receiver* receiver)
     off_set_x=0;
     background = paint->getTexture(assets_directory+"background.png");
     this->painter = paint;
-    bu = paint->getTexture(assets_directory+"BACK_UP.png");
-    bd = paint->getTexture(assets_directory+"BACK_DWN.png");
-    back_button = new BackButton(100,100,bu,bd,painter);
+//    bu = paint->getTexture(assets_directory+"BACK_UP.png");
+//    bd = paint->getTexture(assets_directory+"BACK_DWN.png");
+//    back_button = new BackButton(100,100,bu,bd,painter);
     car = c;
 }
 Pista::Pista(){
@@ -46,14 +46,14 @@ void Pista::logica(){
         else
             off_set_x=0;
 
-        back_button->update(receiver->getMouse_X(),receiver->getMouse_Y(),receiver->isLeftClickDown());
+//        back_button->update(receiver->getMouse_X(),receiver->getMouse_Y(),receiver->isLeftClickDown());
         car->update(receiver);
 }
 void Pista:: draw(){
      painter->draw2DImage(background,background->getWidth(),background->getHeight(),0,0,1,0,false,0,0,Color(255,255,255,255),0,0,false);
      miLista1->draw(off_set_x,off_set_y);
      miLista2->draw(off_set_x,off_set_y);
-     back_button->draw(receiver->getMouse_X(),receiver->getMouse_Y(),receiver->isLeftClickDown());
+//     back_button->draw(receiver->getMouse_X(),receiver->getMouse_Y(),receiver->isLeftClickDown());
      car->draw(painter);
 }
 Pista::~Pista()

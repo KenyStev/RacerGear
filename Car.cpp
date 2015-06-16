@@ -14,9 +14,9 @@ Car::Car(RosalilaGraphics *p)
     y = p->screen_height - car->getHeight();
     scale=1;
 
-    a=0.2;
+    a=0.01;
     v=0;
-    v_max=20;
+    v_max=30;
     off_set_x=0;
 }
 

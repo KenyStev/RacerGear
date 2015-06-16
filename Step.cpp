@@ -13,9 +13,6 @@ Step::Step(RosalilaGraphics* painter, std::string path)
     this->setOff_X(0);
     this->setOff_Y(0);
     this->setScale(1);
-
-    //probando
-//    delete img;
 }
 
 Step::~Step()
