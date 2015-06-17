@@ -13,7 +13,7 @@ RaceGear::~RaceGear()
 
 void RaceGear::create()
 {
-    setScreen(MENU);
+    setScreen(PLAY);
 }
 
 //void RaceGear::setScreen(Screen*Screen)

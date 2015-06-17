@@ -1,3 +1,5 @@
+#include <map>
+
 #ifndef STEP_H
 #define STEP_H
 
@@ -11,6 +13,9 @@
 class Step : public Image
 {
     public:
+        //prueba step-nodo
+        Step* next;
+
         double x, y, scale, off_set_x, off_set_y;
         RosalilaGraphics* painter;
 

@@ -4,6 +4,9 @@
 #include<iostream>
 #include"BackButton.h"
 #include "Car.h"
+
+#include <map>
+#include <vector>
 using namespace std;
 
 //SDL
@@ -21,11 +24,20 @@ class Pista
     float off_set_y, off_set_x;
     ListImage* miLista1;
     ListImage* miLista2;
+
+    ListImage *pasted, *actual, *nexts;
     Image* background;//, *bu, *bd;
     Car *car;
+
+//    int contador=0;
+    map<std::string,ListImage*> segmentos;
+    vector<std::string> secuencia;
+
+
     void logica();
     void draw();
     void init();
+    void clear();
 
         Pista();
         Pista(Car*,RosalilaGraphics*, Receiver*);

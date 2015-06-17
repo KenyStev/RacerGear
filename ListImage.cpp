@@ -6,7 +6,7 @@ ListImage::ListImage(RosalilaGraphics *paint)
     root = NULL;
     this->painter = paint;
     root_scale=0.66;
-    Size=0;
+    max_draw = 13;
 }
 ListImage::ListImage()
 {
@@ -25,155 +25,123 @@ void ListImage::add(std::string path)
 {
     if(root==NULL)
     {
-//        this->scale = scale;
-        root = new Nodo(new Step(painter,path));
+        root = new Step(painter,path);
         double w, h, x, y;
-        queryData(root->frame, &w, &h, &x, &y);
+        queryData(root, &w, &h, &x, &y);
 
-        root->frame->setX(painter->screen_width*0.5 - w*0.5);
-        root->frame->setY(painter->screen_height - h);
-        root->frame->setScale(1);
-
+        root->setX(painter->screen_width*0.5 - w*0.5);
+        root->setY(painter->screen_height - h);
         return;
     }
-    Nodo *temp = root;
+    Step *temp = root;
     while(temp->next!=NULL)
         temp = temp->next;
-    temp->next = new Nodo(new Step(painter,path));
-
-    Nodo *temp2 = temp->next;
-
-    double w, h, x, y;
-    queryData(temp2->frame, &w, &h, &x, &y);
-//     if(Size<8)
-//     {
-        temp2->frame->setX(painter->screen_width*0.5 - w*0.5*temp->frame->scale*root_scale);
-        temp2->frame->setY(temp->frame->getY() - h*temp->frame->scale*root_scale);
-        temp2->frame->setScale(temp->frame->scale*root_scale);
-//     }
-//     else
-//     {
-//        temp2->frame->setX(temp->frame->getX()); //painter->screen_width*0.5 - w*0.5*temp->frame->scale*root_scale);
-//        temp2->frame->setY(temp->frame->getY());// - h*temp->frame->scale*root_scale);
-//        temp2->frame->setScale(temp->frame->scale);
-//     }
-//     Size++;
+    temp->next = new Step(painter,path);
 }
 
-void ListImage::add(Nodo *nuevo)
+void ListImage::add(Step *nuevo)
 {
     if(root==NULL)
     {
         root = nuevo;
         return;
     }
-    Nodo *temp = root;
+    Step *temp = root;
     while(temp->next!=NULL)
         temp = temp->next;
     temp->next = nuevo;
-
-//    nuevo->frame->setX(temp->frame->getX()); //painter->screen_width*0.5 - w*0.5*temp->frame->scale*root_scale);
-//    nuevo->frame->setY(temp->frame->getY());// - h*temp->frame->scale*root_scale);
-//    nuevo->frame->setScale(temp->frame->scale);
-//    Size++;
 }
 
-Nodo* ListImage::pop()
+Step* ListImage::pop()
 {
-    Nodo* temp = root;
+    Step* temp = root;
     root = temp->next;
     temp->next = NULL;
-//    Size--;
     return temp;
 }
 
 void ListImage::draw(double off_set_x, double off_set_y)
 {
-    Nodo *tmp = root;
-    Nodo *last = root;
-    double y_temp=painter->screen_height;
-    double scale_temp=1;
-    int c = 0;
-
+    Step *tmp = root;
     while(tmp)
     {
-        Step *image = tmp->frame;
-        tmp->frame->addY(off_set_y);
-        tmp->frame->addOff_X(off_set_x);
-
-        if(c<8)
-        {
-            tmp->frame->draw(painter);
-            last = tmp;
-        }
-
+        tmp->addOff_X(off_set_x);
         tmp = tmp->next;
-        c++;
     }
+    draw(root,root->next,0,off_set_x,off_set_y);
+}
 
-    cout<<"Scale: "<<last->frame->scale<<endl;
-    if(last->frame->scale>=0.108468)//0.14981)//0.0811825)
+void ListImage::draw(Step*anterior,Step*actual,int c,double off_set_x, double off_set_y)
+{
+    if(c==max_draw)
     {
-         Nodo *n = pop();
-
-         while(last->next!=NULL)
-            last=last->next;
-
-         n->frame->init(last->frame);
-         add(n);
+        if(anterior->scale>=0.0563964)//0.108468)
+        {
+            add(pop());
+        }
+        return;
     }
+    anterior->addY(off_set_y);
+    anterior->draw(painter);
+    actual->init(anterior);
+    draw(actual,actual->next,c+1,off_set_x,off_set_y);
 }
 
 void ListImage::reset()
 {
-    double s = root->frame->getScale();
-    int cont=1;
-    Nodo *tmp = root;
-
-    while(tmp->next!=NULL)
-    {
-        Nodo *tmp2 = tmp->next;
-        double ss = pow(s,cont);
-        double x = painter->screen_width*0.5 - tmp2->frame->getWidth()*0.5*ss;
-        double y = tmp->frame->getY() - tmp2->frame->getHeight()*ss;
-
-        tmp2->frame->init(ss, x, y);
-        tmp = tmp->next;
-        cont++;
-    }
+//    double s = root->getScale();
+//    int cont=1;
+//    Step *tmp = root;
+//
+//    while(tmp->next!=NULL)
+//    {
+//        Step *tmp2 = tmp->next;
+//        double ss = pow(s,cont);
+//        double x = painter->screen_width*0.5 - tmp2->getWidth()*0.5*ss;
+//        double y = tmp->getY() - tmp2->getHeight()*ss;
+//
+//        tmp2->init(ss, x, y);
+//        tmp = tmp->next;
+//        cont++;
+//    }
 }
 
 void ListImage::flush(double flu)
 {
-    Nodo *tmp = root;
-    Nodo *last = root;
-    double y_temp=painter->screen_height;
-    double scale_temp=1;
-    int c = 0;
+//    Step *tmp = root;
+//    Step *last = root;
+//    double y_temp=painter->screen_height;
+//    double scale_temp=1;
+//    int c = 0;
+//
+//    while(tmp)
+//    {
+//        Step *image = tmp->frame;
+//        tmp->addY(flu);
+//
+//        if(c<8)
+//        {
+//            last = tmp;
+//        }
+//
+//        tmp = tmp->next;
+//        c++;
+//    }
+//
+//    cout<<"Scale: "<<last->scale<<endl;
+//    if(last->scale>=0.108468)
+//    {
+//         Step *n = pop();
+//
+//         while(last->next!=NULL)
+//            last=last->next;
+//
+//         n->init(last);
+//         add(n);
+//    }
+}
 
-    while(tmp)
-    {
-        Step *image = tmp->frame;
-        tmp->frame->addY(flu);
-
-        if(c<8)
-        {
-            last = tmp;
-        }
-
-        tmp = tmp->next;
-        c++;
-    }
-
-    cout<<"Scale: "<<last->frame->scale<<endl;
-    if(last->frame->scale>=0.108468)
-    {
-         Nodo *n = pop();
-
-         while(last->next!=NULL)
-            last=last->next;
-
-         n->frame->init(last->frame);
-         add(n);
-    }
+void ListImage::clear()
+{
+    root=NULL;
 }

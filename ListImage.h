@@ -9,16 +9,19 @@ using namespace std;
 class ListImage
 {
     public:
-        Nodo *root;
+        int max_draw;
+        Step *root;
         double root_scale, off_set;
-        int Size;
         ListImage();
         ListImage(RosalilaGraphics *paint);
         virtual ~ListImage();
         void add(string path);
-        void add(Nodo *nuevo);
-        Nodo* pop();
+        void add(Step *nuevo);
+        Step* pop();
         void draw(double off_set_x, double off_set_y);
+        void draw(Step*,Step*,int,double off_set_x, double off_set_y);
+
+        void clear();
 
         void reset();
         void flush(double flu);

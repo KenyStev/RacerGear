@@ -14,10 +14,11 @@ Car::Car(RosalilaGraphics *p)
     y = p->screen_height - car->getHeight();
     scale=1;
 
-    a=0.01;
+    a=0.2;
     v=0;
     v_max=30;
     off_set_x=0;
+    TURN=CHANGE_TURN;
 }
 
 Car::~Car()
@@ -46,14 +47,14 @@ void Car::update(Receiver *r)
         if(r->isKeyDown(SDL_SCANCODE_RIGHT) && off_set_x>-850)
         {
             turn=true;
-            TURN=-10;
+            TURN=-CHANGE_TURN;
             off_set_x+=TURN;
             car = state["left"];
         }
         if(r->isKeyDown(SDL_SCANCODE_LEFT)  && off_set_x<850)
         {
             turn=true;
-            TURN=10;
+            TURN=CHANGE_TURN;
             off_set_x+=TURN;
             car = state["right"];
         }
