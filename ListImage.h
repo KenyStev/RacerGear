@@ -29,6 +29,7 @@ class ListImage
 
     private:
         RosalilaGraphics *painter;
+        map<std::string,Image*> texturas;
 };
 
 #endif // LISTIMAGE_H

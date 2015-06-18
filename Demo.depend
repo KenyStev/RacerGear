@@ -162,7 +162,7 @@
 1434409027 source:/media/kenystev/Datos/keny++/TopGearTry/Button.cpp
 	"Button.h"
 
-1434575448 source:/media/kenystev/Datos/keny++/TopGearTry/Car.cpp
+1434588298 source:/media/kenystev/Datos/keny++/TopGearTry/Car.cpp
 	"Car.h"
 
 1434570006 /media/kenystev/Datos/keny++/TopGearTry/Car.h
@@ -184,11 +184,11 @@
 1434408868 /media/kenystev/Datos/keny++/TopGearTry/InstrButton.h
 	"Button.h"
 
-1434569814 source:/media/kenystev/Datos/keny++/TopGearTry/ListImage.cpp
+1434585362 source:/media/kenystev/Datos/keny++/TopGearTry/ListImage.cpp
 	"ListImage.h"
 	<cmath>
 
-1434569776 /media/kenystev/Datos/keny++/TopGearTry/ListImage.h
+1434580362 /media/kenystev/Datos/keny++/TopGearTry/ListImage.h
 	<iostream>
 	"Nodo.h"
 
@@ -200,7 +200,7 @@
 	"Rosalila/RosalilaSound/RosalilaSound.h"
 	"Step.h"
 
-1434564113 /media/kenystev/Datos/keny++/TopGearTry/Step.h
+1434580395 /media/kenystev/Datos/keny++/TopGearTry/Step.h
 	<map>
 	"SDL2/SDL.h"
 	"Rosalila/RosalilaUtility/RosalilaUtility.h"
@@ -208,7 +208,7 @@
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 	"Rosalila/RosalilaSound/RosalilaSound.h"
 
-1434400918 source:/media/kenystev/Datos/keny++/TopGearTry/main.cpp
+1434590466 source:/media/kenystev/Datos/keny++/TopGearTry/main.cpp
 	<GL/freeglut.h>
 	<GL/gl.h>
 	<stdio.h>
@@ -246,7 +246,7 @@
 	<list>
 	"RaceGear.h"
 
-1434490483 /media/kenystev/Datos/keny++/TopGearTry/Pista.h
+1434580300 /media/kenystev/Datos/keny++/TopGearTry/Pista.h
 	"ListImage.h"
 	<iostream>
 	"BackButton.h"
@@ -269,7 +269,7 @@
 1433194113 source:/media/kenystev/Datos/keny++/TopGearTry/Nodo.cpp
 	"Nodo.h"
 
-1434577064 source:/media/kenystev/Datos/keny++/TopGearTry/Pista.cpp
+1434590565 source:/media/kenystev/Datos/keny++/TopGearTry/Pista.cpp
 	"Pista.h"
 	"ListImage.h"
 
@@ -422,7 +422,7 @@
 	"tinyxml.h"
 	<windows.h>
 
-1434571629 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
+1434584918 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
 	"Step.h"
 
 1434395685 source:/media/kenystev/Datos/keny++/TopGearTry/Game.cpp
@@ -440,7 +440,7 @@
 1434341202 source:/media/kenystev/Datos/keny++/TopGearTry/Screen.cpp
 	"Screen.h"
 
-1434571120 source:/media/kenystev/Datos/keny++/TopGearTry/PlayScreen.cpp
+1434588804 source:/media/kenystev/Datos/keny++/TopGearTry/PlayScreen.cpp
 	"PlayScreen.h"
 	"RaceGear.h"
 

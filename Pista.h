@@ -19,20 +19,13 @@ using namespace std;
 class Pista
 {
     public:
-//    BackButton* back_button;
     Receiver* receiver;
     float off_set_y, off_set_x;
     ListImage* miLista1;
     ListImage* miLista2;
 
-    ListImage *pasted, *actual, *nexts;
     Image* background;//, *bu, *bd;
     Car *car;
-
-//    int contador=0;
-    map<std::string,ListImage*> segmentos;
-    vector<std::string> secuencia;
-
 
     void logica();
     void draw();

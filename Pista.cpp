@@ -6,48 +6,28 @@ Pista::Pista(Car *c, RosalilaGraphics *paint, Receiver* receiver)
     miLista1 =new ListImage(paint);
     miLista2 =new ListImage(paint);
 
-//    pasted =new ListImage(paint);
-//    actual =new ListImage(paint);
-//    nexts=new ListImage(paint);
-
     this->receiver = receiver;
     off_set_y=0;
     off_set_x=0;
     background = paint->getTexture(assets_directory+"background.png");
     this->painter = paint;
-//    segmentos["rect"] = new ListImage(paint);
-//
-//    for(int i=0;i<8;i++)
-//        segmentos["Meta"]->add(assets_directory+"Meta.png");
-//
-//    for(int i=0;i<8;i++)
-//        segmentos["rect"]->add(assets_directory+"rect.png");
-//    bu = paint->getTexture(assets_directory+"BACK_UP.png");
-//    bd = paint->getTexture(assets_directory+"BACK_DWN.png");
-//    back_button = new BackButton(100,100,bu,bd,painter);
     car = c;
 }
 Pista::Pista(){
 
 }
 void Pista::init(){
-
-//map<std::string,Image*> texturas;
-//texturas["Meta"] = new Step(painter,assets_directory+"Meta.png");
-//texturas["rect"] = new Step(painter,assets_directory+"rect.png");
-//texturas["flags"] = new Step(painter,assets_directory+"flags.png");
-
-    miLista1->add(assets_directory+"Meta.png");
-    miLista1->add(assets_directory+"puas_left.png");
-    miLista1->add(assets_directory+"puas_left.png");
-    miLista1->add(assets_directory+"puas_left.png");
-    miLista1->add(assets_directory+"puas_left.png");
-    miLista1->add(assets_directory+"puas_left.png");
-    for(int i=0; i<100; i++)
-        miLista1->add(assets_directory+"rect.png");
+    miLista1->add("Meta");
+    miLista1->add("puas_left");
+    miLista1->add("puas_left");
+    miLista1->add("puas_left");
+    miLista1->add("puas_left");
+    miLista1->add("puas_left");
+    for(int i=0; i<30; i++)
+        miLista1->add("rect");
 
     for(int i=0; i<8; i++)
-        miLista2->add(assets_directory+"flags.png");
+        miLista2->add("flags");
 }
 
 void Pista::logica(){

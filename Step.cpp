@@ -18,6 +18,20 @@ Step::Step(RosalilaGraphics* painter, std::string path)
     this->setScale(1);
 }
 
+Step::Step(RosalilaGraphics* painter, Image *img)
+{
+    next = NULL;
+    this->painter = painter;
+    this->setTexture(img->getTexture());
+    this->setWidth(img->getWidth());
+    this->setHeight(img->getHeight());
+    this->setX(0);
+    this->setY(0);
+    this->setOff_X(0);
+    this->setOff_Y(0);
+    this->setScale(1);
+}
+
 Step::~Step()
 {
     glDeleteTextures( 1, &texture );
@@ -134,7 +148,7 @@ void Step::draw(RosalilaGraphics* painter)
                             x,y,
                             scale,
                             0,
-                            true,
+                            false,
                             0,0,
                             Color(255,255,255,255),
                             0,0,

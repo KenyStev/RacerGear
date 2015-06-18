@@ -20,6 +20,7 @@ class Step : public Image
         RosalilaGraphics* painter;
 
         Step(RosalilaGraphics* painter, std::string path);
+        Step(RosalilaGraphics*, Image*);
         virtual ~Step();
 
         double getX();

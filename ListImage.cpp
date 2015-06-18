@@ -7,6 +7,11 @@ ListImage::ListImage(RosalilaGraphics *paint)
     this->painter = paint;
     root_scale=0.66;
     max_draw = 13;
+
+    texturas["Meta"] = new Step(painter,assets_directory+"Meta.png");
+    texturas["rect"] = new Step(painter,assets_directory+"rect.png");
+    texturas["puas_left"] = new Step(painter,assets_directory+"puas_left.png");
+    texturas["flags"] = new Step(painter,assets_directory+"flags.png");
 }
 ListImage::ListImage()
 {
@@ -25,7 +30,7 @@ void ListImage::add(std::string path)
 {
     if(root==NULL)
     {
-        root = new Step(painter,path);
+        root = new Step(painter,texturas[path]);//path);
         double w, h, x, y;
         queryData(root, &w, &h, &x, &y);
 
@@ -36,7 +41,7 @@ void ListImage::add(std::string path)
     Step *temp = root;
     while(temp->next!=NULL)
         temp = temp->next;
-    temp->next = new Step(painter,path);
+    temp->next = new Step(painter,texturas[path]);//path);
 }
 
 void ListImage::add(Step *nuevo)

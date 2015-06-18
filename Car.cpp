@@ -2,8 +2,6 @@
 
 Car::Car(RosalilaGraphics *p)
 {
-//    car = p->getTexture("assets/car.png");
-
     state["ahead"] = p->getTexture("assets/ahead.png");
     state["left"] = p->getTexture("assets/left.png");
     state["right"] = p->getTexture("assets/right.png");
@@ -16,8 +14,9 @@ Car::Car(RosalilaGraphics *p)
 
     a=0.2;
     v=0;
-    v_max=30;
+    v_max=15;
     off_set_x=0;
+    CHANGE_TURN=10;
     TURN=CHANGE_TURN;
 }
 
@@ -35,6 +34,10 @@ void Car::update(Receiver *r)
             v+=a;
         }
     }else{
+        if(r->isKeyDown(SDL_SCANCODE_DOWN))
+        {
+            v-=a*2;
+        }
         if(v>0)
             v-=a;
         else

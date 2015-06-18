@@ -145,6 +145,19 @@ int main(int argc, char *argv[])
     sound->addSound("sonido",assets_directory+"sound.ogg");
     MenuScreen* menu_screen = new MenuScreen(rosalila_graphics,receiver);*/
 
+    //TiXml
+//    TiXmlDocument doc("assets/cars.xml");
+//    doc.LoadFile();
+//    TiXmlNode *cars = doc.FirstChild("Cars");
+//    TiXmlNode* car=cars->FirstChild("car");
+//
+//    for(TiXmlNode* car=cars->FirstChild("car");
+//        car!=NULL;
+//        car=car->NextSibling("car"))
+//        {
+//            cout<<atof(car->ToElement()->Attribute("velocity"))<<"       "<<atof(car->ToElement()->Attribute("aceleration"))<<endl;
+//        }
+
     RaceGear *race_game = new RaceGear();
     race_game->create();
     while(true)
