@@ -5,9 +5,10 @@
 class PlayButton : public Button
 {
     public:
-        Pista * pista;
+//        Pista * pista;
         void funcionamiento();
-        PlayButton(int x_position, int y_position, Image* up, Image* down,RosalilaGraphics* painter,Receiver* receiver);
+//        PlayButton(int x_position, int y_position, Image* up, Image* down,RosalilaGraphics* painter,Receiver* receiver);
+        PlayButton(int x_position, int y_position, Image* up, Image* down,RosalilaGraphics* painter);
         PlayButton();
         virtual ~PlayButton();
     protected:

@@ -6,6 +6,7 @@ Button::Button(int x_position, int y_position, Image* up, Image* down,RosalilaGr
     y=y_position;
     clickLeft=false;
     this->painter = painter;
+//    this->receiver=receiver;
     this->img_up = up;
     this->img_dwn= down;
     this->mouse_x=0;
@@ -26,12 +27,19 @@ Button::Button(){
 
 }
 
-void Button::update(int M_x, int M_y, bool click){
+void Button::update(int M_x, int M_y,bool click){
     if(sePulsaBoton(M_x,M_y,click)){
         clickLeft=false;
         funcionamiento();
 
     }
+}
+
+bool Button::clicked(int M_x, int M_y, bool click){
+    if(sePulsaBoton(M_x,M_y,click)){
+        return true;
+    }
+    return false;
 }
 
 bool Button::sePulsaBoton(int M_x, int M_y, bool click){

@@ -1,9 +1,9 @@
 #include "PlayButton.h"
 
-PlayButton::PlayButton(int x_position, int y_position, Image* up, Image* down,RosalilaGraphics* painter, Receiver* receiver) :Button(x_position,y_position,up,down,painter)
+PlayButton::PlayButton(int x_position, int y_position, Image* up, Image* down,RosalilaGraphics* painter) :Button(x_position,y_position,up,down,painter)
 {
-    pista= new Pista(painter, receiver);
-    pista->init();
+//    pista= new Pista(new Car(painter), painter, receiver);
+//    pista->init();
     //ctor
 }
 PlayButton::PlayButton(){
@@ -11,12 +11,12 @@ PlayButton::PlayButton(){
 }
 void PlayButton::funcionamiento(){
 //    if(play_into){
-        pista->draw();
-        pista->logica();
+//        pista->logica();
+//        pista->draw();
 //    }
 }
 PlayButton::~PlayButton()
 {
-    delete pista;
+//    delete pista;
     //dtor
 }
