@@ -1,2 +1,6 @@
-obj/
-bin/
+obj/*
+bin/*
+log
+*.o
+Demo.layout
+Demo.depend
