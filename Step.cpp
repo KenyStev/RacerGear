@@ -1,10 +1,27 @@
 #include "Step.h"
 
+
 Step::Step(RosalilaGraphics* painter, std::string path)
 {
+    next = NULL;
+
     this->painter = painter;
 
     Image* img = painter->getTexture(path);
+    this->setTexture(img->getTexture());
+    this->setWidth(img->getWidth());
+    this->setHeight(img->getHeight());
+    this->setX(0);
+    this->setY(0);
+    this->setOff_X(0);
+    this->setOff_Y(0);
+    this->setScale(1);
+}
+
+Step::Step(RosalilaGraphics* painter, Image *img)
+{
+    next = NULL;
+    this->painter = painter;
     this->setTexture(img->getTexture());
     this->setWidth(img->getWidth());
     this->setHeight(img->getHeight());
@@ -53,7 +70,6 @@ void Step::setX(double x)
 void Step::setY(double y)
 {
     this->y = y;
-//    scale = (this->y - 432.27)/223.92;
 }
 
 void Step::setScale(double scale)
@@ -78,7 +94,8 @@ void Step::addX(double x)
 
 void Step::addY(double y)
 {
-    scale = ((this->y) - 432.27)/223.92;
+//    scale = ((this->y) - 432.27)/223.92; //no borrar
+    scale = ((this->y) - 440.27)/220.92;
     this->y+=y*scale;
     setX(painter->screen_width*0.5 - width*0.5*scale + off_set_x);
 }
@@ -100,9 +117,13 @@ void Step::addOff_Y(double off_set_y)
 
 void Step::init()
 {
-    scale*=0.66;//0.0826539;
-    x=painter->screen_width*0.5 - width*0.5*scale;//621.629;
-    y=y - height*scale;//456.558;
+//    scale*=0.66;//0.0826539;
+//    x=painter->screen_width*0.5 - width*0.5*scale;//621.629;
+//    y=y - height*scale;//456.558;
+
+    scale=0.0847309;
+    x=621.629;
+    y=456.558;
 }
 
 void Step::init(double scale, double x, double y)
@@ -127,7 +148,7 @@ void Step::draw(RosalilaGraphics* painter)
                             x,y,
                             scale,
                             0,
-                            true,
+                            false,
                             0,0,
                             Color(255,255,255,255),
                             0,0,
@@ -135,6 +156,7 @@ void Step::draw(RosalilaGraphics* painter)
 //    cout<<"x: "<<x<<endl;
     cout<<"a: "<<scale<<endl;
     cout<<"off_x: "<<off_set_x<<endl;
+    cout<<"x: "<<x<<"y: "<<y<<endl;
 //    exit(0);
 }
 
