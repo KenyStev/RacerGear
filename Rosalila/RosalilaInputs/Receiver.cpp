@@ -304,6 +304,10 @@ void Receiver::updateInputs()
             if(SDL_BUTTON(SDL_BUTTON_LEFT))
                 left_click=true;
         }
+        if(event.type== SDL_MOUSEBUTTONUP){
+            if(SDL_BUTTON(SDL_BUTTON_LEFT))
+                left_click=false;
+        }
         if( event.type == SDL_JOYBUTTONDOWN )
         {
             for(int i=0; i<max_joystick_inputs; i++)
