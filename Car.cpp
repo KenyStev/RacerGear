@@ -12,6 +12,11 @@ Car::Car(RosalilaGraphics *p)
     y = p->screen_height - car->getHeight();
     scale=1;
 
+    wheels.w = car->getWidth()*0.95;
+    wheels.h = car->getHeight()*0.2;
+    wheels.x = (car->getWidth())*0.5 - wheels.w*0.5;
+    wheels.y = (y+car->getHeight()) - wheels.h;
+
     a=0.2;
     v=0;
     v_max=15;
@@ -52,14 +57,14 @@ void Car::update(Receiver *r)
             turn=true;
             TURN=-CHANGE_TURN;
             off_set_x+=TURN;
-            car = state["left"];
+            car = state["right"];
         }
         if(r->isKeyDown(SDL_SCANCODE_LEFT)  && off_set_x<850)
         {
             turn=true;
             TURN=CHANGE_TURN;
             off_set_x+=TURN;
-            car = state["right"];
+            car = state["left"];
         }
         if(off_set_x>LEFT_MAX || off_set_x<RIGHT_MAX)
         {
@@ -74,14 +79,19 @@ void Car::update(Receiver *r)
 
 void Car::draw(RosalilaGraphics *painter)
 {
+    wheels.x = (x+car->getWidth())*0.5 + wheels.w*0.412;
+//    wheels.y = (y+car->getHeight()) - wheels.h;
+
     painter->draw2DImage(   car,
                             car->getWidth(),car->getHeight(),
                             x,y,
                             scale,
-                            0,
-                            true,
+                            0,false,
                             0,0,
                             Color(255,255,255,255),
                             0,0,
                             false);
+
+//    painter->drawRectangle(wheels.x,wheels.y,wheels.w,wheels.h,
+//                            0,255,0,0,100,false);
 }
