@@ -19,6 +19,7 @@ class Car
 
         Image *car;
         map<string,Image*> state;
+        SDL_Rect wheels;//wheel_left
 
         Car(RosalilaGraphics *p);
         virtual ~Car();

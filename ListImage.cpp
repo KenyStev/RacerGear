@@ -11,6 +11,8 @@ ListImage::ListImage(RosalilaGraphics *paint)
     texturas["Meta"] = new Step(painter,assets_directory+"Meta.png");
     texturas["rect"] = new Step(painter,assets_directory+"rect.png");
     texturas["puas_left"] = new Step(painter,assets_directory+"puas_left.png");
+    texturas["puas_right"] = new Step(painter,assets_directory+"puas_right.png");
+    texturas["puas_center"] = new Step(painter,assets_directory+"puas_center.png");
     texturas["flags"] = new Step(painter,assets_directory+"flags.png");
 }
 ListImage::ListImage()
@@ -28,9 +30,16 @@ ListImage::~ListImage()
 
 void ListImage::add(std::string path)
 {
+    Step *newStep = new Step(painter,texturas[path]);
+    if(strcmp(path.c_str(),"puas_left")==0)
+        newStep->setHit_Left(true);
+    if(strcmp(path.c_str(),"puas_right")==0)
+        newStep->setHit_Right(true);
+    if(strcmp(path.c_str(),"puas_center")==0)//cout<<"-->>>>>>>>>>>>>>>>>>>paso el if "<<endl;
+        newStep->setHit_Center(true);
     if(root==NULL)
     {
-        root = new Step(painter,texturas[path]);//path);
+        root = newStep;//new Step(painter,texturas[path]);//path);
         double w, h, x, y;
         queryData(root, &w, &h, &x, &y);
 
@@ -41,7 +50,7 @@ void ListImage::add(std::string path)
     Step *temp = root;
     while(temp->next!=NULL)
         temp = temp->next;
-    temp->next = new Step(painter,texturas[path]);//path);
+    temp->next = newStep;//new Step(painter,texturas[path]);//path);
 }
 
 void ListImage::add(Step *nuevo)
@@ -65,6 +74,17 @@ Step* ListImage::pop()
     return temp;
 }
 
+void ListImage::draw(Car*car,double off_set_x, double off_set_y)
+{
+    Step *tmp = root;
+    while(tmp)
+    {
+        tmp->addOff_X(off_set_x);
+        tmp = tmp->next;
+    }
+    draw(car,root,root->next,0,off_set_x,off_set_y);
+}
+
 void ListImage::draw(double off_set_x, double off_set_y)
 {
     Step *tmp = root;
@@ -73,10 +93,10 @@ void ListImage::draw(double off_set_x, double off_set_y)
         tmp->addOff_X(off_set_x);
         tmp = tmp->next;
     }
-    draw(root,root->next,0,off_set_x,off_set_y);
+    draw(NULL,root,root->next,0,off_set_x,off_set_y);
 }
 
-void ListImage::draw(Step*anterior,Step*actual,int c,double off_set_x, double off_set_y)
+void ListImage::draw(Car*car,Step*anterior,Step*actual,int c,double off_set_x, double off_set_y)
 {
     if(c==max_draw)
     {
@@ -86,64 +106,46 @@ void ListImage::draw(Step*anterior,Step*actual,int c,double off_set_x, double of
         }
         return;
     }
+    checkColosions(car,anterior);
     anterior->addY(off_set_y);
     anterior->draw(painter);
     actual->init(anterior);
-    draw(actual,actual->next,c+1,off_set_x,off_set_y);
+    draw(car,actual,actual->next,c+1,off_set_x,off_set_y);
 }
 
-void ListImage::reset()
+void ListImage::checkColosions(Car*car,Step *actual)
 {
-//    double s = root->getScale();
-//    int cont=1;
-//    Step *tmp = root;
-//
-//    while(tmp->next!=NULL)
-//    {
-//        Step *tmp2 = tmp->next;
-//        double ss = pow(s,cont);
-//        double x = painter->screen_width*0.5 - tmp2->getWidth()*0.5*ss;
-//        double y = tmp->getY() - tmp2->getHeight()*ss;
-//
-//        tmp2->init(ss, x, y);
-//        tmp = tmp->next;
-//        cont++;
-//    }
-}
-
-void ListImage::flush(double flu)
-{
-//    Step *tmp = root;
-//    Step *last = root;
-//    double y_temp=painter->screen_height;
-//    double scale_temp=1;
-//    int c = 0;
-//
-//    while(tmp)
-//    {
-//        Step *image = tmp->frame;
-//        tmp->addY(flu);
-//
-//        if(c<8)
-//        {
-//            last = tmp;
-//        }
-//
-//        tmp = tmp->next;
-//        c++;
-//    }
-//
-//    cout<<"Scale: "<<last->scale<<endl;
-//    if(last->scale>=0.108468)
-//    {
-//         Step *n = pop();
-//
-//         while(last->next!=NULL)
-//            last=last->next;
-//
-//         n->init(last);
-//         add(n);
-//    }
+    if(car!=NULL)
+    {
+        SDL_Rect r, c=car->wheels;
+        if(actual->hit_center)
+        {
+            r = actual->rect_center;
+            if(hitboxCollision(r.x,r.y,r.w,r.h,0,
+                                c.x,c.y,c.w,c.h,0))
+            {
+                car->v=actual->hurt;//car->a*2;
+            }
+        }
+        if(actual->hit_left)
+        {
+            r = actual->rect_left;
+            if(hitboxCollision(r.x,r.y,r.w,r.h,0,
+                                c.x,c.y,c.w,c.h,0))
+            {
+                car->v=actual->hurt;//car->a*2;
+            }
+        }
+        if(actual->hit_right)
+        {
+            r = actual->rect_right;
+            if(hitboxCollision(r.x,r.y,r.w,r.h,0,
+                                c.x,c.y,c.w,c.h,0))
+            {
+                car->v=actual->hurt;//car->a*2;
+            }
+        }
+    }
 }
 
 void ListImage::clear()

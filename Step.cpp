@@ -30,6 +30,9 @@ Step::Step(RosalilaGraphics* painter, Image *img)
     this->setOff_X(0);
     this->setOff_Y(0);
     this->setScale(1);
+    hit_left=false;
+    hit_right=false;
+    hit_center=false;
 }
 
 Step::~Step()
@@ -97,7 +100,15 @@ void Step::addY(double y)
 //    scale = ((this->y) - 432.27)/223.92; //no borrar
     scale = ((this->y) - 440.27)/220.92;
     this->y+=y*scale;
+    rect_left.x=off_set_x;
+    rect_right.x=getWidth() - rect_right.w + off_set_x;
+    rect_center.x=getWidth()*0.5 - rect_center.w*0.3 + off_set_x;
+
     setX(painter->screen_width*0.5 - width*0.5*scale + off_set_x);
+
+    rect_left.y=getY();
+    rect_right.y=getY();
+    rect_center.y=getY();
 }
 
 void Step::addScale(double scale)
@@ -115,23 +126,59 @@ void Step::addOff_Y(double off_set_y)
     this->off_set_y += off_set_y;
 }
 
-void Step::init()
+void Step::setHit_Left(bool hit_left)
 {
-//    scale*=0.66;//0.0826539;
-//    x=painter->screen_width*0.5 - width*0.5*scale;//621.629;
-//    y=y - height*scale;//456.558;
-
-    scale=0.0847309;
-    x=621.629;
-    y=456.558;
+    this->hit_left=true;
+//    SDL_Rect *tmp = new SDL_Rect();
+//    tmp->x = getX();
+//    tmp->y = getY();
+//    tmp->w = getWidth()*(1/3);
+//    tmp->h = getHeight();
+//    hitboxes.push_back(tmp);
+    rect_left.x = getX();
+    rect_left.y = getY();
+    rect_left.w = getWidth()*0.35;
+    rect_left.h = getHeight()*0.9;
+    hurt=8;
 }
 
-void Step::init(double scale, double x, double y)
+void Step::setHit_Right(bool hit_right)
 {
-    this->scale=scale;
-    this->x=x;
-    this->y=y;
+    this->hit_right=true;
+    rect_right.y = getY();
+    rect_right.w = getWidth()*0.25;
+    rect_right.x = getX() + getWidth()*0.65;
+    rect_right.h = getHeight()*0.9;
+    hurt=8;
 }
+
+void Step::setHit_Center(bool hit_center)
+{
+    this->hit_center=true;
+    rect_center.y = getY();
+    rect_center.w = getWidth()*0.2;
+    rect_center.x = getWidth()*0.5 - rect_center.w*0.5;
+    rect_center.h = getHeight()*0.8;
+    hurt=8;
+}
+
+//void Step::init()
+//{
+////    scale*=0.66;//0.0826539;
+////    x=painter->screen_width*0.5 - width*0.5*scale;//621.629;
+////    y=y - height*scale;//456.558;
+//
+//    scale=0.0847309;
+//    x=621.629;
+//    y=456.558;
+//}
+//
+//void Step::init(double scale, double x, double y)
+//{
+//    this->scale=scale;
+//    this->x=x;
+//    this->y=y;
+//}
 
 void Step::init(Step *tmp)
 {
@@ -153,6 +200,15 @@ void Step::draw(RosalilaGraphics* painter)
                             Color(255,255,255,255),
                             0,0,
                             false);
+//    if(hit_left)
+//        painter->drawRectangle(rect_left.x,rect_left.y,rect_left.w,rect_left.h,
+//                            0,255,0,0,100,false);
+//    if(hit_right)
+//        painter->drawRectangle(rect_right.x,rect_right.y,rect_right.w,rect_right.h,
+//                            0,255,0,0,100,false);
+//    if(hit_center)
+//        painter->drawRectangle(rect_center.x,rect_center.y,rect_center.w,rect_center.h,
+//                            0,255,0,0,100,false);
 //    cout<<"x: "<<x<<endl;
     cout<<"a: "<<scale<<endl;
     cout<<"off_x: "<<off_set_x<<endl;

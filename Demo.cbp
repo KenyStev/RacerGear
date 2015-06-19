@@ -40,7 +40,6 @@
 		<Unit filename="Button.h" />
 		<Unit filename="Car.cpp" />
 		<Unit filename="Car.h" />
-		<Unit filename="Data.h" />
 		<Unit filename="ExitButton.cpp" />
 		<Unit filename="ExitButton.h" />
 		<Unit filename="Game.cpp" />
@@ -51,8 +50,6 @@
 		<Unit filename="ListImage.h" />
 		<Unit filename="MenuScreen.cpp" />
 		<Unit filename="MenuScreen.h" />
-		<Unit filename="Nodo.cpp" />
-		<Unit filename="Nodo.h" />
 		<Unit filename="Pista.cpp" />
 		<Unit filename="Pista.h" />
 		<Unit filename="PlayButton.cpp" />
