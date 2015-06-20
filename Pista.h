@@ -23,17 +23,21 @@ class Pista
     float off_set_y, off_set_x;
     ListImage* miLista1;
     ListImage* miLista2;
+    int laps;
 
     Image* background;//, *bu, *bd;
     Car *car;
+    vector<std::string> secuence;
 
     void logica();
     void draw();
     void init();
     void clear();
+    void loadTrack(std::string);
 
         Pista();
         Pista(Car*,RosalilaGraphics*, Receiver*);
+        Pista(Car*,RosalilaGraphics*, Receiver*,std::string);
         virtual ~Pista();
     protected:
     private:

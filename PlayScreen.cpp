@@ -5,7 +5,7 @@ PlayScreen::PlayScreen(Game *game)
 {
     this->game = game;
     player_car = new Car(game->rosalila_graphics);
-    track = new Pista(player_car, game->rosalila_graphics, game->receiver);
+    track = new Pista(player_car, game->rosalila_graphics, game->receiver,"pista_1.xml");
 
     bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
     bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
@@ -20,13 +20,12 @@ PlayScreen::~PlayScreen()
 
 void PlayScreen::show ()
 {
-//    this->game = game;
-//    player_car = new Car(game->rosalila_graphics);
-//    track = new Pista(player_car, game->rosalila_graphics, game->receiver);
-//
-//    bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
-//    bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
-//    back_button = new BackButton(100,100,bu,bd,game->rosalila_graphics);
+    player_car = new Car(game->rosalila_graphics);
+    track = new Pista(player_car, game->rosalila_graphics, game->receiver,"pista_1.xml");
+
+    bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
+    bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
+    back_button = new BackButton(100,100,bu,bd,game->rosalila_graphics);
     track->init();
 }
 

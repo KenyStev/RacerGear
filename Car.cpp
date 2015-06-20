@@ -12,8 +12,8 @@ Car::Car(RosalilaGraphics *p)
     y = p->screen_height - car->getHeight();
     scale=1;
 
-    wheels.w = car->getWidth()*0.95;
-    wheels.h = car->getHeight()*0.2;
+    wheels.w = car->getWidth()*0.9;
+    wheels.h = car->getHeight()*0.15;
     wheels.x = (car->getWidth())*0.5 - wheels.w*0.5;
     wheels.y = (y+car->getHeight()) - wheels.h;
 
@@ -21,7 +21,7 @@ Car::Car(RosalilaGraphics *p)
     v=0;
     v_max=15;
     off_set_x=0;
-    CHANGE_TURN=10;
+    CHANGE_TURN=13;
     TURN=CHANGE_TURN;
 }
 
@@ -32,14 +32,14 @@ Car::~Car()
 
 void Car::update(Receiver *r)
 {
-    if(r->isKeyDown(SDL_SCANCODE_UP))
+    if(r->isKeyDown(SDL_SCANCODE_UP) || r->isJoyDown(1,0))
     {
         if(v<v_max)
         {
             v+=a;
         }
     }else{
-        if(r->isKeyDown(SDL_SCANCODE_DOWN))
+        if(r->isKeyDown(SDL_SCANCODE_DOWN) || r->isJoyDown(-2,0))
         {
             v-=a*2;
         }
@@ -52,14 +52,14 @@ void Car::update(Receiver *r)
     car = state["ahead"];
     turn=false;
     if(v>0){
-        if(r->isKeyDown(SDL_SCANCODE_RIGHT) && off_set_x>-850)
+        if((r->isKeyDown(SDL_SCANCODE_RIGHT)  || r->isJoyDown(-6,0))&& off_set_x>-850)
         {
             turn=true;
             TURN=-CHANGE_TURN;
             off_set_x+=TURN;
             car = state["right"];
         }
-        if(r->isKeyDown(SDL_SCANCODE_LEFT)  && off_set_x<850)
+        if((r->isKeyDown(SDL_SCANCODE_LEFT)  || r->isJoyDown(-4,0)) && off_set_x<850)
         {
             turn=true;
             TURN=CHANGE_TURN;
@@ -79,7 +79,7 @@ void Car::update(Receiver *r)
 
 void Car::draw(RosalilaGraphics *painter)
 {
-    wheels.x = (x+car->getWidth())*0.5 + wheels.w*0.412;
+    wheels.x = (x+car->getWidth())*0.5 + wheels.w*0.465;
 //    wheels.y = (y+car->getHeight()) - wheels.h;
 
     painter->draw2DImage(   car,
