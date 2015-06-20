@@ -33,6 +33,7 @@ Step::Step(RosalilaGraphics* painter, Image *img)
     hit_left=false;
     hit_right=false;
     hit_center=false;
+    isMeta=false;
 }
 
 Step::~Step()

@@ -10,6 +10,7 @@ ListImage::ListImage(RosalilaGraphics *paint)
 
     texturas["Meta"] = new Step(painter,assets_directory+"Meta.png");
     texturas["rect"] = new Step(painter,assets_directory+"rect.png");
+    texturas["rect_width"] = new Step(painter,assets_directory+"rect_width.png");
     texturas["puas_left"] = new Step(painter,assets_directory+"puas_left.png");
     texturas["puas_right"] = new Step(painter,assets_directory+"puas_right.png");
     texturas["puas_center"] = new Step(painter,assets_directory+"puas_center.png");
@@ -26,6 +27,32 @@ ListImage::~ListImage()
 {
     delete painter;
     delete root;
+}
+
+void ListImage::add(int hurt,string path)
+{
+    Step *newStep = new Step(painter,texturas[path]);
+    if(strcmp(path.c_str(),"puas_left")==0)
+        newStep->setHit_Left(true);
+    if(strcmp(path.c_str(),"puas_right")==0)
+        newStep->setHit_Right(true);
+    if(strcmp(path.c_str(),"puas_center")==0)
+        newStep->setHit_Center(true);
+    newStep->hurt=hurt;
+    if(root==NULL)
+    {
+        root = newStep;
+        double w, h, x, y;
+        queryData(root, &w, &h, &x, &y);
+
+        root->setX(painter->screen_width*0.5 - w*0.5);
+        root->setY(painter->screen_height - h);
+        return;
+    }
+    Step *temp = root;
+    while(temp->next!=NULL)
+        temp = temp->next;
+    temp->next = newStep;//new Step(painter,texturas[path]);//path);
 }
 
 void ListImage::add(std::string path)
