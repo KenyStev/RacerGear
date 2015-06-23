@@ -17,13 +17,27 @@ Pista::Pista(){
 
 }
 void Pista::init(){
+    for(int i=0; i<1; i++)
+        miLista1->add("rect");
     miLista1->add("Meta");
     miLista1->add("puas_left");
+    miLista1->add("rect");
+    miLista1->add("rect");
     miLista1->add("puas_left");
+    miLista1->add("puas_right");
+    miLista1->add("rect");
+    miLista1->add("rect");
+    miLista1->add("puas_right");
     miLista1->add("puas_left");
-    miLista1->add("puas_left");
-    miLista1->add("puas_left");
-    for(int i=0; i<30; i++)
+    miLista1->add("puas_center");
+    miLista1->add("rect");
+    miLista1->add("rect");
+    miLista1->add("rect");
+    miLista1->add("rect");
+    miLista1->add("rect");
+    miLista1->add("puas_center");
+
+    for(int i=0; i<100; i++)
         miLista1->add("rect");
 
     for(int i=0; i<8; i++)
@@ -43,7 +57,7 @@ void Pista::logica(){
 void Pista:: draw(){
 
     painter->draw2DImage(background,background->getWidth(),background->getHeight(),0,0,1,0,false,0,0,Color(255,255,255,255),0,0,false);
-    miLista1->draw(off_set_x,off_set_y);
+    miLista1->draw(car,off_set_x,off_set_y);
     miLista2->draw(off_set_x,off_set_y);
     car->draw(painter);
 }

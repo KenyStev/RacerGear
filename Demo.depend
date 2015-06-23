@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1434068975 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ExitButton.cpp
-	"ExitButton.h"
+1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/BackButton.cpp
+	"BackButton.h"
 
-1434063860 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ExitButton.h
+1434156139 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/BackButton.h
 	"Button.h"
 
 1434592417 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Button.h
@@ -159,59 +159,14 @@
 	"../RosalilaUtility/RosalilaUtility.h"
 	<map>
 
-1434068975 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/InstrButton.cpp
-	"InstrButton.h"
-
-1434063860 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/InstrButton.h
-	"Button.h"
-
-1433290151 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Nodo.cpp
-	"Nodo.h"
-
-1433290151 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Nodo.h
-	"SDL2/SDL.h"
-	"Rosalila/RosalilaUtility/RosalilaUtility.h"
-	"Rosalila/RosalilaInputs/RosalilaInputs.h"
-	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
-	"Rosalila/RosalilaSound/RosalilaSound.h"
-	"Step.h"
-
-1434592417 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.h
-	<map>
-	"SDL2/SDL.h"
-	"Rosalila/RosalilaUtility/RosalilaUtility.h"
-	"Rosalila/RosalilaInputs/RosalilaInputs.h"
-	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
-	"Rosalila/RosalilaSound/RosalilaSound.h"
-
-1434068975 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/RankButton.cpp
-	"RankButton.h"
-
-1434069856 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/RankButton.h
-	"Button.h"
-
-1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/RosalilaInputs.cpp
-	"RosalilaInputs.h"
-	<sstream>
-
-1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/BackButton.cpp
-	"BackButton.h"
-
-1434156139 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/BackButton.h
-	"Button.h"
-
 1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Button.cpp
 	"Button.h"
 
-1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Car.cpp
-	"Car.h"
+1434068975 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ExitButton.cpp
+	"ExitButton.h"
 
-1434592417 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Car.h
-	"SDL2/SDL.h"
-	"Rosalila/RosalilaUtility/RosalilaUtility.h"
-	"Rosalila/RosalilaInputs/RosalilaInputs.h"
-	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
-	"Rosalila/RosalilaSound/RosalilaSound.h"
+1434063860 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ExitButton.h
+	"Button.h"
 
 1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Game.cpp
 	"Game.h"
@@ -225,13 +180,11 @@
 1434592417 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Screen.h
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
-1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ListImage.cpp
-	"ListImage.h"
-	<cmath>
+1434068975 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/InstrButton.cpp
+	"InstrButton.h"
 
-1434592417 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ListImage.h
-	<iostream>
-	"Nodo.h"
+1434063860 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/InstrButton.h
+	"Button.h"
 
 1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/main.cpp
 	<GL/freeglut.h>
@@ -284,9 +237,32 @@
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 	"Rosalila/RosalilaSound/RosalilaSound.h"
 
+1434677390 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ListImage.h
+	<iostream>
+	"Step.h"
+	"Car.h"
+
+1434677390 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.h
+	<map>
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+
+1434677390 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Car.h
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
+
 1434592417 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/PlayButton.h
 	"Button.h"
 	"Pista.h"
+
+1434069856 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/RankButton.h
+	"Button.h"
 
 1434592417 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/RaceGear.h
 	"Game.h"
@@ -316,10 +292,6 @@
 	"MenuScreen.h"
 	"RaceGear.h"
 
-1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Pista.cpp
-	"Pista.h"
-	"ListImage.h"
-
 1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/PlayButton.cpp
 	"PlayButton.h"
 
@@ -327,8 +299,8 @@
 	"PlayScreen.h"
 	"RaceGear.h"
 
-1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/RaceGear.cpp
-	"RaceGear.h"
+1434068975 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/RankButton.cpp
+	"RankButton.h"
 
 1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaAI/Automata.cpp
 	"Automata.h"
@@ -380,6 +352,10 @@
 
 1434657937 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/Receiver.cpp
 	"RosalilaInputs.h"
+
+1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaInputs/RosalilaInputs.cpp
+	"RosalilaInputs.h"
+	<sstream>
 
 1432671700 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaMenus/Elemento.cpp
 	"Elemento.h"
@@ -472,6 +448,20 @@
 1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Screen.cpp
 	"Screen.h"
 
-1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.cpp
+1434677390 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Car.cpp
+	"Car.h"
+
+1434677390 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ListImage.cpp
+	"ListImage.h"
+	<cmath>
+
+1434677390 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/RaceGear.cpp
+	"RaceGear.h"
+
+1434677390 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Step.cpp
 	"Step.h"
+
+1434677773 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Pista.cpp
+	"Pista.h"
+	"ListImage.h"
 

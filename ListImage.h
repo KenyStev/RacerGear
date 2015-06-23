@@ -2,7 +2,8 @@
 #define LISTIMAGE_H
 
 #include <iostream>
-#include "Nodo.h"
+#include "Step.h"
+#include "Car.h"
 
 using namespace std;
 
@@ -19,12 +20,11 @@ class ListImage
         void add(Step *nuevo);
         Step* pop();
         void draw(double off_set_x, double off_set_y);
-        void draw(Step*,Step*,int,double off_set_x, double off_set_y);
+        void draw(Car*,double off_set_x, double off_set_y);//chancho
+        void draw(Car*,Step*,Step*,int,double off_set_x, double off_set_y);
+        void checkColosions(Car*,Step*);
 
         void clear();
-
-        void reset();
-        void flush(double flu);
     protected:
 
     private:
