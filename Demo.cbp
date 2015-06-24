@@ -123,6 +123,8 @@
 		<Unit filename="Rosalila/system.h" />
 		<Unit filename="Screen.cpp" />
 		<Unit filename="Screen.h" />
+		<Unit filename="SelectScreen.cpp" />
+		<Unit filename="SelectScreen.h" />
 		<Unit filename="Step.cpp" />
 		<Unit filename="Step.h" />
 		<Unit filename="main.cpp" />

@@ -45,6 +45,12 @@ bool pointIsInRect(int point_x,int point_y,
     return false;
 }
 
+bool hitboxCollision(SDL_Rect a,float a_angle,SDL_Rect b,float b_angle)
+{
+    return hitboxCollision(a.x,a.y,a.w,a.h,a_angle,
+                            b.x,b.y,b.w,b.h,b_angle);
+}
+
 bool hitboxCollision(int a_x,int a_y,int a_width,int a_height,float a_angle,
               int b_x,int b_y,int b_width,int b_height,float b_angle)
 {
