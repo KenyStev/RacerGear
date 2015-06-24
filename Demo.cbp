@@ -60,6 +60,8 @@
 		<Unit filename="RaceGear.h" />
 		<Unit filename="RankButton.cpp" />
 		<Unit filename="RankButton.h" />
+		<Unit filename="Ranking.cpp" />
+		<Unit filename="Ranking.h" />
 		<Unit filename="Rosalila/RosalilaAI/Automata.cpp" />
 		<Unit filename="Rosalila/RosalilaAI/Automata.h" />
 		<Unit filename="Rosalila/RosalilaAI/Estado.cpp" />

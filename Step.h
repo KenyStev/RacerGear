@@ -22,6 +22,7 @@ class Step : public Image
         vector<SDL_Rect*> hitboxes;
         SDL_Rect rect_left,rect_right,rect_center;
         bool hit_left,hit_right,hit_center;
+        bool isMeta;
         double hurt;
 
         Step(RosalilaGraphics* painter, std::string path);

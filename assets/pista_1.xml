@@ -1,16 +1,16 @@
-<Track laps="1">
+<Track laps="5">
 	<step path="Meta" long="1" hurt="0"/>
-	<step path="rect" long="20" hurt="0"/>
+	<step path="rect" long="5" hurt="0"/>
 	<step path="puas_center" long="1" hurt="8"/>
-	<step path="rect" long="20" hurt="0"/>
+	<step path="rect" long="5" hurt="0"/>
 	<step path="puas_left" long="1" hurt="6"/>
-	<step path="rect" long="20" hurt="0"/>
+	<step path="rect" long="7" hurt="0"/>
 	<step path="puas_right" long="1" hurt="6"/>
 	<step path="puas_center" long="1" hurt="8"/>
-	<step path="rect" long="40" hurt="0"/>
-	<step path="rect_width" long="70" hurt="0"/>
+	<step path="rect" long="8" hurt="0"/>
+	<step path="rect_width" long="20" hurt="0"/>
 	<step path="puas_center" long="20" hurt="8"/>
-	<step path="rect" long="30" hurt="0"/>
+	<step path="rect" long="9" hurt="0"/>
 	<step path="puas_left" long="20" hurt="6"/>
-	<step path="rect" long="20" hurt="0"/>
+	<step path="rect" long="2" hurt="0"/>
 </Track>

@@ -158,6 +158,19 @@ int main(int argc, char *argv[])
 //            cout<<atof(car->ToElement()->Attribute("velocity"))<<"       "<<atof(car->ToElement()->Attribute("aceleration"))<<endl;
 //        }
 
+//    TiXmlDocument doc((assets_directory+"pista_1.xml").c_str());
+//    doc.LoadFile();
+//    TiXmlNode *track = doc.FirstChild("Track");
+//    TiXmlNode* step=track->FirstChild("step");
+//
+//    for(TiXmlNode* step=track->FirstChild("step");
+//        step!=NULL;
+//        step=step->NextSibling("step"))
+//        {
+//            cout<<step->ToElement()->Attribute("path")<<endl;
+//        }
+//    exit(11);
+
     RaceGear *race_game = new RaceGear();
     race_game->create();
     while(true)
