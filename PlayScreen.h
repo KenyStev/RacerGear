@@ -1,7 +1,6 @@
 #ifndef PLAYSCREEN_H
 #define PLAYSCREEN_H
 #include "Screen.h"
-//#include "Game.h"
 #include "Game.h"
 #include "Pista.h"
 #include "Car.h"
