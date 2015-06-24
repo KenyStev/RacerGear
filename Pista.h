@@ -7,6 +7,7 @@
 
 #include <map>
 #include <vector>
+#include<ctime>
 using namespace std;
 
 //SDL
@@ -24,6 +25,10 @@ class Pista
     ListImage* road;
     ListImage* miLista2;
     int laps;
+    double time;
+    int seg;
+    string player_name;
+    clock_t start,stop;
 
     Image* background;//, *bu, *bd;
     Car *car;

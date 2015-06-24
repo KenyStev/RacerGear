@@ -18,17 +18,48 @@ Pista::Pista(Car *c, RosalilaGraphics *paint, Receiver* receiver)
     this->painter = paint;
     car = c;
     laps=1;
+    time=0;
+    start=NULL;
+    stop=NULL;
+    seg=0;
 }
 Pista::Pista(){
 
 }
 void Pista::init(){
+//<<<<<<< HEAD
+//   for(int i=0; i<1; i++)
+//    miLista1->add("rect");
+//    miLista1->add("Meta");
+//    miLista1->add("puas_left");
+//    miLista1->add("rect");
+//    miLista1->add("rect");
+//    miLista1->add("puas_left");
+//    miLista1->add("puas_right");
+//    miLista1->add("rect");
+//    miLista1->add("rect");
+//    miLista1->add("puas_right");
+//    miLista1->add("puas_left");
+//    miLista1->add("puas_center");
+//    miLista1->add("rect");
+//    miLista1->add("rect");
+//    miLista1->add("rect");
+//    miLista1->add("rect");
+//    miLista1->add("rect");
+//    miLista1->add("puas_center");
+//
+//    for(int i=0; i<100; i++)
+//        miLista1->add("rect");
+//
+//=======
+//>>>>>>> a8a7eb6cadbae77bdb3bbc7d210280f447e4727e
     for(int i=0; i<90; i++)
         miLista2->add("flags");
 }
 
 void Pista::logica(){
-            off_set_y=car->v;
+        start = clock();
+        off_set_y=car->v;
 
         if(car->turn)
             off_set_x=car->TURN;
@@ -37,6 +68,9 @@ void Pista::logica(){
 
         car->update(receiver);
 
+        stop = clock();
+        time +=(stop - start);
+        seg = (time/2)/1000;
         if(road->isMeta() && road->pops!=0)// && road->pops<=road->size*laps)
         {
             laps--;
@@ -51,7 +85,7 @@ void Pista:: draw(){
     road->draw(car,off_set_x,off_set_y);
     miLista2->draw(off_set_x,off_set_y);
     car->draw(painter);
-//    painter->drawText("Laps: "+toString(laps),100,100);
+    painter->drawText("Tiempo: "+ toString(seg)+" seg.",0,0);
 }
 Pista::~Pista()
 {
