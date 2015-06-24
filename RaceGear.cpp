@@ -13,6 +13,7 @@ RaceGear::~RaceGear()
 
 void RaceGear::create()
 {
+    selected_car = 0;
     setScreen(MENU);
 }
 

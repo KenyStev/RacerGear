@@ -4,7 +4,8 @@
 PlayScreen::PlayScreen(Game *game)
 {
     this->game = game;
-    player_car = new Car(game->rosalila_graphics);
+    loadCars("cars.xml");
+    player_car = cars[0];//new Car(game->rosalila_graphics);
     track = new Pista(player_car, game->rosalila_graphics, game->receiver,"pista_1.xml");
 
     bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
@@ -20,7 +21,9 @@ PlayScreen::~PlayScreen()
 
 void PlayScreen::show ()
 {
-    player_car = new Car(game->rosalila_graphics);
+//    loadCars("cars.xml");
+    player_car = cars[((RaceGear*)game)->selected_car];
+    //player_car = new Car(game->rosalila_graphics);
     track = new Pista(player_car, game->rosalila_graphics, game->receiver,"pista_1.xml");
 
     bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
@@ -63,4 +66,22 @@ void PlayScreen::hide ()
 void PlayScreen::dispose ()
 {
 
+}
+
+void PlayScreen::loadCars(string path)
+{
+    TiXmlDocument doc((assets_directory+path).c_str());
+    doc.LoadFile();
+
+    TiXmlNode *Cars = doc.FirstChild("Cars");
+    int i=0;
+    for(TiXmlNode *car = Cars->FirstChild("car");
+        car!=NULL;
+        car = car->NextSibling("car"),i++)
+        {
+            cars[i] = new Car(game->rosalila_graphics);
+            cars[i]->v_max = atof(car->ToElement()->Attribute("velocity"));
+            cars[i]->a = atof(car->ToElement()->Attribute("aceleration"));
+            cars[i]->CHANGE_TURN = atof(car->ToElement()->Attribute("turn"));
+        }
 }

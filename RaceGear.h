@@ -10,6 +10,7 @@
 class RaceGear : public Game
 {
     public:
+        int selected_car;
         PlayScreen *PLAY;
         MenuScreen *MENU;
         RaceGear();

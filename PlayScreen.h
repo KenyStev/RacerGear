@@ -5,6 +5,8 @@
 #include "Pista.h"
 #include "Car.h"
 
+#include <map>
+
 //buttons
 #include "PlayButton.h"
 #include "ExitButton.h"
@@ -19,8 +21,11 @@ class PlayScreen : public Screen
 
         Pista *track;
         Car *player_car;
+        map<int,Car*> cars;
         Game *game;
         PlayScreen(Game*);
+
+        void loadCars(string);
 
         void show ();
         void render (RosalilaGraphics*);
