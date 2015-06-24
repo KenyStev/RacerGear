@@ -6,15 +6,11 @@ ListImage::ListImage(RosalilaGraphics *paint)
     root = NULL;
     this->painter = paint;
     root_scale=0.66;
-    max_draw = 13;
+    max_draw = 11;
+    size=0;
+    pops=0;
 
-    texturas["Meta"] = new Step(painter,assets_directory+"Meta.png");
-    texturas["rect"] = new Step(painter,assets_directory+"rect.png");
-    texturas["rect_width"] = new Step(painter,assets_directory+"rect_width.png");
-    texturas["puas_left"] = new Step(painter,assets_directory+"puas_left.png");
-    texturas["puas_right"] = new Step(painter,assets_directory+"puas_right.png");
-    texturas["puas_center"] = new Step(painter,assets_directory+"puas_center.png");
-    texturas["flags"] = new Step(painter,assets_directory+"flags.png");
+    loadSteps("steps.xml");
 }
 ListImage::ListImage()
 {
@@ -32,13 +28,40 @@ ListImage::~ListImage()
 void ListImage::add(int hurt,string path)
 {
     Step *newStep = new Step(painter,texturas[path]);
+
+    if(strcmp(path.c_str(),"Meta")==0)
+        newStep->isMeta=true;
+
     if(strcmp(path.c_str(),"puas_left")==0)
         newStep->setHit_Left(true);
     if(strcmp(path.c_str(),"puas_right")==0)
         newStep->setHit_Right(true);
     if(strcmp(path.c_str(),"puas_center")==0)
         newStep->setHit_Center(true);
+
     newStep->hurt=hurt;
+
+    if(strcmp(path.c_str(),"flags")!=0)
+        newStep->setBorders();
+
+    if(strcmp(path.c_str(),"puas_1-2")==0)
+    {
+        newStep->setHit_Left(true);
+        newStep->setHit_Center(true);
+    }
+
+    if(strcmp(path.c_str(),"puas_2-3")==0)
+    {
+        newStep->setHit_Right(true);
+        newStep->setHit_Center(true);
+    }
+
+    if(strcmp(path.c_str(),"puas_1-3")==0)
+    {
+        newStep->setHit_Right(true);
+        newStep->setHit_Left(true);
+    }
+
     if(root==NULL)
     {
         root = newStep;
@@ -53,6 +76,7 @@ void ListImage::add(int hurt,string path)
     while(temp->next!=NULL)
         temp = temp->next;
     temp->next = newStep;//new Step(painter,texturas[path]);//path);
+    size++;
 }
 
 void ListImage::add(std::string path)
@@ -64,6 +88,7 @@ void ListImage::add(std::string path)
         newStep->setHit_Right(true);
     if(strcmp(path.c_str(),"puas_center")==0)//cout<<"-->>>>>>>>>>>>>>>>>>>paso el if "<<endl;
         newStep->setHit_Center(true);
+
     if(root==NULL)
     {
         root = newStep;//new Step(painter,texturas[path]);//path);
@@ -95,6 +120,8 @@ void ListImage::add(Step *nuevo)
 
 Step* ListImage::pop()
 {
+    if(pops==0)
+        pops++;
     Step* temp = root;
     root = temp->next;
     temp->next = NULL;
@@ -148,8 +175,7 @@ void ListImage::checkColosions(Car*car,Step *actual)
         if(actual->hit_center)
         {
             r = actual->rect_center;
-            if(hitboxCollision(r.x,r.y,r.w,r.h,0,
-                                c.x,c.y,c.w,c.h,0))
+            if(hitboxCollision(r,0,c,0))
             {
                 car->v=actual->hurt;//car->a*2;
             }
@@ -157,8 +183,7 @@ void ListImage::checkColosions(Car*car,Step *actual)
         if(actual->hit_left)
         {
             r = actual->rect_left;
-            if(hitboxCollision(r.x,r.y,r.w,r.h,0,
-                                c.x,c.y,c.w,c.h,0))
+            if(hitboxCollision(r,0,c,0))
             {
                 car->v=actual->hurt;//car->a*2;
             }
@@ -166,16 +191,40 @@ void ListImage::checkColosions(Car*car,Step *actual)
         if(actual->hit_right)
         {
             r = actual->rect_right;
-            if(hitboxCollision(r.x,r.y,r.w,r.h,0,
-                                c.x,c.y,c.w,c.h,0))
+            if(hitboxCollision(r,0,c,0))
             {
                 car->v=actual->hurt;//car->a*2;
             }
         }
+        if(hitboxCollision(actual->border_left,0,c,0) || hitboxCollision(actual->border_right,0,c,0))
+            car->outOfRoad=true;
     }
 }
 
 void ListImage::clear()
 {
     root=NULL;
+}
+
+bool ListImage::isMeta()
+{
+    if(root!=NULL)
+        return root->isMeta;
+    return false;
+}
+
+void ListImage::loadSteps(std::string path)
+{
+    TiXmlDocument doc((assets_directory+path).c_str());
+    doc.LoadFile();
+    TiXmlNode *Steps = doc.FirstChild("Steps");
+
+    for(TiXmlNode* step=Steps->FirstChild("step");
+        step!=NULL;
+        step=step->NextSibling("step"))
+        {
+            string s = step->ToElement()->Attribute("path");
+            cout<<s<<endl;
+            texturas[s] = new Step(painter,assets_directory+s+".png");
+        }
 }

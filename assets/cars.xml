@@ -1,5 +1,6 @@
 <Cars>
-	<car velocity="15" aceleration="0.2"/>
-	<car velocity="10" aceleration="0.3"/>
-	<car velocity="18" aceleration="0.25"/>
+	<car velocity="15" aceleration="0.2" turn="13"/>
+	<car velocity="10" aceleration="0.3" turn="14"/>
+	<car velocity="18" aceleration="0.25" turn="15"/>
+	<car velocity="20" aceleration="0.3" turn="16"/>
 </Cars>

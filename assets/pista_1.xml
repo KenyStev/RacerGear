@@ -1,16 +1,11 @@
-<Track laps="5">
-	<step path="Meta" long="1" hurt="0"/>
-	<step path="rect" long="5" hurt="0"/>
-	<step path="puas_center" long="1" hurt="8"/>
-	<step path="rect" long="5" hurt="0"/>
-	<step path="puas_left" long="1" hurt="6"/>
-	<step path="rect" long="7" hurt="0"/>
-	<step path="puas_right" long="1" hurt="6"/>
-	<step path="puas_center" long="1" hurt="8"/>
-	<step path="rect" long="8" hurt="0"/>
-	<step path="rect_width" long="20" hurt="0"/>
-	<step path="puas_center" long="20" hurt="8"/>
-	<step path="rect" long="9" hurt="0"/>
-	<step path="puas_left" long="20" hurt="6"/>
-	<step path="rect" long="2" hurt="0"/>
+<Track laps="2">
+	<repit for="1">
+		<step path="Meta" long="1" hurt="0"/>
+	</repit>
+	<repit for="5">
+		<step path="rect" long="5" hurt="0"/>
+		<step path="puas_center" long="10" hurt="8"/>
+		<step path="rect" long="5" hurt="0"/>
+		<step path="puas_1-3" long="10" hurt="8"/>
+	</repit>
 </Track>

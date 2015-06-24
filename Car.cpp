@@ -23,6 +23,7 @@ Car::Car(RosalilaGraphics *p)
     off_set_x=0;
     CHANGE_TURN=13;
     TURN=CHANGE_TURN;
+    outOfRoad=false;
 }
 
 Car::~Car()
@@ -32,6 +33,13 @@ Car::~Car()
 
 void Car::update(Receiver *r)
 {
+    if(r->isKeyDown(SDL_SCANCODE_DOWN) || r->isJoyDown(4,0))
+    {
+        if(v>0)
+            v-=a*2;
+        else
+            v=0;
+    }else
     if(r->isKeyDown(SDL_SCANCODE_UP) || r->isJoyDown(1,0))
     {
         if(v<v_max)
@@ -39,10 +47,6 @@ void Car::update(Receiver *r)
             v+=a;
         }
     }else{
-        if(r->isKeyDown(SDL_SCANCODE_DOWN) || r->isJoyDown(-2,0))
-        {
-            v-=a*2;
-        }
         if(v>0)
             v-=a;
         else
@@ -66,12 +70,13 @@ void Car::update(Receiver *r)
             off_set_x+=TURN;
             car = state["left"];
         }
-        if(off_set_x>LEFT_MAX || off_set_x<RIGHT_MAX)
+        if(outOfRoad) //off_set_x>LEFT_MAX || off_set_x<RIGHT_MAX)
         {
             if(v>a)
                 v-=a*2;
             else
                 v=a;
+            outOfRoad=false;
         }
     }
     cout<<"-----> off_X-CAR: "<<off_set_x<<endl;

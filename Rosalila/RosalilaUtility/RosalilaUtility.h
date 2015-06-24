@@ -5,6 +5,7 @@
 #include <fstream>
 #include <cmath>
 #include <vector>
+#include <SDL2/SDL.h>
 using namespace std;
 #define PI 3.14159265
 
@@ -45,6 +46,7 @@ bool clearLog();
 std::string toString(int number);
 bool pointIsInRect(int point_x,int point_y,
               int rect_x,int rect_y,int rect_width,int rect_height);
+bool hitboxCollision(SDL_Rect a,float a_angle,SDL_Rect b,float b_angle);
 bool hitboxCollision(int a_x,int a_y,int a_width,int a_height,float a_angle,
               int b_x,int b_y,int b_width,int b_height,float b_angle);
 Point* lineIntersection(Line l1,Line l2);

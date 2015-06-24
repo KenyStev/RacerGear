@@ -21,7 +21,7 @@ class Pista
     public:
     Receiver* receiver;
     float off_set_y, off_set_x;
-    ListImage* miLista1;
+    ListImage* road;
     ListImage* miLista2;
     int laps;
 

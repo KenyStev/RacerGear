@@ -8,7 +8,7 @@ Pista::Pista(Car*c,RosalilaGraphics*rg, Receiver*r,std::string path) : Pista(c, 
 
 Pista::Pista(Car *c, RosalilaGraphics *paint, Receiver* receiver)
 {
-    miLista1 =new ListImage(paint);
+    road =new ListImage(paint);
     miLista2 =new ListImage(paint);
 
     this->receiver = receiver;
@@ -23,29 +23,6 @@ Pista::Pista(){
 
 }
 void Pista::init(){
-//    for(int i=0; i<1; i++)
-//        miLista1->add("rect");
-//    miLista1->add("Meta");
-//    miLista1->add("puas_left");
-//    miLista1->add("rect");
-//    miLista1->add("rect");
-//    miLista1->add("puas_left");
-//    miLista1->add("puas_right");
-//    miLista1->add("rect");
-//    miLista1->add("rect");
-//    miLista1->add("puas_right");
-//    miLista1->add("puas_left");
-//    miLista1->add("puas_center");
-//    miLista1->add("rect");
-//    miLista1->add("rect");
-//    miLista1->add("rect");
-//    miLista1->add("rect");
-//    miLista1->add("rect");
-//    miLista1->add("puas_center");
-//
-//    for(int i=0; i<30; i++)
-//        miLista1->add("rect");
-
     for(int i=0; i<90; i++)
         miLista2->add("flags");
 }
@@ -59,17 +36,26 @@ void Pista::logica(){
             off_set_x=0;
 
         car->update(receiver);
+
+        if(road->isMeta() && road->pops!=0)// && road->pops<=road->size*laps)
+        {
+            laps--;
+            road->add(road->pop());
+            cout<<"Laps: "<<laps<<endl;
+            if(laps==0)exit(11);
+        }
 }
 void Pista:: draw(){
 
     painter->draw2DImage(background,background->getWidth(),background->getHeight(),0,0,1,0,false,0,0,Color(255,255,255,255),0,0,false);
-    miLista1->draw(car,off_set_x,off_set_y);
+    road->draw(car,off_set_x,off_set_y);
     miLista2->draw(off_set_x,off_set_y);
     car->draw(painter);
+//    painter->drawText("Laps: "+toString(laps),100,100);
 }
 Pista::~Pista()
 {
-    delete miLista1;
+    delete road;
     delete miLista2;
     delete receiver;
     delete background;
@@ -77,7 +63,7 @@ Pista::~Pista()
 
 void Pista::clear()
 {
-    miLista1->clear();
+    road->clear();
     miLista2->clear();
 }
 
@@ -87,16 +73,24 @@ void Pista::loadTrack(std::string path)
     doc.LoadFile();
     TiXmlNode *track = doc.FirstChild("Track");
     laps = atoi(track->ToElement()->Attribute("laps"));
-    TiXmlNode* step=track->FirstChild("step");
 
-    for(TiXmlNode* step=track->FirstChild("step");
-        step!=NULL;
-        step=step->NextSibling("step"))
+    for(TiXmlNode* repit=track->FirstChild("repit");
+        repit!=NULL;
+        repit=repit->NextSibling("repit"))
         {
-            string s = step->ToElement()->Attribute("path");
-            int d = atoi(step->ToElement()->Attribute("long"));
-            int hurt = atoi(step->ToElement()->Attribute("hurt"));
-            for(int i=0;i<d;i++)
-                miLista1->add(hurt,s);
+            int rep = atoi(repit->ToElement()->Attribute("for"));
+            for(int i=0;i<rep;i++)
+            {
+                for(TiXmlNode* step=repit->FirstChild("step");
+                    step!=NULL;
+                    step=step->NextSibling("step"))
+                    {
+                        string s = step->ToElement()->Attribute("path");
+                        int d = atoi(step->ToElement()->Attribute("long"));
+                        int hurt = atoi(step->ToElement()->Attribute("hurt"));
+                        for(int i=0;i<d;i++)
+                            road->add(hurt,s);
+                    }
+            }
         }
 }
