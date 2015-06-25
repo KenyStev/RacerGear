@@ -109,7 +109,7 @@
 	<iostream>
 	<fstream>
 
-1434061506 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Image.h
+1435178884 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Rosalila/RosalilaGraphics/Image.h
 	<SDL2/SDL_image.h>
 	<SDL2_image/SDL_image.h>
 	<GL/freeglut.h>
@@ -225,7 +225,7 @@
 	<list>
 	"RaceGear.h"
 
-1435112644 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Pista.h
+1435209899 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Pista.h
 	"ListImage.h"
 	<iostream>
 	"BackButton.h"
@@ -252,12 +252,13 @@
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 	"Rosalila/RosalilaSound/RosalilaSound.h"
 
-1435112644 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Car.h
+1435209826 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Car.h
 	"SDL2/SDL.h"
 	"Rosalila/RosalilaUtility/RosalilaUtility.h"
 	"Rosalila/RosalilaInputs/RosalilaInputs.h"
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 	"Rosalila/RosalilaSound/RosalilaSound.h"
+	<vector>
 
 1434592417 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/PlayButton.h
 	"Button.h"
@@ -271,7 +272,7 @@
 	"PlayScreen.h"
 	"MenuScreen.h"
 
-1435112644 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/PlayScreen.h
+1435210469 /home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/PlayScreen.h
 	"Screen.h"
 	"Game.h"
 	"Pista.h"
@@ -297,7 +298,7 @@
 1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/PlayButton.cpp
 	"PlayButton.h"
 
-1435089189 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/PlayScreen.cpp
+1435210469 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/PlayScreen.cpp
 	"PlayScreen.h"
 	"RaceGear.h"
 
@@ -450,14 +451,14 @@
 1434592417 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Screen.cpp
 	"Screen.h"
 
-1435112644 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Car.cpp
+1435211046 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Car.cpp
 	"Car.h"
 
 1435112644 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/ListImage.cpp
 	"ListImage.h"
 	<cmath>
 
-1435112937 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Pista.cpp
+1435210108 source:/home/luis/Documentos/Progra 3. Clase/Proyecto/RacerGear/Pista.cpp
 	"Pista.h"
 	"ListImage.h"
 

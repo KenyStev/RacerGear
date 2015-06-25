@@ -26,6 +26,7 @@ class Pista
     ListImage* miLista2;
     int laps;
     double time;
+    bool getLose();
     int seg;
     string player_name;
     clock_t start,stop;

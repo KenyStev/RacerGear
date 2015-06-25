@@ -31,9 +31,10 @@ void PlayScreen::show ()
 
 void PlayScreen::render (RosalilaGraphics*)
 {
-    track->logica();
     track->draw();
-
+    if(!track->getLose()){
+        track->logica();
+    }
 //    back_button->update(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
     if(back_button->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
         game->setScreen(((RaceGear*)game)->MENU);
