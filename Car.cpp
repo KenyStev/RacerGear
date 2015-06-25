@@ -24,6 +24,7 @@ Car::Car(RosalilaGraphics *p)
     CHANGE_TURN=13;
     TURN=CHANGE_TURN;
     outOfRoad=false;
+    hurt=0;
 }
 
 Car::~Car()
@@ -42,10 +43,15 @@ void Car::update(Receiver *r)
     }else
     if(r->isKeyDown(SDL_SCANCODE_UP) || r->isJoyDown(1,0))
     {
-        if(v<v_max)
+        if(hurt==0)
         {
-            v+=a;
+            if(v<v_max)
+            {
+                v+=a;
+            }
         }
+        else
+            v=hurt;
     }else{
         if(v>0)
             v-=a;
@@ -55,6 +61,7 @@ void Car::update(Receiver *r)
 
     car = state["ahead"];
     turn=false;
+    hurt=0;
     if(v>0){
         if((r->isKeyDown(SDL_SCANCODE_RIGHT)  || r->isJoyDown(-6,0))&& off_set_x>-850)
         {

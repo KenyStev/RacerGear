@@ -18,6 +18,13 @@ Pista::Pista(Car *c, RosalilaGraphics *paint, Receiver* receiver)
     this->painter = paint;
     car = c;
     laps=1;
+    time=0;
+    start=NULL;
+    stop=NULL;
+    seg=0;
+
+    display_time=new Font("font.ttf");
+    display_time->setSize(50);
 }
 Pista::Pista(){
 
@@ -28,7 +35,8 @@ void Pista::init(){
 }
 
 void Pista::logica(){
-            off_set_y=car->v;
+        start = clock();
+        off_set_y=car->v;
 
         if(car->turn)
             off_set_x=car->TURN;
@@ -37,6 +45,9 @@ void Pista::logica(){
 
         car->update(receiver);
 
+        stop = clock();
+        time +=(stop - start);
+        seg = (time/2)/1000;
         if(road->isMeta() && road->pops!=0)// && road->pops<=road->size*laps)
         {
             laps--;
@@ -51,7 +62,7 @@ void Pista:: draw(){
     road->draw(car,off_set_x,off_set_y);
     miLista2->draw(off_set_x,off_set_y);
     car->draw(painter);
-//    painter->drawText("Laps: "+toString(laps),100,100);
+    display_time->drawText("Tiempo: "+ toString(seg)+" seg.",0,0);
 }
 Pista::~Pista()
 {

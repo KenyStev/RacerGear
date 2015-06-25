@@ -15,7 +15,7 @@ class Car
         double x, y, scale;
         double a, v, v_max;
         double LEFT_MAX = 590, RIGHT_MAX = -590, TURN, CHANGE_TURN=5;
-        double off_set_x;
+        double off_set_x,hurt;
 
         Image *car;
         map<string,Image*> state;

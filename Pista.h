@@ -7,6 +7,7 @@
 
 #include <map>
 #include <vector>
+#include<ctime>
 using namespace std;
 
 //SDL
@@ -16,6 +17,8 @@ using namespace std;
 #include "Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 #include "Rosalila/RosalilaSound/RosalilaSound.h"
 
+#include "Font.h"
+
 class Pista
 {
     public:
@@ -24,6 +27,12 @@ class Pista
     ListImage* road;
     ListImage* miLista2;
     int laps;
+    double time;
+    int seg;
+    string player_name;
+    clock_t start,stop;
+
+    Font *display_time;
 
     Image* background;//, *bu, *bd;
     Car *car;

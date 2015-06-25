@@ -1,41 +1,15 @@
 # depslib dependency file v1.0
-1434408827 source:/media/kenystev/Datos/keny++/TopGearTry/BackButton.cpp
-	"BackButton.h"
-
-1434408835 /media/kenystev/Datos/keny++/TopGearTry/BackButton.h
-	"Button.h"
-
-1434409018 /media/kenystev/Datos/keny++/TopGearTry/Button.h
-	<GL/freeglut.h>
-	<GL/gl.h>
-	<stdio.h>
-	"Rosalila/system.h"
-	<pthread.h>
-	<stdio.h>
-	<stdlib.h>
+1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/RosalilaInputs.cpp
+	"RosalilaInputs.h"
 	<sstream>
-	<string>
-	<iostream>
-	"SDL2/SDL.h"
-	"Rosalila/RosalilaUtility/RosalilaUtility.h"
-	"Rosalila/RosalilaInputs/RosalilaInputs.h"
-	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
-	"Rosalila/RosalilaSound/RosalilaSound.h"
-
-1434161965 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/system.h
-	<iostream>
-
-1434914044 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaUtility/RosalilaUtility.h
-	<iostream>
-	<fstream>
-	<cmath>
-	<vector>
-	<SDL2/SDL.h>
 
 1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/RosalilaInputs.h
 	"../system.h"
 	"../RosalilaInputs/Boton.h"
 	"../RosalilaAI/RosalilaAI.h"
+
+1434161965 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/system.h
+	<iostream>
 
 1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/Boton.h
 	"../RosalilaInputs/Receiver.h"
@@ -85,6 +59,36 @@
 	<map>
 	<vector>
 	<iostream>
+
+1434914044 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaUtility/RosalilaUtility.h
+	<iostream>
+	<fstream>
+	<cmath>
+	<vector>
+	<SDL2/SDL.h>
+
+1434408827 source:/media/kenystev/Datos/keny++/TopGearTry/BackButton.cpp
+	"BackButton.h"
+
+1434408835 /media/kenystev/Datos/keny++/TopGearTry/BackButton.h
+	"Button.h"
+
+1434409018 /media/kenystev/Datos/keny++/TopGearTry/Button.h
+	<GL/freeglut.h>
+	<GL/gl.h>
+	<stdio.h>
+	"Rosalila/system.h"
+	<pthread.h>
+	<stdio.h>
+	<stdlib.h>
+	<sstream>
+	<string>
+	<iostream>
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
 
 1430363027 /media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/RosalilaGraphics.h
 	<iostream>
@@ -163,10 +167,10 @@
 1434409027 source:/media/kenystev/Datos/keny++/TopGearTry/Button.cpp
 	"Button.h"
 
-1435013977 source:/media/kenystev/Datos/keny++/TopGearTry/Car.cpp
+1435247267 source:/media/kenystev/Datos/keny++/TopGearTry/Car.cpp
 	"Car.h"
 
-1434916455 /media/kenystev/Datos/keny++/TopGearTry/Car.h
+1435246691 /media/kenystev/Datos/keny++/TopGearTry/Car.h
 	"SDL2/SDL.h"
 	"Rosalila/RosalilaUtility/RosalilaUtility.h"
 	"Rosalila/RosalilaInputs/RosalilaInputs.h"
@@ -179,13 +183,25 @@
 1434408850 /media/kenystev/Datos/keny++/TopGearTry/ExitButton.h
 	"Button.h"
 
+1434395685 source:/media/kenystev/Datos/keny++/TopGearTry/Game.cpp
+	"Game.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+
+1434396266 /media/kenystev/Datos/keny++/TopGearTry/Game.h
+	"Screen.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaInputs/Receiver.h"
+
+1434342802 /media/kenystev/Datos/keny++/TopGearTry/Screen.h
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+
 1434408861 source:/media/kenystev/Datos/keny++/TopGearTry/InstrButton.cpp
 	"InstrButton.h"
 
 1434408868 /media/kenystev/Datos/keny++/TopGearTry/InstrButton.h
 	"Button.h"
 
-1435028905 source:/media/kenystev/Datos/keny++/TopGearTry/ListImage.cpp
+1435247322 source:/media/kenystev/Datos/keny++/TopGearTry/ListImage.cpp
 	"ListImage.h"
 	<cmath>
 
@@ -193,14 +209,6 @@
 	<iostream>
 	"Step.h"
 	"Car.h"
-
-1433195116 /media/kenystev/Datos/keny++/TopGearTry/Nodo.h
-	"SDL2/SDL.h"
-	"Rosalila/RosalilaUtility/RosalilaUtility.h"
-	"Rosalila/RosalilaInputs/RosalilaInputs.h"
-	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
-	"Rosalila/RosalilaSound/RosalilaSound.h"
-	"Step.h"
 
 1434918351 /media/kenystev/Datos/keny++/TopGearTry/Step.h
 	<map>
@@ -248,18 +256,20 @@
 	<list>
 	"RaceGear.h"
 
-1434924767 /media/kenystev/Datos/keny++/TopGearTry/Pista.h
+1435196448 /media/kenystev/Datos/keny++/TopGearTry/Pista.h
 	"ListImage.h"
 	<iostream>
 	"BackButton.h"
 	"Car.h"
 	<map>
 	<vector>
+	<ctime>
 	"SDL2/SDL.h"
 	"Rosalila/RosalilaUtility/RosalilaUtility.h"
 	"Rosalila/RosalilaInputs/RosalilaInputs.h"
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 	"Rosalila/RosalilaSound/RosalilaSound.h"
+	"Font.h"
 
 1434408773 /media/kenystev/Datos/keny++/TopGearTry/PlayButton.h
 	"Button.h"
@@ -268,18 +278,64 @@
 1434408874 /media/kenystev/Datos/keny++/TopGearTry/RankButton.h
 	"Button.h"
 
-1433194113 source:/media/kenystev/Datos/keny++/TopGearTry/Nodo.cpp
-	"Nodo.h"
+1435168694 /media/kenystev/Datos/keny++/TopGearTry/RaceGear.h
+	"Game.h"
+	"PlayScreen.h"
+	"MenuScreen.h"
 
-1435012712 source:/media/kenystev/Datos/keny++/TopGearTry/Pista.cpp
+1435168293 /media/kenystev/Datos/keny++/TopGearTry/PlayScreen.h
+	"Screen.h"
+	"Game.h"
+	"Pista.h"
+	"Car.h"
+	<map>
+	"PlayButton.h"
+	"ExitButton.h"
+	"InstrButton.h"
+	"RankButton.h"
+
+1434401217 /media/kenystev/Datos/keny++/TopGearTry/MenuScreen.h
+	"Game.h"
+	"PlayScreen.h"
+	"Screen.h"
+	"PlayButton.h"
+	"ExitButton.h"
+	"RankButton.h"
+	"InstrButton.h"
+
+1434409086 source:/media/kenystev/Datos/keny++/TopGearTry/MenuScreen.cpp
+	"MenuScreen.h"
+	"RaceGear.h"
+
+1435197249 source:/media/kenystev/Datos/keny++/TopGearTry/Pista.cpp
 	"Pista.h"
 	"ListImage.h"
 
 1434409099 source:/media/kenystev/Datos/keny++/TopGearTry/PlayButton.cpp
 	"PlayButton.h"
 
+1435169229 source:/media/kenystev/Datos/keny++/TopGearTry/PlayScreen.cpp
+	"PlayScreen.h"
+	"RaceGear.h"
+
+1435168711 source:/media/kenystev/Datos/keny++/TopGearTry/RaceGear.cpp
+	"RaceGear.h"
+
 1434408886 source:/media/kenystev/Datos/keny++/TopGearTry/RankButton.cpp
 	"RankButton.h"
+
+1435188831 source:/media/kenystev/Datos/keny++/TopGearTry/Ranking.cpp
+	"Ranking.h"
+
+1435188831 /media/kenystev/Datos/keny++/TopGearTry/Ranking.h
+	<fstream>
+	<iostream>
+	<map>
+	"SDL2/SDL.h"
+	"Rosalila/RosalilaUtility/RosalilaUtility.h"
+	"Rosalila/RosalilaInputs/RosalilaInputs.h"
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
 
 1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaAI/Automata.cpp
 	"Automata.h"
@@ -319,7 +375,7 @@
 1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Object3D.cpp
 	"Object3D.h"
 
-1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/RosalilaGraphics.cpp
+1435194554 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/RosalilaGraphics.cpp
 	"RosalilaGraphics.h"
 
 1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaGraphics/Timer.cpp
@@ -331,10 +387,6 @@
 
 1434659385 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/Receiver.cpp
 	"RosalilaInputs.h"
-
-1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaInputs/RosalilaInputs.cpp
-	"RosalilaInputs.h"
-	<sstream>
 
 1430363027 source:/media/kenystev/Datos/keny++/TopGearTry/Rosalila/RosalilaMenus/Elemento.cpp
 	"Elemento.h"
@@ -424,69 +476,24 @@
 	"tinyxml.h"
 	<windows.h>
 
-1435007475 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
-	"Step.h"
-
-1434395685 source:/media/kenystev/Datos/keny++/TopGearTry/Game.cpp
-	"Game.h"
-	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
-
-1434396266 /media/kenystev/Datos/keny++/TopGearTry/Game.h
-	"Screen.h"
-	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
-	"Rosalila/RosalilaInputs/Receiver.h"
-
-1434342802 /media/kenystev/Datos/keny++/TopGearTry/Screen.h
-	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
-
 1434341202 source:/media/kenystev/Datos/keny++/TopGearTry/Screen.cpp
 	"Screen.h"
-
-1435169229 source:/media/kenystev/Datos/keny++/TopGearTry/PlayScreen.cpp
-	"PlayScreen.h"
-	"RaceGear.h"
-
-1435168293 /media/kenystev/Datos/keny++/TopGearTry/PlayScreen.h
-	"Screen.h"
-	"Game.h"
-	"Pista.h"
-	"Car.h"
-	<map>
-	"PlayButton.h"
-	"ExitButton.h"
-	"InstrButton.h"
-	"RankButton.h"
-
-1435168711 source:/media/kenystev/Datos/keny++/TopGearTry/RaceGear.cpp
-	"RaceGear.h"
-
-1435168694 /media/kenystev/Datos/keny++/TopGearTry/RaceGear.h
-	"Game.h"
-	"PlayScreen.h"
-	"MenuScreen.h"
-
-1434401217 /media/kenystev/Datos/keny++/TopGearTry/MenuScreen.h
-	"Game.h"
-	"PlayScreen.h"
-	"Screen.h"
-	"PlayButton.h"
-	"ExitButton.h"
-	"RankButton.h"
-	"InstrButton.h"
-
-1434409086 source:/media/kenystev/Datos/keny++/TopGearTry/MenuScreen.cpp
-	"MenuScreen.h"
-	"RaceGear.h"
-
-1434392654 /media/kenystev/Datos/keny++/TopGearTry/Data.h
-	"MenuScreen.h"
-	"PlayScreen.h"
 
 1435167678 source:/media/kenystev/Datos/keny++/TopGearTry/SelectScreen.cpp
 	"SelectScreen.h"
 	"RaceGear.h"
 
-1435028259 /media/kenystev/Datos/keny++/TopGearTry/SelectScreen.h
+1435186123 /media/kenystev/Datos/keny++/TopGearTry/SelectScreen.h
 	"Screen.h"
 	"Game.h"
+
+1435007475 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
+	"Step.h"
+
+1435196327 source:/media/kenystev/Datos/keny++/TopGearTry/Font.cpp
+	"Font.h"
+
+1435196281 /media/kenystev/Datos/keny++/TopGearTry/Font.h
+	<iostream>
+	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
