@@ -6,10 +6,10 @@
 #include "Screen.h"
 //#include "Data.h"
 
-#include "PlayButton.h"
-#include "ExitButton.h"
-#include "RankButton.h"
-#include "InstrButton.h"
+#include "Buttons.h"
+//#include "ExitButton.h"
+//#include "RankButton.h"
+//#include "InstrButton.h"
 
 class MenuScreen : public Screen
 {

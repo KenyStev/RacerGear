@@ -5,7 +5,7 @@
 #include "Screen.h"
 #include "Game.h"
 #include "Scores.h"
-#include "BackButton.h"
+#include "Buttons.h"
 
 
 class RankingScreen : public Screen

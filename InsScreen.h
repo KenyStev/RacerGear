@@ -3,7 +3,7 @@
 
 #include "Game.h"
 #include "Screen.h"
-#include "BackButton.h"
+#include "Buttons.h"
 #include "Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
 class InsScreen: public Screen
