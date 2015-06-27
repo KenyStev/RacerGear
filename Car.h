@@ -17,8 +17,9 @@ class Car
         double x, y, scale, marker_x,marker_y,marker_y_max, marker_speed;
         double a, v, v_max,maximum,time;
         double LEFT_MAX = 590, RIGHT_MAX = -590, TURN, CHANGE_TURN=5;
+        double off_set_x,hurt;
+
         vector<Image*> warning;
-        double off_set_x;
         bool getLose();
         void warningAnimation();
         int warning_actual;
@@ -28,9 +29,10 @@ class Car
         map<string,Image*> velocimeter_state;
         SDL_Rect wheels;//wheel_left
 
-        Car(RosalilaGraphics *p);
+        Car(RosalilaGraphics *p,string);
         Car();
         virtual ~Car();
+        void initCar();
 
         void update(Receiver *r);
         void draw();

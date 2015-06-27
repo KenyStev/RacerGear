@@ -4,6 +4,7 @@ RaceGear::RaceGear()
 {
     PLAY = new PlayScreen(this);
     MENU = new MenuScreen(this);
+    SELECT = new SelectScreen(this);
     RANKING = new RankingScreen(this);
     INSTRUCTION = new InsScreen(this);
 }
@@ -15,26 +16,10 @@ RaceGear::~RaceGear()
 
 void RaceGear::create()
 {
+    selected_car = 0;
+    selected_track = "pista_novato.xml";
     setScreen(MENU);
 }
-
-//void RaceGear::setScreen(Screen*Screen)
-//{
-//    if (this->screen != NULL) this->screen->hide();
-//        this->screen = screen;
-//        if (this->screen != NULL) {
-//            this->screen->show();
-//    }
-//}
-
-//void RaceGear::setScreen(int index)
-//{
-//    switch(index)
-//    {
-//        case 0: setScreen(PLAY); break;
-//        case 1: setScreen(MENU); break;
-//    }
-//}
 
 
 

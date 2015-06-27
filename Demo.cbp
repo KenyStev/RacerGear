@@ -38,10 +38,14 @@
 		<Unit filename="BackButton.h" />
 		<Unit filename="Button.cpp" />
 		<Unit filename="Button.h" />
+		<Unit filename="Buttons.cpp" />
+		<Unit filename="Buttons.h" />
 		<Unit filename="Car.cpp" />
 		<Unit filename="Car.h" />
 		<Unit filename="ExitButton.cpp" />
 		<Unit filename="ExitButton.h" />
+		<Unit filename="Font.cpp" />
+		<Unit filename="Font.h" />
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
 		<Unit filename="InsScreen.cpp" />

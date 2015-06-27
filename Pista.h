@@ -17,6 +17,8 @@ using namespace std;
 #include "Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 #include "Rosalila/RosalilaSound/RosalilaSound.h"
 
+#include "Font.h"
+
 class Pista
 {
     public:
@@ -30,6 +32,8 @@ class Pista
     int seg;
     string player_name;
     clock_t start,stop;
+
+    Font *display_time;
 
     Image* background;//, *bu, *bd;
     Car *car;

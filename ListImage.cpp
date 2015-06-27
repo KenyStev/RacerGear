@@ -21,7 +21,6 @@ ListImage::ListImage()
 
 ListImage::~ListImage()
 {
-    delete painter;
     delete root;
 }
 
@@ -177,7 +176,7 @@ void ListImage::checkColosions(Car*car,Step *actual)
             r = actual->rect_center;
             if(hitboxCollision(r,0,c,0))
             {
-                car->v=actual->hurt;//car->a*2;
+                car->hurt=actual->hurt;
             }
         }
         if(actual->hit_left)
@@ -185,7 +184,7 @@ void ListImage::checkColosions(Car*car,Step *actual)
             r = actual->rect_left;
             if(hitboxCollision(r,0,c,0))
             {
-                car->v=actual->hurt;//car->a*2;
+                car->hurt=actual->hurt;
             }
         }
         if(actual->hit_right)
@@ -193,7 +192,7 @@ void ListImage::checkColosions(Car*car,Step *actual)
             r = actual->rect_right;
             if(hitboxCollision(r,0,c,0))
             {
-                car->v=actual->hurt;//car->a*2;
+                car->hurt=actual->hurt;
             }
         }
         if(hitboxCollision(actual->border_left,0,c,0) || hitboxCollision(actual->border_right,0,c,0))
