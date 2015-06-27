@@ -5,26 +5,35 @@ PlayScreen::PlayScreen(Game *game)
 {
     this->game = game;
     loadCars("cars.xml");
-    player_car = cars[0];//new Car(game->rosalila_graphics);
-    track = new Pista(player_car, game->rosalila_graphics, game->receiver,"pista_1.xml");
-
-    bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
-    bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
-    back_button = new BackButton(100,100,bu,bd,game->rosalila_graphics);
-    track->init();
+//    player_car = cars[0];//new Car(game->rosalila_graphics);
+//    track = new Pista(player_car, game->rosalila_graphics, game->receiver,"pista_1.xml");
+//
+//    bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
+//    bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
+//    back_button = new BackButton(100,100,bu,bd,game->rosalila_graphics);
+//    track->init();
 }
 
 PlayScreen::~PlayScreen()
 {
-    //dtor
+    delete track;
+    delete back_button;
+    delete background;
+    delete bu;
+    delete bd;
+    delete track;
+    delete player_car;
 }
 
 void PlayScreen::show ()
 {
 //    loadCars("cars.xml");
     player_car = cars[((RaceGear*)game)->selected_car];
+    player_car->initCar();
+
     //player_car = new Car(game->rosalila_graphics);
-    track = new Pista(player_car, game->rosalila_graphics, game->receiver,"pista_1.xml");
+//    track = new Pista(player_car, game->rosalila_graphics, game->receiver,"pista_01.xml");
+    track = new Pista(player_car, game->rosalila_graphics, game->receiver,((RaceGear*)game)->selected_track);
 
     bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
     bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
@@ -34,9 +43,10 @@ void PlayScreen::show ()
 
 void PlayScreen::render (RosalilaGraphics*)
 {
-    track->logica();
     track->draw();
-
+    if(!track->getLose()){
+        track->logica();
+    }
 //    back_button->update(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
     if(back_button->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
         game->setScreen(((RaceGear*)game)->MENU);
@@ -79,8 +89,8 @@ void PlayScreen::loadCars(string path)
         car!=NULL;
         car = car->NextSibling("car"),i++)
         {
-            cars[i] = new Car(game->rosalila_graphics);
-            cars[i]->v_max = atof(car->ToElement()->Attribute("velocity"));
+            cars[i] = new Car(game->rosalila_graphics,car->ToElement()->Attribute("image"));
+            cars[i]->maximum = atof(car->ToElement()->Attribute("velocity"));
             cars[i]->a = atof(car->ToElement()->Attribute("aceleration"));
             cars[i]->CHANGE_TURN = atof(car->ToElement()->Attribute("turn"));
         }

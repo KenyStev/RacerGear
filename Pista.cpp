@@ -29,6 +29,9 @@ Pista::Pista(Car *c, RosalilaGraphics *paint, Receiver* receiver)
 Pista::Pista(){
 
 }
+bool Pista::getLose(){
+    return car->getLose();
+}
 void Pista::init(){
     for(int i=0; i<90; i++)
         miLista2->add("flags");
@@ -61,8 +64,9 @@ void Pista:: draw(){
     painter->draw2DImage(background,background->getWidth(),background->getHeight(),0,0,1,0,false,0,0,Color(255,255,255,255),0,0,false);
     road->draw(car,off_set_x,off_set_y);
     miLista2->draw(off_set_x,off_set_y);
-    car->draw(painter);
     display_time->drawText("Tiempo: "+ toString(seg)+" seg.",0,0);
+    car->draw();
+    cout<<receiver->getMouse_Y()<<endl;
 }
 Pista::~Pista()
 {
@@ -70,6 +74,7 @@ Pista::~Pista()
     delete miLista2;
     delete receiver;
     delete background;
+    delete display_time;
 }
 
 void Pista::clear()

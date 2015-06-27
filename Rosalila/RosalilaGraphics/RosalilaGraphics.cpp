@@ -499,6 +499,7 @@ void RosalilaGraphics::drawText(std::string text,int position_x,int position_y)
     glEnd();
     glDisable(GL_BLEND);
     glDisable(GL_TEXTURE_2D);
+    glDeleteTextures( 1, &texture );
 }
 
 void RosalilaGraphics::draw3D()

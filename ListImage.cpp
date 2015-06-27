@@ -21,7 +21,6 @@ ListImage::ListImage()
 
 ListImage::~ListImage()
 {
-    delete painter;
     delete root;
 }
 

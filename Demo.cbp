@@ -38,6 +38,8 @@
 		<Unit filename="BackButton.h" />
 		<Unit filename="Button.cpp" />
 		<Unit filename="Button.h" />
+		<Unit filename="Buttons.cpp" />
+		<Unit filename="Buttons.h" />
 		<Unit filename="Car.cpp" />
 		<Unit filename="Car.h" />
 		<Unit filename="ExitButton.cpp" />
