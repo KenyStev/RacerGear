@@ -4,6 +4,8 @@ RaceGear::RaceGear()
 {
     PLAY = new PlayScreen(this);
     MENU = new MenuScreen(this);
+    RANKING = new RankingScreen(this);
+    INSTRUCTION = new InsScreen(this);
 }
 
 RaceGear::~RaceGear()

@@ -20,19 +20,19 @@ void MenuScreen::show ()
         pd = game->rosalila_graphics->getTexture(assets_directory+"PLAY_DWN.png");
         centro_x=game->rosalila_graphics->screen_width/2-(pu->getWidth()/2);
         centro_y=game->rosalila_graphics->screen_height/2-(pu->getHeight()/2);
-        Pb = new PlayButton(centro_x,centro_y-100,pu,pd,game->rosalila_graphics);
+        Pb = new PlayButton(centro_x,centro_y-100,pu,pd,game->rosalila_graphics, this->game);
         //Instrctions Button init
         iu = game->rosalila_graphics->getTexture(assets_directory+"INSTR_UP.png");
         id = game->rosalila_graphics->getTexture(assets_directory+"INSTR_DWN.png");
         centro_x=game->rosalila_graphics->screen_width/2-(iu->getWidth()/2);
         centro_y=game->rosalila_graphics->screen_height/2-(iu->getHeight()/2);
-        Ib = new InstrButton(centro_x,centro_y,iu,id,game->rosalila_graphics);
+        Ib = new InstrButton(centro_x,centro_y,iu,id,game->rosalila_graphics,this->game);
         //Ranking Button init
         ru = game->rosalila_graphics->getTexture(assets_directory+"RANK_UP.png");
         rd = game->rosalila_graphics->getTexture(assets_directory+"RANK_DWN.png");
         centro_x=game->rosalila_graphics->screen_width/2-(ru->getWidth()/2);
         centro_y=game->rosalila_graphics->screen_height/2-(ru->getHeight()/2);
-        Rb = new RankButton(centro_x,centro_y+100,ru,rd,game->rosalila_graphics);
+        Rb = new RankButton(centro_x,centro_y+100,ru,rd,game->rosalila_graphics,this->game);
         //Exit Button init
         eu = game->rosalila_graphics->getTexture(assets_directory+"EXIT_UP.png");
         ed = game->rosalila_graphics->getTexture(assets_directory+"EXIT_DWN.png");
