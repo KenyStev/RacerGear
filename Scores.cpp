@@ -32,7 +32,7 @@ bool Scores::createNewUserBinary(string name)
     file.close();
 
 }
-bool Scores::readFileBinary(RosalilaGraphics *painter){
+bool Scores::readFileBinary(){
     string archivo ="ranking";
     ifstream file(archivo.c_str());
     file.seekg(0,ios::end);
@@ -55,38 +55,23 @@ bool Scores::readFileBinary(RosalilaGraphics *painter){
         //u->imprimir();
         mi_mapa.insert(pair<int,Usuario*>(u->getAverage(),u));
     }
-    //cout<<"----------------------"<<endl;
-    file.close();
-    int cont=0;
-    //string todo, tab=" ";
-    map<int,Usuario*>::iterator i = mi_mapa.begin();
-    Usuario *user,*user2, *user3;
-    user = i->second;
-    user->print(painter,0);
-    cout<<i->second->nombre<<endl;
-    i++;
-    user2 = i->second;
-    user2->print(painter,1);
-    cout<<i->second->nombre<<endl;
-    i++;
-    user3 = i->second;
-    user3->print(painter,2);
-    cout<<i->second->nombre<<endl;
-
-//    while(i!= mi_mapa.end() && cont<6){
-//        Usuario *user;
-//        user = i->second;
-//        //string name = user->nombre;
-//        //int s1 = user->pista1,s2 = user->pista2,s3 = user->pista3,s4 = user->pista4,pro = user->getAverage();
-//        //todo += name+tab+toString(s1)+tab+toString(s2)+tab+toString(s3)+tab+toString(s4)+tab+toString(pro)+"\n";
-////        cout<<todo<<endl;
-//        user->print(painter);
-//        i++;
-//        cont++;
-//    }
-    //cout<<todo<<endl;
-    //painter->drawText(todo,100,cont*100);
     return true;
+}
+
+void Scores::printMap(){
+    multimap<int,Usuario*>::iterator i = mi_mapa.begin();
+    int cont=0;
+    int cantidad=mi_mapa.size();
+    while(cont<cantidad && cont<6){
+        Usuario * user;
+        user = i->second;
+        user->print(cont);
+        i++;
+        cont++;
+        cout<<"Iteracion: "<<cont<<endl;
+    }
+    cout<<"Final Funcion print map"<<endl;
+    //font->drawText("Hola",0,0);
 }
 
 int Scores::seekUser(string name){

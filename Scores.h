@@ -6,16 +6,18 @@
 #include <stdlib.h>
 #include <string.h>
 #include <map>
-#include "Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+#include "Font.h"
 using namespace std;
 class Scores
 {
     public:
         string PATH_ARCHIVO;
+        Font *font;
         multimap<int,Usuario*>mi_mapa;
         bool createNewUserBinary(string name);
-        bool readFileBinary(RosalilaGraphics *painter);
+        bool readFileBinary();
         int seekUser(string name);
+        void printMap();
         bool setPuntosToPista(string user, int puntos, int pista);
         Scores();
         virtual ~Scores();
