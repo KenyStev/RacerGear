@@ -82,7 +82,7 @@ void MenuScreen::update(){
         click = game->receiver->isLeftClickDown();
 //        Pb->update(mouse_x,mouse_y,click);
         if(Pb->clicked(mouse_x,mouse_y,click)){
-            game->setScreen(((RaceGear*)game)->PLAY);//new PlayScreen(game));
+            game->setScreen(((RaceGear*)game)->SELECT);//new PlayScreen(game));
         }
         Ib->update(mouse_x,mouse_y,click);
         Rb->update(mouse_x,mouse_y,click);

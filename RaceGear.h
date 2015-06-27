@@ -4,6 +4,7 @@
 #include "Game.h"
 #include "PlayScreen.h"
 #include "MenuScreen.h"
+#include "SelectScreen.h"
 #include "RankingScreen.h"
 #include "InsScreen.h"
 
@@ -12,8 +13,12 @@
 class RaceGear : public Game
 {
     public:
+        int selected_car;
+        string selected_track;
+
         PlayScreen *PLAY;
         MenuScreen *MENU;
+        SelectScreen *SELECT;
         RankingScreen *RANKING;
         InsScreen *INSTRUCTION;
         RaceGear();

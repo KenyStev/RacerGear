@@ -23,28 +23,28 @@ using namespace std;
 class Button
 {
     public:
-    RosalilaGraphics* painter;
-//    Receiver *receiver;
-    Image* img_up;
-    Image* img_dwn;
-    SDL_Rect rect_img;
-    bool clickLeft;
-    int mouse_x;
-    int mouse_y;
-    int x;
-    int y;
-    float xMinima; // Estos atributos sirven para poner las coordenadas para pulsar el botón.
-    float yMinima;
-	float xMaxima;
-	float yMaxima;
-	bool quit;
-	void update(int x, int y, bool click);
-	void setMouse(int x, int y, bool click);
-	bool sePulsaBoton(int x, int y, bool click);
-	bool mouseEncima(int x, int y, bool click);
-	void draw(int x, int y, bool click);
-	bool clicked(int M_x, int M_y, bool click);
-	virtual void funcionamiento()=0;
+        RosalilaGraphics* painter;
+    //    Receiver *receiver;
+        Image* img_up;
+        Image* img_dwn;
+        SDL_Rect rect_img;
+        bool clickLeft;
+        int mouse_x;
+        int mouse_y;
+        int x;
+        int y;
+        float xMinima; // Estos atributos sirven para poner las coordenadas para pulsar el botón.
+        float yMinima;
+        float xMaxima;
+        float yMaxima;
+        bool quit;
+        void update(int x, int y, bool click);
+        void setMouse(int x, int y, bool click);
+        bool sePulsaBoton(int x, int y, bool click);
+        bool mouseEncima(int x, int y, bool click);
+        void draw(int x, int y, bool click);
+        bool clicked(int M_x, int M_y, bool click);
+        virtual void funcionamiento()=0;
         Button(int x_position, int y_position, Image* up, Image* down, RosalilaGraphics* painter);
         Button();
         virtual ~Button();

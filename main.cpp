@@ -38,18 +38,18 @@ using namespace std;
 #include <SDL2_mixer/SDL_mixer.h>
 #endif
 
-#include "Pista.h"
-#include "ListImage.h"
-#include "Car.h"
-#include <math.h>
-#include "Button.h"
-#include "PlayButton.h"
-#include "InstrButton.h"
-#include "RankButton.h"
-#include "ExitButton.h"
-#include "BackButton.h"
-#include<list>
-#include "Scores.h"
+//#include "Pista.h"
+//#include "ListImage.h"
+//#include "Car.h"
+//#include <math.h>
+//#include "Button.h"
+//#include "PlayButton.h"
+//#include "InstrButton.h"
+//#include "RankButton.h"
+//#include "ExitButton.h"
+//#include "BackButton.h"
+//#include<list>
+//#include "Scores.h"
 
 #include "RaceGear.h"
 

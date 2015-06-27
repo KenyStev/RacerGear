@@ -1,13 +1,14 @@
 #include "Car.h"
 
-Car::Car(RosalilaGraphics *p)
+Car::Car(RosalilaGraphics *p, string image)
 {
     painter = p;
-    state["ahead"] = p->getTexture("assets/ahead.png");
-    state["left"] = p->getTexture("assets/left.png");
-    state["right"] = p->getTexture("assets/right.png");
+    state["ahead"] = p->getTexture("assets/"+image+"_ahead.png");
+    state["left"] = p->getTexture("assets/"+image+"_left.png");
+    state["right"] = p->getTexture("assets/"+image+"_right.png");
 
     car = state["ahead"];
+
     velocimeter_state["first"] = p->getTexture(assets_directory+"Velocimeter_1.png");
     velocimeter_state["second"] = p->getTexture(assets_directory+"Velocimeter_2.png");
     velocimeter_state["third"] = p->getTexture(assets_directory+"Velocimeter_3.png");
@@ -45,6 +46,7 @@ Car::Car(RosalilaGraphics *p)
     CHANGE_TURN=13;
     TURN=CHANGE_TURN;
     outOfRoad=false;
+    hurt=0;
     time=0;
 }
 Car::Car(){
@@ -53,9 +55,36 @@ Car::Car(){
 
 Car::~Car()
 {
-    delete painter, wheels,car;
-    delete velocimeter,marker,velocimeter_state,state;
+    delete painter;
+    delete car;
+    delete velocimeter;
+    delete marker;
+//    delete velocimeter_state;
+//    delete state;
 }
+
+void Car::initCar()
+{
+    marker_speed =0;
+//    a=0.2;
+    v=0;
+//    maximum = 15;
+    v_max=0;
+    first = true, second = false,third = false,fourth = false,fifth = false, speed_up = false,danger= false, lose = false;
+    warning_actual=0;
+    off_set_x=0;
+//    CHANGE_TURN=13;
+    TURN=CHANGE_TURN;
+    outOfRoad=false;
+    hurt=0;
+    time=0;
+
+    scale=1;
+    marker_x = 114;
+    marker_y = 614;//(140+velocimeter->getHeight())-marker->getHeight();
+    marker_y_max = 201;//((140+velocimeter->getHeight())-marker->getHeight())-413;
+}
+
 void Car::warningAnimation(){
         painter->draw2DImage(warning[warning_actual],
                             warning[warning_actual]->getWidth(),warning[warning_actual]->getHeight(),
@@ -86,10 +115,19 @@ void Car::update(Receiver *r)
     if(r->isKeyDown(SDL_SCANCODE_UP) || r->isJoyDown(1,0))
     {
         speed_up = true;
-        if(v<v_max)
+        if(hurt==0)
         {
-            v+=a;
+            if(v<v_max)
+            {
+                v+=a;
+            }
         }
+        else
+        {
+            speed_up = false;
+            v=hurt;
+        }
+
     }else{
         speed_up = false;
         if(v>0)
@@ -98,9 +136,9 @@ void Car::update(Receiver *r)
             v=0;
     }
 
-    if(v>v_max){
-        v-=a*2;
-    }
+//    if(v>v_max){
+//        v-=a*2;
+//    }
     car = state["ahead"];
     if(r->isKeyDown(SDLK_1)){
         second=false,third=false,fourth =false,fifth =false;
@@ -169,6 +207,7 @@ void Car::update(Receiver *r)
         time=0;
 
     turn=false;
+    hurt=0;
     if(v>0){
         if((r->isKeyDown(SDL_SCANCODE_RIGHT)  || r->isJoyDown(-6,0))&& off_set_x>-850)
         {
