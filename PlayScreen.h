@@ -8,10 +8,10 @@
 #include <map>
 
 //buttons
-#include "PlayButton.h"
-#include "ExitButton.h"
-#include "InstrButton.h"
-#include "RankButton.h"
+#include "Buttons.h"
+//#include "ExitButton.h"
+//#include "InstrButton.h"
+//#include "RankButton.h"
 
 class PlayScreen : public Screen
 {

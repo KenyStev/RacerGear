@@ -163,11 +163,13 @@
 1435369766 source:/media/kenystev/Datos/keny++/TopGearTry/Button.cpp
 	"Button.h"
 
-1435370034 source:/media/kenystev/Datos/keny++/TopGearTry/Buttons.cpp
+1435421187 source:/media/kenystev/Datos/keny++/TopGearTry/Buttons.cpp
 	"Buttons.h"
+	"RaceGear.h"
 
-1435341317 /media/kenystev/Datos/keny++/TopGearTry/Buttons.h
+1435421185 /media/kenystev/Datos/keny++/TopGearTry/Buttons.h
 	"Button.h"
+	"Game.h"
 
 1435419475 source:/media/kenystev/Datos/keny++/TopGearTry/Car.cpp
 	"Car.h"
@@ -209,10 +211,10 @@
 	"InsScreen.h"
 	"RaceGear.h"
 
-1435419475 /media/kenystev/Datos/keny++/TopGearTry/InsScreen.h
+1435421148 /media/kenystev/Datos/keny++/TopGearTry/InsScreen.h
 	"Game.h"
 	"Screen.h"
-	"BackButton.h"
+	"Buttons.h"
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
 1435419588 /media/kenystev/Datos/keny++/TopGearTry/RaceGear.h
@@ -223,21 +225,18 @@
 	"RankingScreen.h"
 	"InsScreen.h"
 
-1435168293 /media/kenystev/Datos/keny++/TopGearTry/PlayScreen.h
+1435421123 /media/kenystev/Datos/keny++/TopGearTry/PlayScreen.h
 	"Screen.h"
 	"Game.h"
 	"Pista.h"
 	"Car.h"
 	<map>
-	"PlayButton.h"
-	"ExitButton.h"
-	"InstrButton.h"
-	"RankButton.h"
+	"Buttons.h"
 
-1435247624 /media/kenystev/Datos/keny++/TopGearTry/Pista.h
+1435421116 /media/kenystev/Datos/keny++/TopGearTry/Pista.h
 	"ListImage.h"
 	<iostream>
-	"BackButton.h"
+	"Buttons.h"
 	"Car.h"
 	<map>
 	<vector>
@@ -275,27 +274,23 @@
 	"Button.h"
 	"Game.h"
 
-1434401217 /media/kenystev/Datos/keny++/TopGearTry/MenuScreen.h
+1435421131 /media/kenystev/Datos/keny++/TopGearTry/MenuScreen.h
 	"Game.h"
 	"PlayScreen.h"
 	"Screen.h"
-	"PlayButton.h"
-	"ExitButton.h"
-	"RankButton.h"
-	"InstrButton.h"
+	"Buttons.h"
 
-1435368237 /media/kenystev/Datos/keny++/TopGearTry/SelectScreen.h
+1435420590 /media/kenystev/Datos/keny++/TopGearTry/SelectScreen.h
 	"Screen.h"
 	"Game.h"
 	"Buttons.h"
-	"PlayButton.h"
 	<vector>
 
-1435419475 /media/kenystev/Datos/keny++/TopGearTry/RankingScreen.h
+1435421141 /media/kenystev/Datos/keny++/TopGearTry/RankingScreen.h
 	"Screen.h"
 	"Game.h"
 	"Scores.h"
-	"BackButton.h"
+	"Buttons.h"
 
 1435419475 /media/kenystev/Datos/keny++/TopGearTry/Scores.h
 	<iostream>
@@ -319,7 +314,7 @@
 	"ListImage.h"
 	<cmath>
 
-1435419475 source:/media/kenystev/Datos/keny++/TopGearTry/main.cpp
+1435420651 source:/media/kenystev/Datos/keny++/TopGearTry/main.cpp
 	<GL/freeglut.h>
 	<GL/gl.h>
 	<stdio.h>
@@ -344,18 +339,6 @@
 	<SDL2_image/SDL_image.h>
 	<SDL2_ttf/SDL_ttf.h>
 	<SDL2_mixer/SDL_mixer.h>
-	"Pista.h"
-	"ListImage.h"
-	"Car.h"
-	<math.h>
-	"Button.h"
-	"PlayButton.h"
-	"InstrButton.h"
-	"RankButton.h"
-	"ExitButton.h"
-	"BackButton.h"
-	<list>
-	"Scores.h"
 	"RaceGear.h"
 
 1435419475 source:/media/kenystev/Datos/keny++/TopGearTry/MenuScreen.cpp
@@ -533,4 +516,14 @@
 
 1434341202 source:/media/kenystev/Datos/keny++/TopGearTry/Screen.cpp
 	"Screen.h"
+
+1435419827 source:/media/kenystev/Datos/keny++/TopGearTry/SelectScreen.cpp
+	"SelectScreen.h"
+	"RaceGear.h"
+
+1435007475 source:/media/kenystev/Datos/keny++/TopGearTry/Step.cpp
+	"Step.h"
+
+1435419475 source:/media/kenystev/Datos/keny++/TopGearTry/Usuario.cpp
+	"Usuario.h"
 
