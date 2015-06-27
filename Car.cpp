@@ -162,7 +162,7 @@ void Car::update(Receiver *r)
             marker_y=614;
     }
     if(danger){
-        if(time>8){
+        if(time>15){
             lose=true;
         }
     }else
