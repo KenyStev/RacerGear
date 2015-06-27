@@ -13,9 +13,11 @@ class RaceGear : public Game
     public:
         int selected_car;
         string selected_track;
+
         PlayScreen *PLAY;
         MenuScreen *MENU;
         SelectScreen *SELECT;
+
         RaceGear();
 
 //        void setScreen(Screen *screen);
