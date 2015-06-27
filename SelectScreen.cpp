@@ -15,7 +15,7 @@ void SelectScreen::show ()
 {
     play_button = new PlayButton(1162,712,game->rosalila_graphics->getTexture(assets_directory+"PLAY_UP.png"),
                                     game->rosalila_graphics->getTexture(assets_directory+"PLAY_DWN.png"),
-                                    game->rosalila_graphics);
+                                    game->rosalila_graphics,game);
 
 
     //load cars
