@@ -4,7 +4,6 @@
 RankingScreen::RankingScreen(Game *game)
 {
     this->game = game;
-    ranking = new Scores();
     //ctor
 }
 
@@ -13,6 +12,11 @@ void RankingScreen:: show (){
     bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
     bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
     back_button = new BackButton(100,100,bu,bd,game->rosalila_graphics);
+    ranking = new Scores();
+    ranking->readFileBinary();
+    ranking->printMap();
+    game->rosalila_graphics->drawText("MAMA",500,0);
+
 //    ranking = new Ranking(game->rosalila_graphics);
 
 }
@@ -26,8 +30,7 @@ void RankingScreen::render (RosalilaGraphics*p){
                             Color(255,255,255,255),
                             0,0,
                             false);
-    ranking->readFileBinary(game->rosalila_graphics);
-
+    ranking->printMap();
     if(back_button->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
             game->setScreen(((RaceGear*)game)->MENU);
         back_button->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());

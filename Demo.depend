@@ -247,19 +247,19 @@
 	"Scores.h"
 	"Buttons.h"
 
-1435382977 /home/luis/Documentos/Proyecto Nuevo/Scores.h
+1435429020 /home/luis/Documentos/Proyecto Nuevo/Scores.h
 	<iostream>
 	<fstream>
 	"Usuario.h"
 	<stdlib.h>
 	<string.h>
 	<map>
-	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Font.h"
 
-1435391401 /home/luis/Documentos/Proyecto Nuevo/Usuario.h
+1435429967 /home/luis/Documentos/Proyecto Nuevo/Usuario.h
 	<fstream>
 	<iostream>
-	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+	"Font.h"
 
 1435427327 /home/luis/Documentos/Proyecto Nuevo/InsScreen.h
 	"Game.h"
@@ -285,7 +285,7 @@
 	"ListImage.h"
 	<cmath>
 
-1435427328 source:/home/luis/Documentos/Proyecto Nuevo/main.cpp
+1435438603 source:/home/luis/Documentos/Proyecto Nuevo/main.cpp
 	<GL/freeglut.h>
 	<GL/gl.h>
 	<stdio.h>
@@ -327,7 +327,7 @@
 1435427327 source:/home/luis/Documentos/Proyecto Nuevo/RaceGear.cpp
 	"RaceGear.h"
 
-1435389187 source:/home/luis/Documentos/Proyecto Nuevo/RankingScreen.cpp
+1435438719 source:/home/luis/Documentos/Proyecto Nuevo/RankingScreen.cpp
 	"RankingScreen.h"
 	"RaceGear.h"
 
@@ -474,7 +474,7 @@
 	"tinyxml.h"
 	<windows.h>
 
-1435391501 source:/home/luis/Documentos/Proyecto Nuevo/Scores.cpp
+1435438828 source:/home/luis/Documentos/Proyecto Nuevo/Scores.cpp
 	"Scores.h"
 
 1435273244 source:/home/luis/Documentos/Proyecto Nuevo/Screen.cpp
@@ -487,6 +487,6 @@
 1435273244 source:/home/luis/Documentos/Proyecto Nuevo/Step.cpp
 	"Step.h"
 
-1435391401 source:/home/luis/Documentos/Proyecto Nuevo/Usuario.cpp
+1435438741 source:/home/luis/Documentos/Proyecto Nuevo/Usuario.cpp
 	"Usuario.h"
 
