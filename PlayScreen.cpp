@@ -46,6 +46,7 @@ void PlayScreen::render (RosalilaGraphics*p)
     track->draw();
     if(!track->getLose()){
         track->logica();
+        ((RaceGear*)game)->setTime(track->seg);
     }
 
     if(track->laps==0)

@@ -15,6 +15,7 @@ class RaceGear : public Game
     public:
         int selected_car;
         string selected_track;
+        int time;
 
         //datos del jugador
         string name_player;
@@ -30,8 +31,9 @@ class RaceGear : public Game
 
 //        void setScreen(Screen *screen);
 //        void setScreen(int);
-
+        void setTime(int time);
         void create();
+        string getSelectedTrack();
         virtual ~RaceGear();
     protected:
     private:

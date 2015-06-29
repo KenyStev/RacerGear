@@ -6,19 +6,19 @@
 #include <stdlib.h>
 #include <string.h>
 #include <map>
-#include "Font.h"
 using namespace std;
 class Scores
 {
     public:
         string PATH_ARCHIVO;
-        Font *font;
         multimap<int,Usuario*>mi_mapa;
         bool createNewUserBinary(string name);
         bool readFileBinary();
         int seekUser(string name);
         void printMap();
         bool setPuntosToPista(string user, int puntos, int pista);
+        void seekRLP(int pista);
+        int getRLP(string name);
         Scores();
         virtual ~Scores();
     protected:
