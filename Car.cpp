@@ -40,9 +40,9 @@ Car::Car(RosalilaGraphics *p, string image)
     v=0;
     maximum = 15;
     v_max=0;
-    first = true, second = false,third = false,fourth = false,fifth = false, speed_up = false,danger= false, lose = false;
+    first = false, second = false,third = false,fourth = false,fifth = false, speed_up = false,danger= false, lose = false;
     warning_actual=0;
-    off_set_x=0;
+    off_set_x=0,cambio =0;
     CHANGE_TURN=13;
     TURN=CHANGE_TURN;
     outOfRoad=false;
@@ -66,11 +66,11 @@ Car::~Car()
 void Car::initCar()
 {
     marker_speed =0;
-//    a=0.2;
+    cambio =0;
     v=0;
 //    maximum = 15;
     v_max=0;
-    first = true, second = false,third = false,fourth = false,fifth = false, speed_up = false,danger= false, lose = false;
+    first = false, second = false,third = false,fourth = false,fifth = false, speed_up = false,danger= false, lose = false;
     warning_actual=0;
     off_set_x=0;
 //    CHANGE_TURN=13;
@@ -116,17 +116,21 @@ void Car::update(Receiver *r)
         speed_up = true;
         if(hurt==0)
         {
-            if(v<v_max)
-            {
-                v+=a;
+           if(first || second || third || fourth || fifth){
+                if(v<=v_max)
+                {
+                    v+=a;
+                }
+                else
+                    v-=a*2;
             }
+
         }
         else
         {
             speed_up = false;
             v=hurt;
         }
-
     }else{
         speed_up = false;
         if(v>0)
@@ -139,7 +143,19 @@ void Car::update(Receiver *r)
 //        v-=a*2;
 //    }
     car = state["ahead"];
-    if(r->isKeyDown(SDLK_1) || r->isKeyPressed(SDLK_a)){
+    if(r->isKeyPressed(SDLK_a)){
+        if(cambio<6)
+            cambio++;
+
+    }
+
+
+    if(r->isKeyPressed(SDLK_z)){
+        if(cambio>0)
+            cambio--;
+    }
+
+    if(cambio==1){
         second=false,third=false,fourth =false,fifth =false;
         velocimeter = velocimeter_state["first"];
         v_max = maximum *0.20;
@@ -149,7 +165,7 @@ void Car::update(Receiver *r)
             first = true;
         }
     }
-    else if(r->isKeyDown(SDLK_2)){
+    else if(cambio==2){
         first = false,third=false,fourth =false,fifth =false;
         velocimeter= velocimeter_state["second"];
         v_max = maximum *0.40;
@@ -159,7 +175,7 @@ void Car::update(Receiver *r)
         second=true;
         }
     }
-    else if(r->isKeyDown(SDLK_3)){
+    else if(cambio==3){
         second=false,first=false,fourth =false,fifth =false;
         velocimeter= velocimeter_state["third"];
         v_max = maximum *0.60;
@@ -169,7 +185,7 @@ void Car::update(Receiver *r)
             third = true;
         }
     }
-    else if(r->isKeyDown(SDLK_4)){
+    else if(cambio==4){
         third = false,second=false,first=false,fifth =false;
         velocimeter= velocimeter_state["fourth"];
         v_max = maximum *0.80;
@@ -179,7 +195,7 @@ void Car::update(Receiver *r)
             fourth = true;
         }
     }
-    else if(r->isKeyDown(SDLK_5)){
+    else if(cambio==5){
         fourth = false,second=false,third=false,first =false;
         velocimeter= velocimeter_state["fifth"];
         v_max = maximum;

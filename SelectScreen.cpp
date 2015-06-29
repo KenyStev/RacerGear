@@ -143,5 +143,11 @@ void SelectScreen::catchName()
             char c = i+65;
             name+=c;
         }
+        if(game->receiver->isKeyPressed(SDLK_BACKSPACE)){
+            name ="";
+        }
+        if(game->receiver->isKeyPressed(SDLK_SPACE)){
+            name +=" ";
+        }
     }
 }

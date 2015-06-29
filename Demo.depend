@@ -173,7 +173,7 @@
 1435273244 /home/luis/Documentos/Proyecto Nuevo/Screen.h
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
-1435551374 /home/luis/Documentos/Proyecto Nuevo/RaceGear.h
+1435553091 /home/luis/Documentos/Proyecto Nuevo/RaceGear.h
 	"Game.h"
 	"PlayScreen.h"
 	"MenuScreen.h"
@@ -217,7 +217,7 @@
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 	"Rosalila/RosalilaSound/RosalilaSound.h"
 
-1435523317 /home/luis/Documentos/Proyecto Nuevo/Car.h
+1435586996 /home/luis/Documentos/Proyecto Nuevo/Car.h
 	"SDL2/SDL.h"
 	"Rosalila/RosalilaUtility/RosalilaUtility.h"
 	"Rosalila/RosalilaInputs/RosalilaInputs.h"
@@ -229,11 +229,12 @@
 	<iostream>
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
-1435427327 /home/luis/Documentos/Proyecto Nuevo/MenuScreen.h
+1435589808 /home/luis/Documentos/Proyecto Nuevo/MenuScreen.h
 	"Game.h"
 	"PlayScreen.h"
 	"Screen.h"
 	"Buttons.h"
+	"Rosalila/RosalilaSound/RosalilaSound.h"
 
 1435551374 /home/luis/Documentos/Proyecto Nuevo/SelectScreen.h
 	"Screen.h"
@@ -267,7 +268,7 @@
 	"Buttons.h"
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
-1435550837 source:/home/luis/Documentos/Proyecto Nuevo/Car.cpp
+1435587122 source:/home/luis/Documentos/Proyecto Nuevo/Car.cpp
 	"Car.h"
 
 1435427327 source:/home/luis/Documentos/Proyecto Nuevo/Font.cpp
@@ -285,7 +286,7 @@
 	"ListImage.h"
 	<cmath>
 
-1435551610 source:/home/luis/Documentos/Proyecto Nuevo/main.cpp
+1435589876 source:/home/luis/Documentos/Proyecto Nuevo/main.cpp
 	<GL/freeglut.h>
 	<GL/gl.h>
 	<stdio.h>
@@ -312,19 +313,19 @@
 	<SDL2_mixer/SDL_mixer.h>
 	"RaceGear.h"
 
-1435427327 source:/home/luis/Documentos/Proyecto Nuevo/MenuScreen.cpp
+1435593238 source:/home/luis/Documentos/Proyecto Nuevo/MenuScreen.cpp
 	"MenuScreen.h"
 	"RaceGear.h"
 
-1435551374 source:/home/luis/Documentos/Proyecto Nuevo/Pista.cpp
+1435557263 source:/home/luis/Documentos/Proyecto Nuevo/Pista.cpp
 	"Pista.h"
 	"ListImage.h"
 
-1435551374 source:/home/luis/Documentos/Proyecto Nuevo/PlayScreen.cpp
+1435553093 source:/home/luis/Documentos/Proyecto Nuevo/PlayScreen.cpp
 	"PlayScreen.h"
 	"RaceGear.h"
 
-1435551374 source:/home/luis/Documentos/Proyecto Nuevo/RaceGear.cpp
+1435553092 source:/home/luis/Documentos/Proyecto Nuevo/RaceGear.cpp
 	"RaceGear.h"
 
 1435550093 source:/home/luis/Documentos/Proyecto Nuevo/RankingScreen.cpp
@@ -480,7 +481,7 @@
 1435273244 source:/home/luis/Documentos/Proyecto Nuevo/Screen.cpp
 	"Screen.h"
 
-1435551582 source:/home/luis/Documentos/Proyecto Nuevo/SelectScreen.cpp
+1435553718 source:/home/luis/Documentos/Proyecto Nuevo/SelectScreen.cpp
 	"SelectScreen.h"
 	"RaceGear.h"
 

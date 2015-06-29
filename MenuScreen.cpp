@@ -42,6 +42,7 @@ void MenuScreen::show ()
         mouse_x=0;
         mouse_y=0;
         click=false;
+
 }
 
 void MenuScreen::render (RosalilaGraphics*painter)

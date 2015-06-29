@@ -58,6 +58,14 @@ void Pista::logica(){
             cout<<"Laps: "<<laps<<endl;
 //            if(laps==0)exit(11);
         }
+        if(getLose()){
+                off_set_y=0;
+//            if(off_set_y>0)
+//                off_set_y-=1;
+//            else
+//                off_set_y=0;
+        }
+
 }
 void Pista:: draw(){
 

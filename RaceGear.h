@@ -30,7 +30,6 @@ class RaceGear : public Game
 
 //        void setScreen(Screen *screen);
 //        void setScreen(int);
-        void setTime(int time);
         void create();
         string getSelectedTrack();
         virtual ~RaceGear();

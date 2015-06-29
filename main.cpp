@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
     while(true)
     {
         race_game->render();
+
     }
 
     return 0;

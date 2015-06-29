@@ -22,7 +22,7 @@ class Car
         vector<Image*> warning;
         bool getLose();
         void warningAnimation();
-        int warning_actual;
+        int warning_actual,cambio=0;
 
         Image *car,*velocimeter,*marker;
         map<string,Image*> state;
