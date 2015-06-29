@@ -1,6 +1,6 @@
-Rosalila Demo
+Web Page of ReceGear
 =============
-rosalilastudio.com
+kenystev.github.io/racergear
 
 Build instructions using Code::Blocks:
 

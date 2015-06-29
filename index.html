@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="RaceGear : A PC Game Programmed with Rosalila Engine 2">
+    <meta name="author" content="KenyStev & Lisaula">
 
-    <title>Half Slider - Start Bootstrap Template</title>
+    <title>RaceGear Game</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,34 +27,27 @@
 </head>
 
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">RaceGear</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
+
+            <a id="forkme_banner" href="https://github.com/kenystev/racergear"><img src="images/blacktocat.png"></a>
+            
+            <section id="downloads">
+                <a class="zip_download_link" href="#">Download this project as a .zip file</a >
+                <a class="tar_download_link" href="#">Download this project as a tar.gz file</a>
+            </section>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
@@ -73,23 +66,29 @@
         <div class="carousel-inner">
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+        		<div class="details_car"> <img src="images/details_reptileCar.png"/>
+
+        		</div>
                 <div class="carousel-caption">
-                    <h2>Caption 1</h2>
+                    
                 </div>
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="details_car"> <img src="images/details_stormCar.png"/>
+
+                </div>
                 <div class="carousel-caption">
-                    <h2>Caption 2</h2>
+                    
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="details_car"> <img src="images/details_psychoCar.png"/>
+
+                </div>
                 <div class="carousel-caption">
-                    <h2>Caption 3</h2>
+                    
                 </div>
             </div>
         </div>
@@ -109,8 +108,246 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h1>Half Slider by Start Bootstrap</h1>
-                <p>The background images for the slider are set directly in the HTML using inline CSS. The rest of the styles for this template are contained within the <code>half-slider.css</code>file.</p>
+                <h1>Description</h1>
+                <p>RaceGear is a 2D Game with a flight of fancy 3D programed ic C++ using the <a href="https://github.com/Rosalila/RosalilaEngine"/>Rosalila Engine 2</a> library </p>
+
+                <p>The Rosalila Engine 2 dependencies are needed to play the game or run the projects, this need SDL2 library too.
+                You can put this comand in the terminal to install the dependencies:</p>
+                <pre>apt-get install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev freeglut3-dev</pre>
+                <p>and next link the libraries:</p>
+                <p>In Code::Blocks: "Linker settings" -> "Other linker options" Add the following:</p>
+                <pre>
+        -lGL
+        -lglut
+        -lGLU
+        -lSDL2
+        -lSDL2_image
+        -lSDL2_ttf
+        -lSDL2_mixer</pre>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>License</h1>
+                <p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+
+                <p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+                <p>See the GNU General Public License for more details. </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Screenshots and Video gameplay</h1>
+                <div id="num1" class="jumbotron">
+                  
+                </div>
+                <div id="num2" class="jumbotron">
+                  
+                </div>
+                <div id="num3" class="jumbotron">
+                  
+                </div>
+                <div id="num4" class="jumbotron">
+                  
+                </div>
+                <div id="num5" class="jumbotron">
+                  
+                </div>
+                <div id="num6" class="jumbotron">
+                  
+                </div>
+                
+                <iframe width="1140" height="600" src="https://www.youtube.com/embed/0g_DF-XIcjE" frameborder="0" allowfullscreen></iframe>
+                
+            </div>
+        </div>
+
+        <hr>
+        
+        <div class="row">
+            <div class="col-lg-12">
+            <h1>Authors and Contributors</h1>
+            <p>Everything in this game was make by we <b>Luis C. Isaula</b> and <b>Kevin J. Estevez</b></p>
+            <p>When someone needed an assets only he will make it. Then here we are gonna say step by step who did make every asset?</p>
+
+            <div class="row">
+            <!-- CAR -->
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/red_right.png" alt="...">
+                  <div class="caption">
+                    <h3>KenyStev</h3>
+                    <h6>This is the FireCar</h6>
+                    <p>Diferents cars of the game</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/red_ahead.png" alt="...">
+                  <div class="caption">
+                    <h3>KenyStev</h3>
+                    <h6>This is the FireCar</h6>
+                    <p>Diferents cars of the game</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/red_left.png" alt="...">
+                  <div class="caption">
+                    <h3>KenyStev</h3>
+                    <h6>This is the FireCar</h6>
+                    <p>Diferents cars of the game</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BACKGROUNDS -->
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Menu.png" alt="...">
+                  <div class="caption">
+                    <h3>Lisaula</h3>
+                    <p>Diferents backgounds of the screean's game and the logo</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Ranking_background.png" alt="...">
+                  <div class="caption">
+                    <h3>Lisaula</h3>
+                    <p>Diferents backgounds of the screean's game</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Instrucciones.png" alt="...">
+                  <div class="caption">
+                    <h3>Lisaula</h3>
+                    <p>Diferents backgounds of the screean's game</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEPS -->
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/puas_1-2.png" alt="...">
+                  <div class="caption">
+                    <h3>KenyStev</h3>
+                    <p>Diferents steps of the raod with diferents obstacles</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/puas_1-3.png" alt="...">
+                  <div class="caption">
+                    <h3>KenyStev</h3>
+                    <p>Diferents steps of the raod with diferents obstacles</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/puas_2-3.png" alt="...">
+                  <div class="caption">
+                    <h3>KenyStev</h3>
+                    <p>Diferents steps of the raod with diferents obstacles</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BUTTONS -->
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/PLAY_DWN.png" alt="...">
+                  <div class="caption">
+                    <h3>Lisaula</h3>
+                    <p>Diferents buttons of the game</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Menu_DOWN.png" alt="...">
+                  <div class="caption">
+                    <h3>Lisaula</h3>
+                    <p>Diferents buttons of the game</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/BACK_DWN.png" alt="...">
+                  <div class="caption">
+                    <h3>Lisaula</h3>
+                    <p>Diferents buttons of the game</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- WARNING -->
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Warnig_2.png" alt="...">
+                  <div class="caption">
+                    <h3>Lisaula</h3>
+                    <p>Warning Animation</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Warnig_3.png" alt="...">
+                  <div class="caption">
+                    <h3>Lisaula</h3>
+                    <p>Warning Animation</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Warnig_4.png" alt="...">
+                  <div class="caption">
+                    <h3>Lisaula</h3>
+                    <p>Warning Animation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Support or Contact</h1>
+                <p>If you're having any trouble with the game, feel free to create a new <a href="https://github.com/kenystev/racergear/issues">issue</a> so we can get that fixed.</p>
             </div>
         </div>
 
@@ -118,11 +355,13 @@
 
         <!-- Footer -->
         <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="well well-lg">
+                    <p>CopyRight &copy; RaceGear maintained by <a id="kenystev" href="https://github.com/kenystev">KenyStev</a> and <a id="lisaula" href="https://github.com/lisaula">Lisaula</a></p>
                 </div>
             </div>
+        </div>
             <!-- /.row -->
         </footer>
 

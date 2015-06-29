@@ -1,6 +1,0 @@
-<Pistas>
-	<pista path="pista_novato.xml" button="p_novato"/>
-	<pista path="pista_01.xml" button="p_01"/>
-	<pista path="pista_02.xml" button="p_02"/>
-	<pista path="pista_03.xml" button="p_03"/>
-</Pistas>
