@@ -41,7 +41,7 @@ void PlayScreen::show ()
     track->init();
 }
 
-void PlayScreen::render (RosalilaGraphics*)
+void PlayScreen::render (RosalilaGraphics*p)
 {
     track->draw();
     if(!track->getLose()){
@@ -66,16 +66,15 @@ void PlayScreen::resume ()
 void PlayScreen::hide ()
 {
     track->clear();
-//    delete player_car;
-//    delete track;
-//    delete bu;
-//    delete bd;
-//    delete back_button;
 }
 
 void PlayScreen::dispose ()
 {
-
+    delete player_car;
+    delete track;
+    delete bu;
+    delete bd;
+    delete back_button;
 }
 
 void PlayScreen::loadCars(string path)

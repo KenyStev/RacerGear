@@ -8,7 +8,7 @@ SelectScreen::SelectScreen(Game *game)
 
 SelectScreen::~SelectScreen()
 {
-    //dtor
+    dispose();
 }
 
 void SelectScreen::show ()
@@ -66,7 +66,11 @@ void SelectScreen::hide ()
 
 void SelectScreen::dispose ()
 {
-
+    delete play_button;
+    for(int i=0;i<buttons.size();i++)
+        delete buttons[i];
+    for(int i=0;i<tracks.size();i++)
+        delete tracks[i];
 }
 
 void SelectScreen::loadCars()

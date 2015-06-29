@@ -11,7 +11,11 @@ RaceGear::RaceGear()
 
 RaceGear::~RaceGear()
 {
-    //dtor
+    delete PLAY;
+    delete MENU;
+    delete SELECT;
+    delete RANKING;
+    delete INSTRUCTION;
 }
 
 void RaceGear::create()
