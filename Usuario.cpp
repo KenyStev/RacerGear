@@ -8,6 +8,9 @@ Usuario::Usuario(string name)
     pista3=0;
     pista4=0;
     promedio=0;
+    font= new Font("font.ttf");
+    font->setSize(40);
+    font->setColor(255,204,0);
     //ctor
 }
 
@@ -18,6 +21,9 @@ Usuario::Usuario(string name, int p1,int p2,int p3,int p4,int pro){
     pista3=p3;
     pista4=p4;
     promedio=pro;
+    font= new Font("font.ttf");
+    font->setSize(40);
+    font->setColor(255,204,0);
 }
 void Usuario::imprimir(){
     cout<<nombre<<endl;
@@ -42,13 +48,19 @@ void Usuario::setAverage(){
 int Usuario::getAverage(){
     return promedio;
 }
-void Usuario::print(RosalilaGraphics *painter,int c){
+void Usuario::print(int c){
     string p=toString(pista1);
     string p2=toString(pista2);
     string p3=toString(pista3);
     string p4=toString(pista4);
     string p5=toString(promedio);
-    painter->drawText(nombre,100,100*c);
+    int y = c*80+225;
+    font->drawText(nombre,57,y);
+    font->drawText(p,315,y);
+    font->drawText(p2,545,y);
+    font->drawText(p3,765,y);
+    font->drawText(p4,985,y);
+    font->drawText(p5,1200,y);
 }
 Usuario::~Usuario()
 {

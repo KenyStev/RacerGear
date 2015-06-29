@@ -74,9 +74,10 @@ int main(int argc, char *argv[])
 
     //BINARIO
     //scr->initFStreamBinary();
-    //scr->createNewUserBinary("Juan");
-//    scr->createNewUserBinary("Luis");
-   scr->readFileBinary(race_game->rosalila_graphics);
+    //scr->createNewUserBinary("Raton");
+//    scr->createNewUserBinary("Thomas");
+//      scr->readFileBinary();
+//      scr->printMap();
 //    cout<<scr->seekUser("Mario");
 //    scr->setPuntosToPista("Juan",8,1);
 //    scr->setPuntosToPista("Juan",10,2);

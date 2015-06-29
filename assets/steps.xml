@@ -27,5 +27,6 @@
 	<step path="psico_17"/>
 	<step path="psico_18"/>
 	<step path="flags"/>
+	<step path="flags_2"/>
 	<step path="rect2"/>
 </Steps>

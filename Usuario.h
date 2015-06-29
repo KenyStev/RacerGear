@@ -3,13 +3,14 @@
 
 #include<fstream>
 #include<iostream>
-#include "Rosalila/RosalilaGraphics/RosalilaGraphics.h"
+#include"Font.h"
 
     using namespace std;
 class Usuario
 {
     public:
     int pista1,pista2,pista3,pista4,promedio;
+    Font *font;
         // Insertion operator
 //	friend std::ostream& operator<<(std::ostream& os, const Usuario& s)
 //	{
@@ -24,7 +25,7 @@ class Usuario
 //		return os;
 //	}
 //
-//	// Extraction operator
+	// Extraction operator
 //	friend std::istream& operator>>(std::istream& is, Usuario& s)
 //	{
 //		// read in individual members of s
@@ -36,7 +37,7 @@ class Usuario
         Usuario(string name, int p1,int p2,int p3,int p4,int pro);
         Usuario();
         void imprimir();
-        void print(RosalilaGraphics* painter,int c);
+        void print(int c);
         int average();
         int getAverage();
         void setAverage();
