@@ -17,9 +17,10 @@ void CarButton::funcionamiento()
 }
 
 //TrackButton
-TrackButton::TrackButton(string name,int x_position, int y_position, Image* up, Image* down, RosalilaGraphics* painter) : Button(x_position,y_position,up,down,painter)
+TrackButton::TrackButton(int i,string name,int x_position, int y_position, Image* up, Image* down, RosalilaGraphics* painter) : Button(x_position,y_position,up,down,painter)
 {
     this->name=name;
+    this->i=i;
 }
 
 TrackButton::~TrackButton()

@@ -19,7 +19,8 @@ class TrackButton : public Button
 {
     public:
         string name;
-        TrackButton(string name,int x_position, int y_position, Image* up, Image* down, RosalilaGraphics* painter);
+        int num_pista;
+        TrackButton(int i,string name,int x_position, int y_position, Image* up, Image* down, RosalilaGraphics* painter);
         void funcionamiento();
         virtual ~TrackButton();
 };
