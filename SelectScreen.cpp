@@ -45,7 +45,10 @@ void SelectScreen::render (RosalilaGraphics*p)
     for(int i=0;i<tracks.size();i++)
     {
         if(tracks[i]->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
-                    ((RaceGear*)game)->selected_track=tracks[i]->name;
+        {
+            ((RaceGear*)game)->selected_track=tracks[i]->name;
+            ((RaceGear*)game)->id_pista=tracks[i]->num_pista;
+        }
         tracks[i]->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
     }
 
@@ -126,7 +129,7 @@ void SelectScreen::loadTracks()
             string path = track->ToElement()->Attribute("button");
             string path_s = path+"_s.png";
             path+=".png";
-            tracks.push_back(new TrackButton(path_file,350,i*182,game->rosalila_graphics->getTexture(assets_directory+path),
+            tracks.push_back(new TrackButton(i,path_file,350,i*182,game->rosalila_graphics->getTexture(assets_directory+path),
                                 game->rosalila_graphics->getTexture(assets_directory+path_s),
                                 game->rosalila_graphics));
             cout<<path_file<<"   "<<path<<"   "<<path_s<<endl;

@@ -28,6 +28,7 @@ void RaceGear::create()
     selected_track = "pista_novato.xml";
     name_player="";
     seg=0;
+    id_pista=0;
 
     setScreen(MENU);
 }
