@@ -22,28 +22,28 @@ using namespace std;
 class Pista
 {
     public:
-    Receiver* receiver;
-    float off_set_y, off_set_x;
-    ListImage* road;
-    ListImage* miLista2;
-    int laps;
-    double time;
-    bool getLose();
-    int seg;
-    string player_name;
-    clock_t start,stop;
+        Receiver* receiver;
+        float off_set_y, off_set_x;
+        ListImage* road;
+        ListImage* miLista2;
+        int laps;
+        double time;
+        bool getLose();
+        int seg;
+        string player_name;
+        clock_t start,stop;
 
-    Font *display_time;
+        Font *display_time;
 
-    Image* background;//, *bu, *bd;
-    Car *car;
-    vector<std::string> secuence;
+        Image* background;//, *bu, *bd;
+        Car *car;
+        vector<std::string> secuence;
 
-    void logica();
-    void draw();
-    void init();
-    void clear();
-    void loadTrack(std::string);
+        void logica();
+        void draw();
+        void init();
+        void clear();
+        void loadTrack(std::string);
 
         Pista();
         Pista(Car*,RosalilaGraphics*, Receiver*);

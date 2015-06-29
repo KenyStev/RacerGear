@@ -34,7 +34,7 @@ bool Pista::getLose(){
 }
 void Pista::init(){
     for(int i=0; i<90; i++)
-        miLista2->add("flags");
+        miLista2->add("flags_2");
 }
 
 void Pista::logica(){
@@ -56,7 +56,7 @@ void Pista::logica(){
             laps--;
             road->add(road->pop());
             cout<<"Laps: "<<laps<<endl;
-            if(laps==0)exit(11);
+//            if(laps==0)exit(11);
         }
 }
 void Pista:: draw(){

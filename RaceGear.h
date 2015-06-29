@@ -17,6 +17,10 @@ class RaceGear : public Game
         string selected_track;
         int time;
 
+        //datos del jugador
+        string name_player;
+        int seg;
+
         PlayScreen *PLAY;
         MenuScreen *MENU;
         SelectScreen *SELECT;

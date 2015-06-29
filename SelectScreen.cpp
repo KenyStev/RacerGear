@@ -12,6 +12,8 @@ SelectScreen::~SelectScreen()
     delete &buttons;
     delete &tracks;
     //dtor
+    dispose();
+
 }
 
 void SelectScreen::show ()
@@ -19,7 +21,8 @@ void SelectScreen::show ()
     play_button = new PlayButton(1162,712,game->rosalila_graphics->getTexture(assets_directory+"PLAY_UP.png"),
                                     game->rosalila_graphics->getTexture(assets_directory+"PLAY_DWN.png"),
                                     game->rosalila_graphics,game);
-
+    name="";
+    display = new Font("font.ttf");
 
     //load cars
     loadCars();
@@ -50,6 +53,15 @@ void SelectScreen::render (RosalilaGraphics*p)
                     game->setScreen(((RaceGear*)game)->PLAY);
 
     play_button->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
+
+    int x = game->receiver->getMouse_X();
+    int y = game->receiver->getMouse_Y();
+    display->drawText(toString(x),0,0);
+    display->drawText(toString(y),0,50);
+
+    display->drawText("Su Nombre:",830,200);
+    display->drawText(name,830,217);
+    catchName();
 }
 
 void SelectScreen::pause ()
@@ -64,12 +76,17 @@ void SelectScreen::resume ()
 
 void SelectScreen::hide ()
 {
-//   delete play_button;
+    ((RaceGear*)game)->name_player=name;
+
 }
 
 void SelectScreen::dispose ()
 {
-
+    delete play_button;
+    for(int i=0;i<buttons.size();i++)
+        delete buttons[i];
+    for(int i=0;i<tracks.size();i++)
+        delete tracks[i];
 }
 
 void SelectScreen::loadCars()
@@ -114,4 +131,17 @@ void SelectScreen::loadTracks()
                                 game->rosalila_graphics));
             cout<<path_file<<"   "<<path<<"   "<<path_s<<endl;
         }
+}
+
+void SelectScreen::catchName()
+{
+
+    for(int i=0; i<26;i++)
+    {
+        if(game->receiver->isKeyPressed(i+97))
+        {
+            char c = i+65;
+            name+=c;
+        }
+    }
 }

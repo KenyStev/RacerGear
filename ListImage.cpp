@@ -176,7 +176,10 @@ void ListImage::checkColosions(Car*car,Step *actual)
             r = actual->rect_center;
             if(hitboxCollision(r,0,c,0))
             {
-                car->hurt=actual->hurt;
+                if(car->v_max-actual->hurt>0)
+                    car->hurt=car->v_max-actual->hurt;
+                else
+                    car->hurt=car->v_max*0.5;
             }
         }
         if(actual->hit_left)
@@ -184,7 +187,10 @@ void ListImage::checkColosions(Car*car,Step *actual)
             r = actual->rect_left;
             if(hitboxCollision(r,0,c,0))
             {
-                car->hurt=actual->hurt;
+                if(car->v_max-actual->hurt>0)
+                    car->hurt=car->v_max-actual->hurt;
+                else
+                    car->hurt=car->v_max*0.5;
             }
         }
         if(actual->hit_right)
@@ -192,7 +198,10 @@ void ListImage::checkColosions(Car*car,Step *actual)
             r = actual->rect_right;
             if(hitboxCollision(r,0,c,0))
             {
-                car->hurt=actual->hurt;
+                if(car->v_max-actual->hurt>0)
+                    car->hurt=car->v_max-actual->hurt;
+                else
+                    car->hurt=car->v_max*0.5;
             }
         }
         if(hitboxCollision(actual->border_left,0,c,0) || hitboxCollision(actual->border_right,0,c,0))
