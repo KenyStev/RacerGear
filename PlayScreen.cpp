@@ -41,16 +41,24 @@ void PlayScreen::show ()
     track->init();
 }
 
-void PlayScreen::render (RosalilaGraphics*)
+void PlayScreen::render (RosalilaGraphics*p)
 {
     track->draw();
     if(!track->getLose()){
         track->logica();
     }
+
+    if(track->laps==0)
+    {
+        ((RaceGear*)game)->seg=track->seg;
+//        game->setScreen(((RaceGear*)game)->STATISTICS);
+    }
 //    back_button->update(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
     if(back_button->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
         game->setScreen(((RaceGear*)game)->MENU);
     back_button->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
+
+    p->drawText(((RaceGear*)game)->name_player,500,0);
 }
 //        void resize (int width, int height);
 void PlayScreen::pause ()
@@ -66,16 +74,15 @@ void PlayScreen::resume ()
 void PlayScreen::hide ()
 {
     track->clear();
-//    delete player_car;
-//    delete track;
-//    delete bu;
-//    delete bd;
-//    delete back_button;
 }
 
 void PlayScreen::dispose ()
 {
-
+    delete player_car;
+    delete track;
+    delete bu;
+    delete bd;
+    delete back_button;
 }
 
 void PlayScreen::loadCars(string path)

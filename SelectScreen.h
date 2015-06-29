@@ -3,6 +3,7 @@
 #include "Screen.h"
 #include "Game.h"
 #include "Buttons.h"
+#include "Font.h"
 #include <vector>
 
 class SelectScreen : public Screen
@@ -11,12 +12,17 @@ class SelectScreen : public Screen
         vector<CarButton*> buttons;
         vector<TrackButton*> tracks;
         PlayButton *play_button;
+        string name;
+        Font *display;
 
         void loadCars();
         void loadTracks();
 
         Game *game;
         SelectScreen(Game*);
+
+        void catchName();
+
         void show ();
         void render (RosalilaGraphics*);
 //        void resize (int width, int height);
