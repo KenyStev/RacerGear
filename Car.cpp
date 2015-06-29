@@ -78,7 +78,6 @@ void Car::initCar()
     outOfRoad=false;
     hurt=0;
     time=0;
-
     scale=1;
     marker_x = 114;
     marker_y = 614;//(140+velocimeter->getHeight())-marker->getHeight();
@@ -140,7 +139,7 @@ void Car::update(Receiver *r)
 //        v-=a*2;
 //    }
     car = state["ahead"];
-    if(r->isKeyDown(SDLK_1)){
+    if(r->isKeyDown(SDLK_1) || r->isKeyPressed(SDLK_a)){
         second=false,third=false,fourth =false,fifth =false;
         velocimeter = velocimeter_state["first"];
         v_max = maximum *0.20;

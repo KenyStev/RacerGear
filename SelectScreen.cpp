@@ -8,7 +8,12 @@ SelectScreen::SelectScreen(Game *game)
 
 SelectScreen::~SelectScreen()
 {
+    delete play_button;
+    delete &buttons;
+    delete &tracks;
+    //dtor
     dispose();
+
 }
 
 void SelectScreen::show ()
@@ -72,6 +77,7 @@ void SelectScreen::resume ()
 void SelectScreen::hide ()
 {
     ((RaceGear*)game)->name_player=name;
+
 }
 
 void SelectScreen::dispose ()

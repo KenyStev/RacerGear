@@ -25,6 +25,10 @@ void InsScreen::resume (){
 
 }
 void InsScreen::hide (){
+    delete fondo;
+    delete bd;
+    delete bu;
+    //delete back_button;
 
 }
 void InsScreen::dispose (){
@@ -33,5 +37,9 @@ void InsScreen::dispose (){
 
 InsScreen::~InsScreen()
 {
+    delete fondo;
+    delete bd;
+    delete bu;
+    delete back_button;
     //dtor
 }
