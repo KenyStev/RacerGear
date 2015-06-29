@@ -46,6 +46,7 @@ void PlayScreen::render (RosalilaGraphics*)
     track->draw();
     if(!track->getLose()){
         track->logica();
+        ((RaceGear*)game)->setTime(track->seg);
     }
 //    back_button->update(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
     if(back_button->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))

@@ -173,7 +173,7 @@
 1435273244 /home/luis/Documentos/Proyecto Nuevo/Screen.h
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
-1435427327 /home/luis/Documentos/Proyecto Nuevo/RaceGear.h
+1435549002 /home/luis/Documentos/Proyecto Nuevo/RaceGear.h
 	"Game.h"
 	"PlayScreen.h"
 	"MenuScreen.h"
@@ -217,7 +217,7 @@
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 	"Rosalila/RosalilaSound/RosalilaSound.h"
 
-1435427327 /home/luis/Documentos/Proyecto Nuevo/Car.h
+1435523317 /home/luis/Documentos/Proyecto Nuevo/Car.h
 	"SDL2/SDL.h"
 	"Rosalila/RosalilaUtility/RosalilaUtility.h"
 	"Rosalila/RosalilaInputs/RosalilaInputs.h"
@@ -247,16 +247,15 @@
 	"Scores.h"
 	"Buttons.h"
 
-1435429020 /home/luis/Documentos/Proyecto Nuevo/Scores.h
+1435534744 /home/luis/Documentos/Proyecto Nuevo/Scores.h
 	<iostream>
 	<fstream>
 	"Usuario.h"
 	<stdlib.h>
 	<string.h>
 	<map>
-	"Font.h"
 
-1435429967 /home/luis/Documentos/Proyecto Nuevo/Usuario.h
+1435533468 /home/luis/Documentos/Proyecto Nuevo/Usuario.h
 	<fstream>
 	<iostream>
 	"Font.h"
@@ -267,7 +266,7 @@
 	"Buttons.h"
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
-1435427327 source:/home/luis/Documentos/Proyecto Nuevo/Car.cpp
+1435550708 source:/home/luis/Documentos/Proyecto Nuevo/Car.cpp
 	"Car.h"
 
 1435427327 source:/home/luis/Documentos/Proyecto Nuevo/Font.cpp
@@ -277,7 +276,7 @@
 	"Game.h"
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
-1435389063 source:/home/luis/Documentos/Proyecto Nuevo/InsScreen.cpp
+1435550135 source:/home/luis/Documentos/Proyecto Nuevo/InsScreen.cpp
 	"InsScreen.h"
 	"RaceGear.h"
 
@@ -285,7 +284,7 @@
 	"ListImage.h"
 	<cmath>
 
-1435438603 source:/home/luis/Documentos/Proyecto Nuevo/main.cpp
+1435536377 source:/home/luis/Documentos/Proyecto Nuevo/main.cpp
 	<GL/freeglut.h>
 	<GL/gl.h>
 	<stdio.h>
@@ -316,18 +315,18 @@
 	"MenuScreen.h"
 	"RaceGear.h"
 
-1435427327 source:/home/luis/Documentos/Proyecto Nuevo/Pista.cpp
+1435523332 source:/home/luis/Documentos/Proyecto Nuevo/Pista.cpp
 	"Pista.h"
 	"ListImage.h"
 
-1435427327 source:/home/luis/Documentos/Proyecto Nuevo/PlayScreen.cpp
+1435549472 source:/home/luis/Documentos/Proyecto Nuevo/PlayScreen.cpp
 	"PlayScreen.h"
 	"RaceGear.h"
 
-1435427327 source:/home/luis/Documentos/Proyecto Nuevo/RaceGear.cpp
+1435549040 source:/home/luis/Documentos/Proyecto Nuevo/RaceGear.cpp
 	"RaceGear.h"
 
-1435438719 source:/home/luis/Documentos/Proyecto Nuevo/RankingScreen.cpp
+1435550093 source:/home/luis/Documentos/Proyecto Nuevo/RankingScreen.cpp
 	"RankingScreen.h"
 	"RaceGear.h"
 
@@ -474,19 +473,31 @@
 	"tinyxml.h"
 	<windows.h>
 
-1435438828 source:/home/luis/Documentos/Proyecto Nuevo/Scores.cpp
+1435536393 source:/home/luis/Documentos/Proyecto Nuevo/Scores.cpp
 	"Scores.h"
 
 1435273244 source:/home/luis/Documentos/Proyecto Nuevo/Screen.cpp
 	"Screen.h"
 
-1435427327 source:/home/luis/Documentos/Proyecto Nuevo/SelectScreen.cpp
+1435550214 source:/home/luis/Documentos/Proyecto Nuevo/SelectScreen.cpp
 	"SelectScreen.h"
 	"RaceGear.h"
 
 1435273244 source:/home/luis/Documentos/Proyecto Nuevo/Step.cpp
 	"Step.h"
 
-1435438741 source:/home/luis/Documentos/Proyecto Nuevo/Usuario.cpp
+1435440137 source:/home/luis/Documentos/Proyecto Nuevo/Usuario.cpp
 	"Usuario.h"
+
+1435550279 source:/home/luis/Documentos/Proyecto Nuevo/StatisticsScreen.cpp
+	"StatisticsScreen.h"
+	"RaceGear.h"
+
+1435548164 /home/luis/Documentos/Proyecto Nuevo/StatisticsScreen.h
+	"Screen.h"
+	"Game.h"
+	"Buttons.h"
+	"Scores.h"
+	"Font.h"
+	<map>
 

@@ -50,7 +50,7 @@ void Pista::logica(){
 
         stop = clock();
         time +=(stop - start);
-        seg = (time/2)/1000;
+        seg = ((time)/1240);
         if(road->isMeta() && road->pops!=0)// && road->pops<=road->size*laps)
         {
             laps--;
@@ -66,7 +66,6 @@ void Pista:: draw(){
     miLista2->draw(off_set_x,off_set_y);
     display_time->drawText("Tiempo: "+ toString(seg)+" seg.",0,0);
     car->draw();
-    cout<<receiver->getMouse_Y()<<endl;
 }
 Pista::~Pista()
 {

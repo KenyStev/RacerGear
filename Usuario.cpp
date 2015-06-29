@@ -10,7 +10,8 @@ Usuario::Usuario(string name)
     promedio=0;
     font= new Font("font.ttf");
     font->setSize(40);
-    font->setColor(255,204,0);
+//    font->setColor(255,204,0);
+    font->setColor(255,255,255);
     //ctor
 }
 
@@ -23,7 +24,8 @@ Usuario::Usuario(string name, int p1,int p2,int p3,int p4,int pro){
     promedio=pro;
     font= new Font("font.ttf");
     font->setSize(40);
-    font->setColor(255,204,0);
+    //font->setColor(255,204,0);
+    font->setColor(255,255,255);
 }
 void Usuario::imprimir(){
     cout<<nombre<<endl;

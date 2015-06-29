@@ -39,6 +39,7 @@ bool Scores::readFileBinary(){
     int fin = file.tellg();
     int cantidad = fin/40;
     file.seekg(0,ios::beg);
+    mi_mapa.clear();
     for(int i =0;i<cantidad;i++){
         char* nombre= new char[20];
         string n;
@@ -55,6 +56,7 @@ bool Scores::readFileBinary(){
         //u->imprimir();
         mi_mapa.insert(pair<int,Usuario*>(u->getAverage(),u));
     }
+    file.close();
     return true;
 }
 
@@ -68,9 +70,7 @@ void Scores::printMap(){
         user->print(cont);
         i++;
         cont++;
-        cout<<"Iteracion: "<<cont<<endl;
     }
-    cout<<"Final Funcion print map"<<endl;
     //font->drawText("Hola",0,0);
 }
 
@@ -97,7 +97,56 @@ int Scores::seekUser(string name){
         file.read((char*)&p,4);
 
     }
+    file.close();
     return -1;
+}
+
+void Scores::seekRLP(int no_pista){
+    ifstream file(PATH_ARCHIVO.c_str());
+    file.seekg(0,ios::end);
+    int fin = file.tellg();
+    int cantidad = fin/40;
+    file.seekg(0,ios::beg);
+    mi_mapa.clear();
+    for(int i =0;i<cantidad;i++){
+        char* nombre= new char[20];
+        string n;
+        int x1,x2,x3,x4,p;
+        file.read(nombre,20);
+        file.read((char*)&x1,4);
+        file.read((char*)&x2,4);
+        file.read((char*)&x3,4);
+        file.read((char*)&x4,4);
+        file.read((char*)&p,4);
+        n= nombre;
+        Usuario *u = new Usuario(n,x1,x2,x3,x4,p);
+        if(no_pista==1){
+            mi_mapa.insert(pair<int,Usuario*>(x1,u));
+        }
+        else if(no_pista==2){
+            mi_mapa.insert(pair<int,Usuario*>(x2,u));
+        }
+        else if(no_pista==3){
+            mi_mapa.insert(pair<int,Usuario*>(x3,u));
+        }
+        else if(no_pista==4){
+            mi_mapa.insert(pair<int,Usuario*>(x4,u));
+        }
+    }
+    file.close();
+}
+
+int Scores::getRLP(string name){
+    int mi_posicion=1;
+    multimap<int,Usuario*>::iterator i = mi_mapa.begin();
+    while(i!=mi_mapa.end()){
+        string user = i->second->nombre;
+        if(user==name){
+            return mi_posicion;
+        }
+        mi_posicion++;
+        i++;
+    }
 }
 
 bool Scores::setPuntosToPista(string name, int puntos, int pista){

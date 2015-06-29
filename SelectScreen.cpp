@@ -8,6 +8,9 @@ SelectScreen::SelectScreen(Game *game)
 
 SelectScreen::~SelectScreen()
 {
+    delete play_button;
+    delete &buttons;
+    delete &tracks;
     //dtor
 }
 
@@ -61,7 +64,7 @@ void SelectScreen::resume ()
 
 void SelectScreen::hide ()
 {
-//    delete buttons;
+//   delete play_button;
 }
 
 void SelectScreen::dispose ()

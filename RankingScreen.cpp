@@ -11,13 +11,9 @@ void RankingScreen:: show (){
     background = game->rosalila_graphics->getTexture(assets_directory+"Ranking_background.png");
     bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
     bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
-    back_button = new BackButton(100,100,bu,bd,game->rosalila_graphics);
+    back_button = new BackButton(50,50,bu,bd,game->rosalila_graphics);
     ranking = new Scores();
     ranking->readFileBinary();
-    ranking->printMap();
-    game->rosalila_graphics->drawText("MAMA",500,0);
-
-//    ranking = new Ranking(game->rosalila_graphics);
 
 }
 void RankingScreen::render (RosalilaGraphics*p){
@@ -47,7 +43,11 @@ void RankingScreen::resume ()
 
 void RankingScreen::hide ()
 {
-
+    //delete back_button;
+    delete background;
+    //delete bu;
+    //delete bd;
+    delete ranking;
 }
 
 void RankingScreen::dispose ()
