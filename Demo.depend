@@ -503,3 +503,7 @@
 1435681247 source:/media/kenystev/Datos/keny++/TopGearTry/Usuario.cpp
 	"Usuario.h"
 
+1435688917 source:/media/kenystev/Datos/keny++/TopGearTry/PlayScreen.cpp
+	"PlayScreen.h"
+	"RaceGear.h"
+
