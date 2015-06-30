@@ -20,6 +20,18 @@ body {
     height: 50%;
 }
 
+#carousel_screenshots{
+    height: 640px;
+    position: relative;
+    margin-bottom: 40px;
+    top: 20px;
+}
+
+#video_gameplay{
+    position: relative;
+    left: 15px;
+}
+
 .item,
 .active,
 .carousel-inner {
@@ -150,4 +162,20 @@ a {
 .link_light{
     color: white;
     text-decoration: bold;
+}
+
+.navbar-brand img{
+    display: block;
+    position: absolute;
+    height: 100%;
+    top:0;
+    left: 100px;
+    z-index: 10;
+    padding: 5px;
+    color: #fff;
+    background: #fff no-repeat 95% 50%;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
