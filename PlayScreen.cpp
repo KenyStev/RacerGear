@@ -40,7 +40,7 @@ void PlayScreen::show ()
 
     bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
     bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
-    back_button = new BackButton(100,100,bu,bd,game->rosalila_graphics);
+    back_button = new BackButton(20,18,bu,bd,game->rosalila_graphics);
     track->init();
     n =((RaceGear*)game)->name_player;
     if(scr->seekUser(n)<0){
@@ -48,6 +48,9 @@ void PlayScreen::show ()
         //scr->createNewUserBinary(n);
     }
     num_rt = ((RaceGear*)game)->id_pista;
+    display_laps = new Font("airstrikeplat.ttf");
+    display_laps->setSize(30);
+    display_laps->setColor(0,0,0);
 }
 
 void PlayScreen::render (RosalilaGraphics*p)
@@ -71,7 +74,12 @@ void PlayScreen::render (RosalilaGraphics*p)
         game->setScreen(((RaceGear*)game)->MENU);
     back_button->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
 
-    p->drawText("Laps: "+toString(track->laps),500,0);
+    display_laps->drawText("Laps: "+toString(track->laps),117,87);
+
+//    int x = game->receiver->getMouse_X();
+//    int y = game->receiver->getMouse_Y();
+//    p->drawText(toString(x),0,0);
+//    p->drawText(toString(y),0,50);
 }
 //        void resize (int width, int height);
 void PlayScreen::pause ()
