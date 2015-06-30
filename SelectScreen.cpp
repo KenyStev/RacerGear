@@ -40,10 +40,10 @@ void SelectScreen::show ()
     cars[2]= game->rosalila_graphics->getTexture(assets_directory+"green.png");
     cars[3]= game->rosalila_graphics->getTexture(assets_directory+"red.png");
 
-    rts[1]="Racetrack For Beginners";
-    rts[2]="Racetrack No.1";
-    rts[3]="Racetrack No.2";
-    rts[4]="Racetrack No.3";
+    rts[1]="rookie's racetrack";
+    rts[2]="racetrack No. 01";
+    rts[3]="racetrack No. 02";
+    rts[4]="racetrack No. 03";
 
 }
 
@@ -86,13 +86,16 @@ void SelectScreen::render (RosalilaGraphics*p)
     }
 
     if(play_button->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
-                    game->setScreen(((RaceGear*)game)->PLAY);
+    {
+        if(name!="" && name!="Your name please")
+            game->setScreen(((RaceGear*)game)->PLAY);
+        else
+            name="Your name please";
+    }
 
     play_button->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
-
-
     display->drawText(name,888,410);
-    nuevo->drawText(rts[((RaceGear*)game)->id_pista],790,185);
+    nuevo->drawText(rts[((RaceGear*)game)->id_pista],896,185);
         catchName();
 }
 
@@ -136,7 +139,7 @@ void SelectScreen::loadCars()
             string path = car->ToElement()->Attribute("image");
             string path_s = path+"_s.png";
             path+=".png";
-            buttons.push_back(new CarButton(i,0,i*182,game->rosalila_graphics->getTexture(assets_directory+path),
+            buttons.push_back(new CarButton(i,40,i*182 + 60,game->rosalila_graphics->getTexture(assets_directory+path),
                                 game->rosalila_graphics->getTexture(assets_directory+path_s),
                                 game->rosalila_graphics));
         }
@@ -158,7 +161,7 @@ void SelectScreen::loadTracks()
             string path = track->ToElement()->Attribute("button");
             string path_s = path+"_s.png";
             path+=".png";
-            tracks.push_back(new TrackButton(i+1,path_file,350,i*182,game->rosalila_graphics->getTexture(assets_directory+path),
+            tracks.push_back(new TrackButton(i+1,path_file,350,i*182 + 60,game->rosalila_graphics->getTexture(assets_directory+path),
                                 game->rosalila_graphics->getTexture(assets_directory+path_s),
                                 game->rosalila_graphics));
             cout<<path_file<<"   "<<path<<"   "<<path_s<<endl;

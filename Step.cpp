@@ -106,8 +106,8 @@ void Step::addY(double y)
     rect_right.x=getWidth() - rect_right.w + off_set_x;
     rect_center.x=getWidth()*0.5 - rect_center.w*0.3 + off_set_x;
 
-    border_left.x = getX() - border_left.w + off_set_x;
-    border_right.x = getX() + getWidth()*scale - border_right.w*0.5 + off_set_x;
+    border_left.x = getX() - border_left.w*2 + off_set_x;
+    border_right.x = getX() + getWidth()*scale + off_set_x;
 
     setX(painter->screen_width*0.5 - width*0.5*scale + off_set_x);
 

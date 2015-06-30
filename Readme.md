@@ -1,6 +1,6 @@
-Rosalila Demo
+Race Gear
 =============
-rosalilastudio.com
+powered by rosalila engine from rosalilastudio.com
 
 Build instructions using Code::Blocks:
 

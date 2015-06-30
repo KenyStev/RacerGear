@@ -182,11 +182,12 @@
 	"InsScreen.h"
 	"StatisticsScreen.h"
 
-1435625338 /home/luis/Documentos/Proyecto Nuevo/PlayScreen.h
+1435687080 /home/luis/Documentos/Proyecto Nuevo/PlayScreen.h
 	"Screen.h"
 	"Game.h"
 	"Pista.h"
 	"Car.h"
+	"Font.h"
 	<map>
 	"Buttons.h"
 	"Scores.h"
@@ -232,6 +233,19 @@
 	<iostream>
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
+1435534744 /home/luis/Documentos/Proyecto Nuevo/Scores.h
+	<iostream>
+	<fstream>
+	"Usuario.h"
+	<stdlib.h>
+	<string.h>
+	<map>
+
+1435533468 /home/luis/Documentos/Proyecto Nuevo/Usuario.h
+	<fstream>
+	<iostream>
+	"Font.h"
+
 1435593290 /home/luis/Documentos/Proyecto Nuevo/MenuScreen.h
 	"Game.h"
 	"PlayScreen.h"
@@ -252,26 +266,21 @@
 	"Scores.h"
 	"Buttons.h"
 
-1435534744 /home/luis/Documentos/Proyecto Nuevo/Scores.h
-	<iostream>
-	<fstream>
-	"Usuario.h"
-	<stdlib.h>
-	<string.h>
-	<map>
-
-1435533468 /home/luis/Documentos/Proyecto Nuevo/Usuario.h
-	<fstream>
-	<iostream>
-	"Font.h"
-
 1435427327 /home/luis/Documentos/Proyecto Nuevo/InsScreen.h
 	"Game.h"
 	"Screen.h"
 	"Buttons.h"
 	"Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 
-1435622804 source:/home/luis/Documentos/Proyecto Nuevo/Car.cpp
+1435680017 /home/luis/Documentos/Proyecto Nuevo/StatisticsScreen.h
+	"Screen.h"
+	"Game.h"
+	"Buttons.h"
+	"Scores.h"
+	"Font.h"
+	<vector>
+
+1435687080 source:/home/luis/Documentos/Proyecto Nuevo/Car.cpp
 	"Car.h"
 
 1435427327 source:/home/luis/Documentos/Proyecto Nuevo/Font.cpp
@@ -320,11 +329,11 @@
 	"MenuScreen.h"
 	"RaceGear.h"
 
-1435626640 source:/home/luis/Documentos/Proyecto Nuevo/Pista.cpp
+1435687080 source:/home/luis/Documentos/Proyecto Nuevo/Pista.cpp
 	"Pista.h"
 	"ListImage.h"
 
-1435625628 source:/home/luis/Documentos/Proyecto Nuevo/PlayScreen.cpp
+1435687080 source:/home/luis/Documentos/Proyecto Nuevo/PlayScreen.cpp
 	"PlayScreen.h"
 	"RaceGear.h"
 
@@ -484,23 +493,15 @@
 1435273244 source:/home/luis/Documentos/Proyecto Nuevo/Screen.cpp
 	"Screen.h"
 
-1435600288 source:/home/luis/Documentos/Proyecto Nuevo/SelectScreen.cpp
+1435687160 source:/home/luis/Documentos/Proyecto Nuevo/SelectScreen.cpp
 	"SelectScreen.h"
 	"RaceGear.h"
 
-1435686369 source:/home/luis/Documentos/Proyecto Nuevo/StatisticsScreen.cpp
+1435686474 source:/home/luis/Documentos/Proyecto Nuevo/StatisticsScreen.cpp
 	"StatisticsScreen.h"
 	"RaceGear.h"
 
-1435680017 /home/luis/Documentos/Proyecto Nuevo/StatisticsScreen.h
-	"Screen.h"
-	"Game.h"
-	"Buttons.h"
-	"Scores.h"
-	"Font.h"
-	<vector>
-
-1435273244 source:/home/luis/Documentos/Proyecto Nuevo/Step.cpp
+1435687080 source:/home/luis/Documentos/Proyecto Nuevo/Step.cpp
 	"Step.h"
 
 1435440137 source:/home/luis/Documentos/Proyecto Nuevo/Usuario.cpp
