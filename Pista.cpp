@@ -35,7 +35,7 @@ Pista::Pista(){
 
 }
 void Pista::countdown(){
-    if(cont>=0){
+    if(cont>=0 && cont<=3){
     painter->draw2DImage(contD[cont],
                             contD[cont]->getWidth(),contD[cont]->getHeight(),
                             215,67,
@@ -94,7 +94,7 @@ void Pista::logica(){
                     off_set_y=0;
             }
         }
-        if(cont==3){
+        if(cont==4){
             if(painter->frame%50==0){
                 go=true;
             }
