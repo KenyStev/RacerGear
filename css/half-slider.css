@@ -27,6 +27,10 @@ body {
     top: 20px;
 }
 
+.screenshots img{
+    height: 640px;
+}
+
 #video_gameplay{
     position: relative;
     left: 15px;
