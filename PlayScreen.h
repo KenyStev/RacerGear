@@ -12,13 +12,17 @@
 //#include "ExitButton.h"
 //#include "InstrButton.h"
 //#include "RankButton.h"
+#include "Scores.h"
 
 class PlayScreen : public Screen
 {
     public:
         BackButton* back_button;
-        Image* background, *bu, *bd;
-
+        Image* background, *bu, *bd,*G_over;
+        bool finish;
+        string n="";
+        int time, num_rt,notexitst=1;
+        Scores *scr;
         Pista *track;
         Car *player_car;
         map<int,Car*> cars;
