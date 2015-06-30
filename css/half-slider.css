@@ -80,7 +80,7 @@ a {
     display: block;
     float: right;
     width: 90px;
-    height:70px;
+    height:60px;
     text-indent: -5000px;
     overflow: hidden;
     background: url(../images/sprite_download.png) no-repeat bottom left;
@@ -89,7 +89,7 @@ a {
     display: block;
     float: right;
     width: 90px;
-    height:70px;
+    height:60px;
     text-indent: -5000px;
     overflow: hidden;
     background: url(../images/sprite_download.png) no-repeat bottom right;
@@ -145,4 +145,9 @@ a {
 
 #num6{
     background: url(../images/screentry.png);
+}
+
+.link_light{
+    color: white;
+    text-decoration: bold;
 }
