@@ -1007,6 +1007,108 @@
          stdDeviation="0.01 5"
          id="feGaussianBlur5178" />
     </filter>
+    <filter
+       y="-0.25"
+       height="1.5"
+       inkscape:menu-tooltip="Darkens the edge with an inner blur and adds a flexible glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:label="Dark and Glow"
+       color-interpolation-filters="sRGB"
+       id="filter5992">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result6"
+         id="feGaussianBlur5994" />
+      <feComposite
+         result="result8"
+         in="SourceGraphic"
+         operator="atop"
+         in2="result6"
+         id="feComposite5996" />
+      <feComposite
+         result="result9"
+         operator="over"
+         in2="SourceAlpha"
+         in="result8"
+         id="feComposite5998" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+         result="result10"
+         id="feColorMatrix6000" />
+      <feBlend
+         in="result10"
+         mode="normal"
+         in2="result6"
+         id="feBlend6002" />
+    </filter>
+    <filter
+       y="-0.25"
+       height="1.5"
+       inkscape:menu-tooltip="Darkens the edge with an inner blur and adds a flexible glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:label="Dark and Glow"
+       color-interpolation-filters="sRGB"
+       id="filter6004">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result6"
+         id="feGaussianBlur6006" />
+      <feComposite
+         result="result8"
+         in="SourceGraphic"
+         operator="atop"
+         in2="result6"
+         id="feComposite6008" />
+      <feComposite
+         result="result9"
+         operator="over"
+         in2="SourceAlpha"
+         in="result8"
+         id="feComposite6010" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+         result="result10"
+         id="feColorMatrix6012" />
+      <feBlend
+         in="result10"
+         mode="normal"
+         in2="result6"
+         id="feBlend6014" />
+    </filter>
+    <filter
+       y="-0.25"
+       height="1.5"
+       inkscape:menu-tooltip="Darkens the edge with an inner blur and adds a flexible glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:label="Dark and Glow"
+       color-interpolation-filters="sRGB"
+       id="filter6016">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result6"
+         id="feGaussianBlur6018" />
+      <feComposite
+         result="result8"
+         in="SourceGraphic"
+         operator="atop"
+         in2="result6"
+         id="feComposite6020" />
+      <feComposite
+         result="result9"
+         operator="over"
+         in2="SourceAlpha"
+         in="result8"
+         id="feComposite6022" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+         result="result10"
+         id="feColorMatrix6024" />
+      <feBlend
+         in="result10"
+         mode="normal"
+         in2="result6"
+         id="feBlend6026" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1015,9 +1117,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.32000001"
-     inkscape:cx="-8604.5038"
-     inkscape:cy="2587.2419"
+     inkscape:zoom="1.28"
+     inkscape:cx="-29800.996"
+     inkscape:cy="702.69905"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -14261,6 +14363,428 @@
          d="m -6999.6428,-1079.7585 0.375,15.4165 -0.375,0 0,241.79644 38.6874,0 0,-111.60577 124.9376,-30.67856 159.8124,-39.21761 -161.7187,-37.8652 -161.7187,-37.8458 z"
          id="path5278"
          inkscape:connector-curvature="0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:41.03649902px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:1.95091546;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       x="-30317.293"
+       y="629.00519"
+       id="text5189"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/media/kenystev/Datos/keny++/TopGearTry/assets/p_novato.png"
+       inkscape:export-xdpi="88.762268"
+       inkscape:export-ydpi="88.762268"><tspan
+         sodipodi:role="line"
+         id="tspan5191"
+         x="-30317.293"
+         y="629.00519"
+         style="stroke-width:1.95091546">rookie's racetrack</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5214"
+       y="719.06409"
+       x="-29820.48"
+       style="font-size:84.13793182px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter5992);font-family:Sans"
+       xml:space="preserve"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)"><tspan
+         y="719.06409"
+         x="-29820.48"
+         id="tspan5216"
+         sodipodi:role="line">rookie's racetrack</tspan></text>
+    <g
+       id="g6065"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)"
+       inkscape:export-filename="/media/kenystev/Datos/keny++/TopGearTry/assets/p_novato_s.png"
+       inkscape:export-xdpi="88.762268"
+       inkscape:export-ydpi="88.762268">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="rect5218"
+         d="m -29865.316,730.84955 477.297,0 -477.297,16.57281 z"
+         style="fill:#808080;stroke:#000000;filter:url(#filter6016)" />
+      <path
+         style="fill:#808080;stroke:#000000;filter:url(#filter6004)"
+         d="m -29016.019,649.42236 -477.297,0 477.297,-16.57281 z"
+         id="path5222"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text6028"
+       y="714.35779"
+       x="-30317.293"
+       style="font-size:41.03649902px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:1.95091546;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="714.35779"
+         x="-30317.293"
+         id="tspan6030"
+         sodipodi:role="line"
+         style="stroke-width:1.95091546">racetrack No. 01</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:84.13793182px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter5992);font-family:Sans"
+       x="-29790.201"
+       y="894.06409"
+       id="text6032"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)"><tspan
+         sodipodi:role="line"
+         id="tspan6034"
+         x="-29790.201"
+         y="894.06409">racetrack No. 01</tspan></text>
+    <g
+       id="g6069"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)">
+      <path
+         style="fill:#808080;stroke:#000000;filter:url(#filter6016)"
+         d="m -29865.316,905.84954 477.297,0 -477.297,16.57281 z"
+         id="path6036"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6038"
+         d="m -29016.019,824.42235 -477.297,0 477.297,-16.57281 z"
+         style="fill:#808080;stroke:#000000;filter:url(#filter6004)" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:41.03649902px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:1.95091546;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       x="-30317.293"
+       y="801.23444"
+       id="text6040"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6042"
+         x="-30317.293"
+         y="801.23444"
+         style="stroke-width:1.95091546">racetrack No. 02</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text6044"
+       y="1072.1891"
+       x="-29789.873"
+       style="font-size:84.13793182px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter5992);font-family:Sans"
+       xml:space="preserve"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)"><tspan
+         y="1072.1891"
+         x="-29789.873"
+         id="tspan6046"
+         sodipodi:role="line">racetrack No. 02</tspan></text>
+    <g
+       id="g6073"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6048"
+         d="m -29865.316,1083.9745 477.297,0 -477.297,16.5728 z"
+         style="fill:#808080;stroke:#000000;filter:url(#filter6016)" />
+      <path
+         style="fill:#808080;stroke:#000000;filter:url(#filter6004)"
+         d="m -29016.019,1002.5473 -477.297,0 477.297,-16.57277 z"
+         id="path6050"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text6052"
+       y="900.30438"
+       x="-30317.293"
+       style="font-size:41.03649902px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:1.95091546;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="900.30438"
+         x="-30317.293"
+         id="tspan6054"
+         sodipodi:role="line"
+         style="stroke-width:1.95091546">racetrack No. 03</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:84.13793182px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter5992);font-family:Sans"
+       x="-29790.715"
+       y="1275.3141"
+       id="text6056"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)"><tspan
+         sodipodi:role="line"
+         id="tspan6058"
+         x="-29790.715"
+         y="1275.3141">racetrack No. 03</tspan></text>
+    <g
+       id="g6077"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)">
+      <path
+         style="fill:#808080;stroke:#000000;filter:url(#filter6016)"
+         d="m -29865.316,1287.0995 477.297,0 -477.297,16.5728 z"
+         id="path6060"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6062"
+         d="m -29016.019,1205.6723 -477.297,0 477.297,-16.5728 z"
+         style="fill:#808080;stroke:#000000;filter:url(#filter6004)" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:84.13793182000000570px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       x="-29820.48"
+       y="-130.93588"
+       id="text6272"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)"><tspan
+         sodipodi:role="line"
+         id="tspan6274"
+         x="-29820.48"
+         y="-130.93588">rookie's racetrack</tspan></text>
+    <g
+       id="g6276"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,-136.27264)"
+       style="fill:#ffffff;stroke:#ffffff"
+       inkscape:export-filename="/media/kenystev/Datos/keny++/TopGearTry/assets/p_novato_s.png"
+       inkscape:export-xdpi="88.762268"
+       inkscape:export-ydpi="88.762268">
+      <path
+         style="fill:#ffffff;stroke:#ffffff;filter:url(#filter6016)"
+         d="m -29865.316,730.84955 477.297,0 -477.297,16.57281 z"
+         id="path6278"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6280"
+         d="m -29016.019,649.42236 -477.297,0 477.297,-16.57281 z"
+         style="fill:#ffffff;stroke:#ffffff;filter:url(#filter6004)" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text6282"
+       y="44.064114"
+       x="-29790.201"
+       style="font-size:84.13793182000000570px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       xml:space="preserve"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)"><tspan
+         y="44.064114"
+         x="-29790.201"
+         id="tspan6284"
+         sodipodi:role="line">racetrack No. 01</tspan></text>
+    <g
+       id="g6286"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,-136.27264)"
+       style="fill:#ffffff;stroke:#ffffff"
+       inkscape:export-filename="/media/kenystev/Datos/keny++/TopGearTry/assets/p_01_s.png"
+       inkscape:export-xdpi="88.762268"
+       inkscape:export-ydpi="88.762268">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6288"
+         d="m -29865.316,905.84954 477.297,0 -477.297,16.57281 z"
+         style="fill:#ffffff;stroke:#ffffff;filter:url(#filter6016)" />
+      <path
+         style="fill:#ffffff;stroke:#ffffff;filter:url(#filter6004)"
+         d="m -29016.019,824.42235 -477.297,0 477.297,-16.57281 z"
+         id="path6290"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:84.13793182000000570px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       x="-29789.873"
+       y="222.18912"
+       id="text6292"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)"><tspan
+         sodipodi:role="line"
+         id="tspan6294"
+         x="-29789.873"
+         y="222.18912">racetrack No. 02</tspan></text>
+    <g
+       id="g6296"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,-136.27264)"
+       style="fill:#ffffff;stroke:#ffffff"
+       inkscape:export-filename="/media/kenystev/Datos/keny++/TopGearTry/assets/p_02_s.png"
+       inkscape:export-xdpi="88.762268"
+       inkscape:export-ydpi="88.762268">
+      <path
+         style="fill:#ffffff;stroke:#ffffff;filter:url(#filter6016)"
+         d="m -29865.316,1083.9745 477.297,0 -477.297,16.5728 z"
+         id="path6298"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6300"
+         d="m -29016.019,1002.5473 -477.297,0 477.297,-16.57277 z"
+         style="fill:#ffffff;stroke:#ffffff;filter:url(#filter6004)" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text6302"
+       y="425.31412"
+       x="-29790.715"
+       style="font-size:84.13793182000000570px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       xml:space="preserve"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,278.29689)"><tspan
+         y="425.31412"
+         x="-29790.715"
+         id="tspan6304"
+         sodipodi:role="line">racetrack No. 03</tspan></text>
+    <g
+       id="g6306"
+       transform="matrix(0.48772888,0,0,0.48772888,-15303.958,-136.27264)"
+       style="fill:#ffffff;stroke:#ffffff"
+       inkscape:export-filename="/media/kenystev/Datos/keny++/TopGearTry/assets/p_03_s.png"
+       inkscape:export-xdpi="88.762268"
+       inkscape:export-ydpi="88.762268">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6308"
+         d="m -29865.316,1287.0995 477.297,0 -477.297,16.5728 z"
+         style="fill:#ffffff;stroke:#ffffff;filter:url(#filter6016)" />
+      <path
+         style="fill:#ffffff;stroke:#ffffff;filter:url(#filter6004)"
+         d="m -29016.019,1205.6723 -477.297,0 477.297,-16.5728 z"
+         id="path6310"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <text
+       transform="matrix(0.48772888,0,0,0.48772888,-15766.458,278.29689)"
+       sodipodi:linespacing="125%"
+       id="text6424"
+       y="-130.93588"
+       x="-29820.48"
+       style="font-size:84.13793182000000570px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4.00017320999999981;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="-130.93588"
+         x="-29820.48"
+         id="tspan6426"
+         sodipodi:role="line">rookie's racetrack</tspan></text>
+    <g
+       style="fill:none;stroke:#ffffff"
+       transform="matrix(0.48772888,0,0,0.48772888,-15766.458,-136.27264)"
+       id="g6428"
+       inkscape:export-filename="/media/kenystev/Datos/keny++/TopGearTry/assets/p_novato.png"
+       inkscape:export-xdpi="88.762268"
+       inkscape:export-ydpi="88.762268">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6430"
+         d="m -29865.316,730.84955 477.297,0 -477.297,16.57281 z"
+         style="fill:none;stroke:#ffffff;filter:url(#filter6016)" />
+      <path
+         style="fill:none;stroke:#ffffff;filter:url(#filter6004)"
+         d="m -29016.019,649.42236 -477.297,0 477.297,-16.57281 z"
+         id="path6432"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <text
+       transform="matrix(0.48772888,0,0,0.48772888,-15766.458,278.29689)"
+       xml:space="preserve"
+       style="font-size:84.13793182000000570px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       x="-29790.201"
+       y="44.064114"
+       id="text6434"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6436"
+         x="-29790.201"
+         y="44.064114">racetrack No. 01</tspan></text>
+    <g
+       style="fill:none;stroke:#ffffff"
+       transform="matrix(0.48772888,0,0,0.48772888,-15766.458,-136.27264)"
+       id="g6438"
+       inkscape:export-filename="/media/kenystev/Datos/keny++/TopGearTry/assets/p_01.png"
+       inkscape:export-xdpi="88.762268"
+       inkscape:export-ydpi="88.762268">
+      <path
+         style="fill:none;stroke:#ffffff;filter:url(#filter6016)"
+         d="m -29865.316,905.84954 477.297,0 -477.297,16.57281 z"
+         id="path6440"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6442"
+         d="m -29016.019,824.42235 -477.297,0 477.297,-16.57281 z"
+         style="fill:none;stroke:#ffffff;filter:url(#filter6004)" />
+    </g>
+    <text
+       transform="matrix(0.48772888,0,0,0.48772888,-15766.458,278.29689)"
+       sodipodi:linespacing="125%"
+       id="text6444"
+       y="222.18912"
+       x="-29789.873"
+       style="font-size:84.13793182000000570px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="222.18912"
+         x="-29789.873"
+         id="tspan6446"
+         sodipodi:role="line">racetrack No. 02</tspan></text>
+    <g
+       style="fill:none;stroke:#ffffff"
+       transform="matrix(0.48772888,0,0,0.48772888,-15766.458,-136.27264)"
+       id="g6448"
+       inkscape:export-filename="/media/kenystev/Datos/keny++/TopGearTry/assets/p_02.png"
+       inkscape:export-xdpi="88.762268"
+       inkscape:export-ydpi="88.762268">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6450"
+         d="m -29865.316,1083.9745 477.297,0 -477.297,16.5728 z"
+         style="fill:none;stroke:#ffffff;filter:url(#filter6016)" />
+      <path
+         style="fill:none;stroke:#ffffff;filter:url(#filter6004)"
+         d="m -29016.019,1002.5473 -477.297,0 477.297,-16.57277 z"
+         id="path6452"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <text
+       transform="matrix(0.48772888,0,0,0.48772888,-15766.458,278.29689)"
+       xml:space="preserve"
+       style="font-size:84.13793182000000570px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;font-family:Sans"
+       x="-29790.715"
+       y="425.31412"
+       id="text6454"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6456"
+         x="-29790.715"
+         y="425.31412">racetrack No. 03</tspan></text>
+    <g
+       style="fill:none;stroke:#ffffff"
+       transform="matrix(0.48772888,0,0,0.48772888,-15766.458,-136.27264)"
+       id="g6458"
+       inkscape:export-filename="/media/kenystev/Datos/keny++/TopGearTry/assets/p_03.png"
+       inkscape:export-xdpi="88.762268"
+       inkscape:export-ydpi="88.762268">
+      <path
+         style="fill:none;stroke:#ffffff;filter:url(#filter6016)"
+         d="m -29865.316,1287.0995 477.297,0 -477.297,16.5728 z"
+         id="path6460"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6462"
+         d="m -29016.019,1205.6723 -477.297,0 477.297,-16.5728 z"
+         style="fill:none;stroke:#ffffff;filter:url(#filter6004)" />
     </g>
   </g>
 </svg>

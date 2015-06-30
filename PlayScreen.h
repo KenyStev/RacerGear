@@ -4,6 +4,7 @@
 #include "Game.h"
 #include "Pista.h"
 #include "Car.h"
+#include "Font.h"
 
 #include <map>
 
@@ -26,6 +27,8 @@ class PlayScreen : public Screen
         Pista *track;
         Car *player_car;
         map<int,Car*> cars;
+        Font *display_laps;
+
         Game *game;
         PlayScreen(Game*);
 

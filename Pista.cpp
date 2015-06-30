@@ -24,8 +24,9 @@ Pista::Pista(Car *c, RosalilaGraphics *paint, Receiver* receiver)
     seg=0;
     cont=-1;
     go=false;
-    display_time=new Font("font.ttf");
-    display_time->setSize(50);
+    display_time=new Font("airstrikeplat.ttf");
+    display_time->setSize(20);
+    display_time->setColor(0,0,0);
     contD.push_back(paint->getTexture(assets_directory+"Contador1.png"));
     contD.push_back(paint->getTexture(assets_directory+"Contador2.png"));
     contD.push_back(paint->getTexture(assets_directory+"Contador3.png"));
@@ -106,7 +107,7 @@ void Pista:: draw(){
     painter->draw2DImage(background,background->getWidth(),background->getHeight(),0,0,1,0,false,0,0,Color(255,255,255,255),0,0,false);
     road->draw(car,off_set_x,off_set_y);
     miLista2->draw(off_set_x,off_set_y);
-    display_time->drawText("Time: "+ toString(seg)+" seg.",0,0);
+    display_time->drawText("Time: "+ toString(seg)+" seg.",115,120);
     car->draw();
     if(!go){
         countdown();
