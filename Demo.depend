@@ -320,7 +320,7 @@
 	"MenuScreen.h"
 	"RaceGear.h"
 
-1435626040 source:/home/luis/Documentos/Proyecto Nuevo/Pista.cpp
+1435626640 source:/home/luis/Documentos/Proyecto Nuevo/Pista.cpp
 	"Pista.h"
 	"ListImage.h"
 
@@ -488,11 +488,11 @@
 	"SelectScreen.h"
 	"RaceGear.h"
 
-1435625778 source:/home/luis/Documentos/Proyecto Nuevo/StatisticsScreen.cpp
+1435686369 source:/home/luis/Documentos/Proyecto Nuevo/StatisticsScreen.cpp
 	"StatisticsScreen.h"
 	"RaceGear.h"
 
-1435617033 /home/luis/Documentos/Proyecto Nuevo/StatisticsScreen.h
+1435680017 /home/luis/Documentos/Proyecto Nuevo/StatisticsScreen.h
 	"Screen.h"
 	"Game.h"
 	"Buttons.h"
