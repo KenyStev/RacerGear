@@ -43,9 +43,11 @@ void StatisticsScreen::show (){
     estrellas.push_back(game->rosalila_graphics->getTexture(assets_directory+"Estrella4.png"));
     estrellas.push_back(game->rosalila_graphics->getTexture(assets_directory+"Estrella5.png"));
     stars=-1;
+    s=0;
     font = new Font("font.ttf");
     font->setSize(52);
     font->setColor(255,255,255);
+    s=calculateStars(time,((RaceGear*)game)->id_pista);
 }
 void StatisticsScreen::render (RosalilaGraphics* painter){
     game->rosalila_graphics->draw2DImage(background,
@@ -64,15 +66,11 @@ void StatisticsScreen::render (RosalilaGraphics* painter){
                             Color(255,255,255,255),
                             0,0,
                             false);
-    paintStars(5);
+    paintStars(s);
     font->drawText(toString(time),316,470);
     font->drawText(toString(mi_posicion),221,556);
     font->drawText(name,87,117);
     font->drawText(track,463,385);
-    int x = game->receiver->getMouse_X();
-    int y = game->receiver->getMouse_Y();
-    font->drawText(toString(x),0,0);
-    font->drawText(toString(y),0,50);
 
     if(menu->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
             game->setScreen(((RaceGear*)game)->MENU);
@@ -116,10 +114,71 @@ void StatisticsScreen::paintStars(int s){
                                 false);
     }
     if(stars<s-1){
-        if(game->rosalila_graphics->frame%40==0){
+        if(game->rosalila_graphics->frame%50==0){
             stars++;
         }
     }
+}
+
+int StatisticsScreen::calculateStars(int seg, int pista){
+    if(pista==1){
+        switch (seg)
+        {
+            case 1 ... 220:
+                return 5;
+            case 221 ... 254:
+                return 4;
+            case 255 ... 280:
+                return 3;
+            case 281 ... 294:
+                return 2;
+            default:
+                return 1;
+        }
+    }else if(pista == 2){
+        switch (seg)
+        {
+            case 1 ... 100:
+                return 5;
+            case 101 ... 115:
+                return 4;
+            case 116 ... 128:
+                return 3;
+            case 129 ... 135:
+                return 2;
+            default:
+                return 1;
+        }
+    }else if(pista ==3){
+        switch (seg)
+        {
+            case 1 ... 185:
+                return 5;
+            case 186 ... 212:
+                return 4;
+            case 213 ... 233:
+                return 3;
+            case 234 ... 244:
+                return 2;
+            default:
+                return 1;
+        }
+    }else if(pista ==4){
+        switch (seg)
+        {
+            case 1 ... 85:
+                return 5;
+            case 86 ... 95:
+                return 4;
+            case 96 ... 104:
+                return 3;
+            case 105 ... 110:
+                return 2;
+            default:
+                return 1;
+        }
+    }
+    return 0;
 }
 
 StatisticsScreen::~StatisticsScreen()
