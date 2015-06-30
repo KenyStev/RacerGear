@@ -30,7 +30,7 @@ Car::Car(RosalilaGraphics *p, string image)
     marker_y = 614;//(140+velocimeter->getHeight())-marker->getHeight();
     marker_y_max = 201;//((140+velocimeter->getHeight())-marker->getHeight())-413;
 
-    wheels.w = car->getWidth()*0.8;
+    wheels.w = car->getWidth()*0.9;
     wheels.h = car->getHeight()*0.15;
     wheels.x = (car->getWidth())*0.5 - wheels.w*0.5;
     wheels.y = (y+car->getHeight()) - wheels.h;
@@ -321,5 +321,5 @@ void Car::draw()
             }else
                 danger = false;
 //    painter->drawRectangle(wheels.x,wheels.y,wheels.w,wheels.h,
-//                            0,255,0,0,100,false);
+//                            0,255,0,0,255,false);
 }
