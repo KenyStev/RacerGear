@@ -22,7 +22,7 @@ class PlayScreen : public Screen
         Image* background, *bu, *bd,*G_over;
         bool finish;
         string n="";
-        int time, num_rt,notexitst=1;
+        int time, num_rt;
         Scores *scr;
         Pista *track;
         Car *player_car;
