@@ -13,6 +13,11 @@ MenuScreen::~MenuScreen()
 
 void MenuScreen::show ()
 {
+        ((RaceGear*)game)->selected_car = 0;
+        ((RaceGear*)game)->selected_track = "pista_novato.xml";
+        ((RaceGear*)game)->name_player="";
+        ((RaceGear*)game)->seg=0;
+        ((RaceGear*)game)->id_pista=1;
         //Fondo init
         fondo= game->rosalila_graphics->getTexture(assets_directory+"Menu.png");
         //Play button init

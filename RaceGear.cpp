@@ -7,6 +7,7 @@ RaceGear::RaceGear()
     SELECT = new SelectScreen(this);
     RANKING = new RankingScreen(this);
     INSTRUCTION = new InsScreen(this);
+    STATISTICS = new StatisticsScreen(this);
 }
 
 RaceGear::~RaceGear()
@@ -16,6 +17,7 @@ RaceGear::~RaceGear()
     delete SELECT;
     delete RANKING;
     delete INSTRUCTION;
+    delete STATISTICS;
 }
 
 void RaceGear::create()
@@ -24,6 +26,7 @@ void RaceGear::create()
     selected_track = "pista_novato.xml";
     name_player="";
     seg=0;
+    id_pista=1;
 
     setScreen(MENU);
 }

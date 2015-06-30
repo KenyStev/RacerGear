@@ -16,7 +16,7 @@ using namespace std;
 #include "Rosalila/RosalilaInputs/RosalilaInputs.h"
 #include "Rosalila/RosalilaGraphics/RosalilaGraphics.h"
 #include "Rosalila/RosalilaSound/RosalilaSound.h"
-
+#include <vector>
 #include "Font.h"
 
 class Pista
@@ -26,9 +26,12 @@ class Pista
         float off_set_y, off_set_x;
         ListImage* road;
         ListImage* miLista2;
-        int laps;
+        int laps,cont;
+        bool go;
+        vector<Image*> contD;
         double time;
         bool getLose();
+        void countdown();
         int seg;
         string player_name;
         clock_t start,stop;

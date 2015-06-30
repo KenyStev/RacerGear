@@ -22,48 +22,82 @@ Pista::Pista(Car *c, RosalilaGraphics *paint, Receiver* receiver)
     start=NULL;
     stop=NULL;
     seg=0;
-
+    cont=-1;
+    go=false;
     display_time=new Font("font.ttf");
     display_time->setSize(50);
+    contD.push_back(paint->getTexture(assets_directory+"Contador1.png"));
+    contD.push_back(paint->getTexture(assets_directory+"Contador2.png"));
+    contD.push_back(paint->getTexture(assets_directory+"Contador3.png"));
+    contD.push_back(paint->getTexture(assets_directory+"Contador4.png"));
 }
 Pista::Pista(){
 
+}
+void Pista::countdown(){
+    if(cont>=0){
+    painter->draw2DImage(contD[cont],
+                            contD[cont]->getWidth(),contD[cont]->getHeight(),
+                            215,67,
+                            1,
+                            0,false,
+                            0,0,
+                            Color(255,255,255,255),
+                            0,0,
+                            false);
+    }
+    if(cont<=3){
+        if(painter->frame%50==0)
+            cont++;
+    }
 }
 bool Pista::getLose(){
     return car->getLose();
 }
 void Pista::init(){
+    cont=-1;
+    go=false;
     for(int i=0; i<90; i++)
         miLista2->add("flags_2");
 }
 
 void Pista::logica(){
-        start = clock();
-        off_set_y=car->v;
+        if(go){
+            start = clock();
+            off_set_y=car->v;
 
-        if(car->turn)
-            off_set_x=car->TURN;
-        else
-            off_set_x=0;
+            if(car->turn)
+                off_set_x=car->TURN;
+            else
+                off_set_x=0;
 
-        car->update(receiver);
+            car->update(receiver);
 
-        stop = clock();
-        time +=(stop - start);
-        seg = ((time)/1240);
-        if(road->isMeta() && road->pops!=0)// && road->pops<=road->size*laps)
-        {
-            laps--;
-            road->add(road->pop());
-            cout<<"Laps: "<<laps<<endl;
-//            if(laps==0)exit(11);
+            stop = clock();
+            time +=(stop - start);
+            seg = ((time)/300);
+            if(road->isMeta() && road->pops!=0)// && road->pops<=road->size*laps)
+            {
+                laps--;
+                road->add(road->pop());
+                //cout<<"Laps: "<<laps<<endl;
+    //            if(laps==0)exit(11);
+            }
+            if(laps==0){
+                if(off_set_y>0)
+                    off_set_y-=1;
+                else{
+                    off_set_y=0;
+                }
+            }
+            if(getLose()){
+                    off_set_y=0;
+            }
         }
-        if(getLose()){
-                off_set_y=0;
-//            if(off_set_y>0)
-//                off_set_y-=1;
-//            else
-//                off_set_y=0;
+        if(cont==3){
+            if(painter->frame%50==0){
+                go=true;
+            }
         }
 
 }
@@ -72,8 +106,12 @@ void Pista:: draw(){
     painter->draw2DImage(background,background->getWidth(),background->getHeight(),0,0,1,0,false,0,0,Color(255,255,255,255),0,0,false);
     road->draw(car,off_set_x,off_set_y);
     miLista2->draw(off_set_x,off_set_y);
-    display_time->drawText("Tiempo: "+ toString(seg)+" seg.",0,0);
+    display_time->drawText("Time: "+ toString(seg)+" seg.",0,0);
     car->draw();
+    if(!go){
+        countdown();
+        cout<<cont<<endl;
+    }
 }
 Pista::~Pista()
 {

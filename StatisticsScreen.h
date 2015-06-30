@@ -5,21 +5,25 @@
 #include "Buttons.h"
 #include "Scores.h"
 #include "Font.h"
-#include<map>
+#include <vector>
 
 class StatisticsScreen : public Screen
 {
     public:
         Game *game;
         Font *font;
-        int mi_posicion;
-        string track,nombre_pista="";
-        int car,time;
+        int mi_posicion=0;
+        string track,name;
+        int car,time,stars;
         map<int,Image*>cars;
+        map<int,string>rts;
+        vector<Image*> estrellas;
         BackButton *reiniciar, *menu;
-        Image* background,*mu,*md,*ru,*rd,*carro;
+        Image* background,*mu,*md,*ru,*rd;
+        Image *carro;
         Scores *ranking;
         StatisticsScreen(Game* game);
+        void paintStars(int cont);
         void show ();
         void render (RosalilaGraphics* painter);
         void pause ();

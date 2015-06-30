@@ -11,9 +11,13 @@ class SelectScreen : public Screen
     public:
         vector<CarButton*> buttons;
         vector<TrackButton*> tracks;
+        string name_rt="";
         PlayButton *play_button;
+        Image *background, *car_chosed;
+        map<int,Image*>cars;
+        map<int,string>rts;
         string name;
-        Font *display;
+        Font *display,*nuevo;
 
         void loadCars();
         void loadTracks();

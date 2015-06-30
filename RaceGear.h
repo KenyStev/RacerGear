@@ -7,6 +7,7 @@
 #include "SelectScreen.h"
 #include "RankingScreen.h"
 #include "InsScreen.h"
+#include "StatisticsScreen.h"
 
 //#include "Data.h"
 
@@ -20,12 +21,14 @@ class RaceGear : public Game
         //datos del jugador
         string name_player;
         int seg;
+        int id_pista;
 
         PlayScreen *PLAY;
         MenuScreen *MENU;
         SelectScreen *SELECT;
         RankingScreen *RANKING;
         InsScreen *INSTRUCTION;
+        StatisticsScreen *STATISTICS;
         RaceGear();
 
 //        void setScreen(Screen *screen);

@@ -18,21 +18,45 @@ SelectScreen::~SelectScreen()
 
 void SelectScreen::show ()
 {
-    play_button = new PlayButton(1162,712,game->rosalila_graphics->getTexture(assets_directory+"PLAY_UP.png"),
+     background = game->rosalila_graphics->getTexture(assets_directory+"Selec.png");
+    play_button = new PlayButton(1004,501,game->rosalila_graphics->getTexture(assets_directory+"PLAY_UP.png"),
                                     game->rosalila_graphics->getTexture(assets_directory+"PLAY_DWN.png"),
                                     game->rosalila_graphics,game);
     name="";
     display = new Font("font.ttf");
+    nuevo = new Font("font.ttf");
+    nuevo->setColor(213,255,230);
+    nuevo->setSize(48);
+    display->setColor(255,255,0);
+    display->setSize(48);
 
     //load cars
     loadCars();
 
     //load tracks
     loadTracks();
+    cars[0]= game->rosalila_graphics->getTexture(assets_directory+"gray.png");
+    cars[1]= game->rosalila_graphics->getTexture(assets_directory+"blue.png");
+    cars[2]= game->rosalila_graphics->getTexture(assets_directory+"green.png");
+    cars[3]= game->rosalila_graphics->getTexture(assets_directory+"red.png");
+
+    rts[1]="Racetrack For Beginners";
+    rts[2]="Racetrack No.1";
+    rts[3]="Racetrack No.2";
+    rts[4]="Racetrack No.3";
+
 }
 
 void SelectScreen::render (RosalilaGraphics*p)
 {
+    game->rosalila_graphics->draw2DImage(background,
+                            background->getWidth(),background->getHeight(),
+                            0,0,1,
+                            0,false,
+                            0,0,
+                            Color(255,255,255,255),
+                            0,0,
+                            false);
     //draw cars
     for(int i=0;i<buttons.size();i++)
     {
@@ -40,12 +64,24 @@ void SelectScreen::render (RosalilaGraphics*p)
                     ((RaceGear*)game)->selected_car=buttons[i]->num;
         buttons[i]->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
     }
+    car_chosed=cars[((RaceGear*)game)->selected_car];
+     game->rosalila_graphics->draw2DImage(car_chosed,
+                            car_chosed->getWidth(),car_chosed->getHeight(),
+                            968,251,1,
+                            0,false,
+                            0,0,
+                            Color(255,255,255,255),
+                            0,0,
+                            false);
 
     //draw track
     for(int i=0;i<tracks.size();i++)
     {
         if(tracks[i]->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
-                    ((RaceGear*)game)->selected_track=tracks[i]->name;
+        {
+            ((RaceGear*)game)->selected_track=tracks[i]->name;
+            ((RaceGear*)game)->id_pista=tracks[i]->num_pista;
+        }
         tracks[i]->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
     }
 
@@ -59,9 +95,9 @@ void SelectScreen::render (RosalilaGraphics*p)
     display->drawText(toString(x),0,0);
     display->drawText(toString(y),0,50);
 
-    display->drawText("Su Nombre:",830,200);
-    display->drawText(name,830,217);
-    catchName();
+    display->drawText(name,888,410);
+    nuevo->drawText(rts[((RaceGear*)game)->id_pista],790,185);
+        catchName();
 }
 
 void SelectScreen::pause ()
@@ -126,7 +162,7 @@ void SelectScreen::loadTracks()
             string path = track->ToElement()->Attribute("button");
             string path_s = path+"_s.png";
             path+=".png";
-            tracks.push_back(new TrackButton(path_file,350,i*182,game->rosalila_graphics->getTexture(assets_directory+path),
+            tracks.push_back(new TrackButton(i+1,path_file,350,i*182,game->rosalila_graphics->getTexture(assets_directory+path),
                                 game->rosalila_graphics->getTexture(assets_directory+path_s),
                                 game->rosalila_graphics));
             cout<<path_file<<"   "<<path<<"   "<<path_s<<endl;
@@ -135,19 +171,20 @@ void SelectScreen::loadTracks()
 
 void SelectScreen::catchName()
 {
-
-    for(int i=0; i<26;i++)
-    {
-        if(game->receiver->isKeyPressed(i+97))
+    if(name.size()<15){
+        for(int i=0; i<26;i++)
         {
-            char c = i+65;
-            name+=c;
+            if(game->receiver->isKeyPressed(i+97))
+            {
+                char c = i+65;
+                name+=c;
+            }
+            if(game->receiver->isKeyPressed(SDLK_SPACE)){
+                name +=" ";
+            }
         }
-        if(game->receiver->isKeyPressed(SDLK_BACKSPACE)){
-            name ="";
-        }
-        if(game->receiver->isKeyPressed(SDLK_SPACE)){
-            name +=" ";
-        }
+    }
+    if(game->receiver->isKeyPressed(SDLK_BACKSPACE)){
+                name ="";
     }
 }

@@ -27,6 +27,9 @@ PlayScreen::~PlayScreen()
 
 void PlayScreen::show ()
 {
+    time=0;
+    scr=new Scores();
+    finish=false;
 //    loadCars("cars.xml");
     player_car = cars[((RaceGear*)game)->selected_car];
     player_car->initCar();
@@ -39,6 +42,12 @@ void PlayScreen::show ()
     bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
     back_button = new BackButton(100,100,bu,bd,game->rosalila_graphics);
     track->init();
+    n =((RaceGear*)game)->name_player;
+    if(scr->seekUser(n)<0){
+        notexitst=-1;
+        //scr->createNewUserBinary(n);
+    }
+    num_rt = ((RaceGear*)game)->id_pista;
 }
 
 void PlayScreen::render (RosalilaGraphics*p)
@@ -50,15 +59,19 @@ void PlayScreen::render (RosalilaGraphics*p)
 
     if(track->laps==0)
     {
+        finish=true;
         ((RaceGear*)game)->seg=track->seg;
-//        game->setScreen(((RaceGear*)game)->STATISTICS);
+        //exit(11);
+       if(game->rosalila_graphics->frame%100==0)
+            game->setScreen(((RaceGear*)game)->STATISTICS);
+
     }
 //    back_button->update(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
     if(back_button->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
         game->setScreen(((RaceGear*)game)->MENU);
     back_button->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
 
-    p->drawText(((RaceGear*)game)->name_player,500,0);
+    p->drawText("Laps: "+toString(track->laps),500,0);
 }
 //        void resize (int width, int height);
 void PlayScreen::pause ()
@@ -73,7 +86,27 @@ void PlayScreen::resume ()
 
 void PlayScreen::hide ()
 {
-    track->clear();
+    time = ((RaceGear*)game)->seg;
+    cout<<notexitst<<endl;
+    cout<<n<<endl;
+    cout<<((RaceGear*)game)->selected_car<<endl;
+    cout<<num_rt<<endl;
+    cout<<time<<endl;
+    cout<<"-------------------AQUI"<<endl;
+//    if(finish){
+//        scr->setPuntosToPista(n,time,num_rt);
+//    }
+//    //scr->setPuntosToPista(n,time,num_rt);
+//    track->clear();
+//    delete background;
+//    delete scr;
+//    delete track;
+//    delete player_car;
+//    delete cars[0];
+//    delete cars[1];
+//    delete cars[2];
+//    delete cars[3];
+//    delete &cars;
 }
 
 void PlayScreen::dispose ()

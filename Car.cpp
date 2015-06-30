@@ -22,7 +22,7 @@ Car::Car(RosalilaGraphics *p, string image)
 
     marker = p->getTexture(assets_directory+"Indicador.png");
     velocimeter = velocimeter_state["first"];
-
+    G_over=painter->getTexture(assets_directory+"Gameover.png");
     x = p->screen_width*0.5 - car->getWidth()*0.5;
     y = p->screen_height - car->getHeight();
     scale=1;
@@ -30,7 +30,7 @@ Car::Car(RosalilaGraphics *p, string image)
     marker_y = 614;//(140+velocimeter->getHeight())-marker->getHeight();
     marker_y_max = 201;//((140+velocimeter->getHeight())-marker->getHeight())-413;
 
-    wheels.w = car->getWidth()*0.9;
+    wheels.w = car->getWidth()*0.8;
     wheels.h = car->getHeight()*0.15;
     wheels.x = (car->getWidth())*0.5 - wheels.w*0.5;
     wheels.y = (y+car->getHeight()) - wheels.h;
@@ -56,18 +56,35 @@ Car::Car(){
 Car::~Car()
 {
     delete painter;
+//    delete state["ahead"];
+//    delete state["left"];
+//    delete state["right"];
     delete car;
+//    delete velocimeter_state["first"];
+//    delete velocimeter_state["second"];
+//    delete velocimeter_state["third"];
+//    delete velocimeter_state["fourth"];
+//    delete velocimeter_state["fifth"];
     delete velocimeter;
     delete marker;
+//    delete warning[0];
+//    delete warning[1];
+//    delete warning[2];
+//    delete warning[3];
+//    delete &warning;
+//    delete &wheels;
 //    delete velocimeter_state;
 //    delete state;
 }
 
 void Car::initCar()
 {
+    G_over=painter->getTexture(assets_directory+"Gameover.png");
     marker_speed =0;
     cambio =0;
     v=0;
+    car = state["ahead"];
+    velocimeter = velocimeter_state["first"];
 //    maximum = 15;
     v_max=0;
     first = false, second = false,third = false,fourth = false,fifth = false, speed_up = false,danger= false, lose = false;
@@ -144,15 +161,16 @@ void Car::update(Receiver *r)
 //    }
     car = state["ahead"];
     if(r->isKeyPressed(SDLK_a)){
-        if(cambio<6)
+        if(cambio<6){
             cambio++;
-
+        }
     }
 
 
     if(r->isKeyPressed(SDLK_z)){
-        if(cambio>0)
+        if(cambio>0){
             cambio--;
+        }
     }
 
     if(cambio==1){
@@ -247,7 +265,7 @@ void Car::update(Receiver *r)
             outOfRoad=false;
         }
     }
-    cout<<"-----> off_X-CAR: "<<off_set_x<<endl;
+    //cout<<"-----> off_X-CAR: "<<off_set_x<<endl;
 }
 
 bool Car:: getLose(){
@@ -292,7 +310,14 @@ void Car::draw()
             warningAnimation();
             danger = true;
             if(lose)
-                painter->drawText("PERDISTE",painter->screen_width*0.5,painter->screen_height*0.5);
+                painter->draw2DImage(G_over,
+                        G_over->getWidth(),G_over->getHeight(),
+                        93,84,1,
+                        0,false,
+                        0,0,
+                        Color(255,255,255,255),
+                        0,0,
+                        false);
             }else
                 danger = false;
 //    painter->drawRectangle(wheels.x,wheels.y,wheels.w,wheels.h,

@@ -24,7 +24,7 @@ class Car
         void warningAnimation();
         int warning_actual,cambio=0;
 
-        Image *car,*velocimeter,*marker;
+        Image *car,*velocimeter,*marker, *G_over;
         map<string,Image*> state;
         map<string,Image*> velocimeter_state;
         SDL_Rect wheels;//wheel_left
