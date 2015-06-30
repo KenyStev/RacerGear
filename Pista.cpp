@@ -24,7 +24,7 @@ Pista::Pista(Car *c, RosalilaGraphics *paint, Receiver* receiver)
     seg=0;
     cont=-1;
     go=false;
-    display_time=new Font("airstrikeplat.ttf");
+    display_time=new Font("airstrikeacad.ttf");
     display_time->setSize(20);
     display_time->setColor(0,0,0);
     contD.push_back(paint->getTexture(assets_directory+"Contador1.png"));

@@ -40,7 +40,7 @@ void ListImage::add(int hurt,string path)
 
     newStep->hurt=hurt;
 
-    if(strcmp(path.c_str(),"flags")!=0)
+    if(strcmp(path.c_str(),"flags")!=0 && strcmp(path.c_str(),"flags_2")!=0)
         newStep->setBorders();
 
     if(strcmp(path.c_str(),"puas_1-2")==0)
