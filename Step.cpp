@@ -236,9 +236,6 @@ void Step::draw(RosalilaGraphics* painter)
 //                                0,255,0,0,100,false);
 //    }
 //    cout<<"x: "<<x<<endl;
-    cout<<"a: "<<scale<<endl;
-    cout<<"off_x: "<<off_set_x<<endl;
-    cout<<"x: "<<x<<"y: "<<y<<endl;
 //    exit(0);
 }
 

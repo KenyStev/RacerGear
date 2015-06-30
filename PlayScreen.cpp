@@ -44,8 +44,7 @@ void PlayScreen::show ()
     track->init();
     n =((RaceGear*)game)->name_player;
     if(scr->seekUser(n)<0){
-        notexitst=-1;
-        //scr->createNewUserBinary(n);
+        scr->createNewUserBinary(n);
     }
     num_rt = ((RaceGear*)game)->id_pista;
     display_laps = new Font("airstrikeacad.ttf");
@@ -76,10 +75,6 @@ void PlayScreen::render (RosalilaGraphics*p)
 
     display_laps->drawText("Laps: "+toString(track->laps),117,87);
 
-//    int x = game->receiver->getMouse_X();
-//    int y = game->receiver->getMouse_Y();
-//    p->drawText(toString(x),0,0);
-//    p->drawText(toString(y),0,50);
 }
 //        void resize (int width, int height);
 void PlayScreen::pause ()
@@ -95,15 +90,9 @@ void PlayScreen::resume ()
 void PlayScreen::hide ()
 {
     time = ((RaceGear*)game)->seg;
-    cout<<notexitst<<endl;
-    cout<<n<<endl;
-    cout<<((RaceGear*)game)->selected_car<<endl;
-    cout<<num_rt<<endl;
-    cout<<time<<endl;
-    cout<<"-------------------AQUI"<<endl;
-//    if(finish){
-//        scr->setPuntosToPista(n,time,num_rt);
-//    }
+    if(finish){
+        scr->setPuntosToPista(n,time,num_rt);
+    }
 //    //scr->setPuntosToPista(n,time,num_rt);
 //    track->clear();
 //    delete background;
