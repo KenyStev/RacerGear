@@ -232,7 +232,7 @@ void ListImage::loadSteps(std::string path)
         step=step->NextSibling("step"))
         {
             string s = step->ToElement()->Attribute("path");
-            cout<<s<<endl;
+            //cout<<s<<endl;
             texturas[s] = new Step(painter,assets_directory+s+".png");
         }
 }

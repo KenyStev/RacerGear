@@ -8,9 +8,7 @@ StatisticsScreen::StatisticsScreen(Game *game)
 }
 
 void StatisticsScreen::show (){
-    font = new Font("font.ttf");
-    font->setSize(72);
-    font->setColor(255,255,255);
+
     background = game->rosalila_graphics->getTexture(assets_directory+"StaScreen.png");
     mu = game->rosalila_graphics->getTexture(assets_directory+"Menu_UP.png");
     md = game->rosalila_graphics->getTexture(assets_directory+"Menu_DOWN.png");
@@ -18,44 +16,36 @@ void StatisticsScreen::show (){
     ru = game->rosalila_graphics->getTexture(assets_directory+"Reiniciar_UP.png");
     rd = game->rosalila_graphics->getTexture(assets_directory+"Reiniciar_DOWN.png");
     reiniciar = new BackButton(1039,264,ru,rd,game->rosalila_graphics);
+
+    cars[0]= game->rosalila_graphics->getTexture(assets_directory+"gray_left.png");
+    cars[1]= game->rosalila_graphics->getTexture(assets_directory+"blue_left.png");
+    cars[2]= game->rosalila_graphics->getTexture(assets_directory+"green_left.png");
+    cars[3]= game->rosalila_graphics->getTexture(assets_directory+"red_left.png");
     car=((RaceGear*)game)->selected_car;
-    track=((RaceGear*)game)->getSelectedTrack();
-    time=((RaceGear*)game)->time;
-    cars[0]= game->rosalila_graphics->getTexture("blue_left.png");
-    cars[1]= game->rosalila_graphics->getTexture("gray_left.png");
-    cars[2]= game->rosalila_graphics->getTexture("green_left.png");
-    cars[3]= game->rosalila_graphics->getTexture("red_left.png");
-
-    carro = cars[0];
-    if(car==1){
-        carro = cars[1];
-    }
-    else if(car==2){
-        carro = cars[2];
-    }
-    else if(car==3){
-        carro = cars[3];
-    }
+    carro = cars[car];
+    name = ((RaceGear*)game)->name_player;
+    rts[1]="For Beginners";
+    rts[2]="No.1";
+    rts[3]="No.2";
+    rts[4]="No.3";
+    track = rts[((RaceGear*)game)->id_pista];
+    time=((RaceGear*)game)->seg;
     ranking = new Scores();
-    string num = "";//track[7];
-    for(int i=0;i<track.size()-4;i++){
-        nombre_pista+=track[i];
-        if(i == 7)
-            num+=track[i];
+    if(ranking->seekUser(name)>0){
+        ranking->seekRLP(((RaceGear*)game)->id_pista);
+        mi_posicion= ranking->getRLP(name);
+    }else{
+        mi_posicion=0;
     }
-    if(num=="2"){
-        ranking->seekRLP(2);
-    }
-    else if(num=="3"){
-        ranking->seekRLP(3);
-    }
-    else if(num=="4"){
-        ranking->seekRLP(4);
-    }
-    else
-        ranking->seekRLP(1);
-
-    mi_posicion = ranking->getRLP("");
+    estrellas.push_back(game->rosalila_graphics->getTexture(assets_directory+"Estrella.png"));
+    estrellas.push_back(game->rosalila_graphics->getTexture(assets_directory+"Estrella2.png"));
+    estrellas.push_back(game->rosalila_graphics->getTexture(assets_directory+"Estrella3.png"));
+    estrellas.push_back(game->rosalila_graphics->getTexture(assets_directory+"Estrella4.png"));
+    estrellas.push_back(game->rosalila_graphics->getTexture(assets_directory+"Estrella5.png"));
+    stars=-1;
+    font = new Font("font.ttf");
+    font->setSize(52);
+    font->setColor(255,255,255);
 }
 void StatisticsScreen::render (RosalilaGraphics* painter){
     game->rosalila_graphics->draw2DImage(background,
@@ -68,16 +58,21 @@ void StatisticsScreen::render (RosalilaGraphics* painter){
                             false);
     game->rosalila_graphics->draw2DImage(carro,
                             carro->getWidth(),carro->getHeight(),
-                            88,355,1,
+                            88,222,1,
                             0,false,
                             0,0,
                             Color(255,255,255,255),
                             0,0,
                             false);
-    font->drawText(toString(time),316,521);
-    font->drawText(toString(mi_posicion),221,608);
-    font->drawText("nombre",87,117);
-    font->drawText(nombre_pista,463,437);
+    paintStars(5);
+    font->drawText(toString(time),316,470);
+    font->drawText(toString(mi_posicion),221,556);
+    font->drawText(name,87,117);
+    font->drawText(track,463,385);
+    int x = game->receiver->getMouse_X();
+    int y = game->receiver->getMouse_Y();
+    font->drawText(toString(x),0,0);
+    font->drawText(toString(y),0,50);
 
     if(menu->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
             game->setScreen(((RaceGear*)game)->MENU);
@@ -95,19 +90,36 @@ void StatisticsScreen::resume (){
 
 }
 void StatisticsScreen::hide (){
-    delete font;
-//    delete reiniciar;
-//    delete menu;
-    delete background;
-//    delete mu;
-//    delete md;
-//    delete ru;
-//    delete rd;
-    delete carro;
-    delete ranking;
+////    delete reiniciar;
+////    delete menu;
+//    delete background;
+////    delete mu;
+////    delete md;
+////    delete ru;
+////    delete rd;
+//    delete carro;
+//    delete ranking;
 }
 void StatisticsScreen::dispose (){
 
+}
+
+void StatisticsScreen::paintStars(int s){
+    if(stars>=0){
+        game->rosalila_graphics->draw2DImage(estrellas[stars],
+                                estrellas[stars]->getWidth(),estrellas[stars]->getHeight(),
+                                74,626,1,
+                                0,false,
+                                0,0,
+                                Color(255,255,255,255),
+                                0,0,
+                                false);
+    }
+    if(stars<s-1){
+        if(game->rosalila_graphics->frame%40==0){
+            stars++;
+        }
+    }
 }
 
 StatisticsScreen::~StatisticsScreen()

@@ -7,6 +7,7 @@
 #include "SelectScreen.h"
 #include "RankingScreen.h"
 #include "InsScreen.h"
+#include "StatisticsScreen.h"
 
 //#include "Data.h"
 
@@ -27,11 +28,11 @@ class RaceGear : public Game
         SelectScreen *SELECT;
         RankingScreen *RANKING;
         InsScreen *INSTRUCTION;
+        StatisticsScreen *STATISTICS;
         RaceGear();
 
 //        void setScreen(Screen *screen);
 //        void setScreen(int);
-        void setTime(int time);
         void create();
         string getSelectedTrack();
         virtual ~RaceGear();
