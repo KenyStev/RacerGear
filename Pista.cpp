@@ -111,7 +111,6 @@ void Pista:: draw(){
     car->draw();
     if(!go){
         countdown();
-        cout<<cont<<endl;
     }
 }
 Pista::~Pista()
