@@ -48,7 +48,7 @@ void PlayScreen::show ()
         //scr->createNewUserBinary(n);
     }
     num_rt = ((RaceGear*)game)->id_pista;
-    display_laps = new Font("airstrikeplat.ttf");
+    display_laps = new Font("airstrikeacad.ttf");
     display_laps->setSize(30);
     display_laps->setColor(0,0,0);
 }

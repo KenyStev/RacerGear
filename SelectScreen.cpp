@@ -94,12 +94,6 @@ void SelectScreen::render (RosalilaGraphics*p)
     }
 
     play_button->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
-
-//    int x = game->receiver->getMouse_X();
-//    int y = game->receiver->getMouse_Y();
-//    display->drawText(toString(x),0,0);
-//    display->drawText(toString(y),0,50);
-
     display->drawText(name,888,410);
     nuevo->drawText(rts[((RaceGear*)game)->id_pista],896,185);
         catchName();
