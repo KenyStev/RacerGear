@@ -1,3 +1,16 @@
+/**
+* Copyright (C) Kevin J. Estevez (kenystev) and Luis C. Isaula (lisaula)
+*
+* GNU GENERAL PUBLIC LICENSE Version 2
+* The licenses for most software are designed to take away your
+* freedom to share and change it.  By contrast, the GNU General Public
+* License is intended to guarantee your freedom to share and change free
+* software--to make sure the software is free for all its users.  This
+* General Public License applies to most of the Free Software
+* Foundation's software and to any other program whose authors commit to
+* using it.
+*/
+
 #include "PlayScreen.h"
 #include "RaceGear.h"
 
@@ -5,13 +18,6 @@ PlayScreen::PlayScreen(Game *game)
 {
     this->game = game;
     loadCars("cars.xml");
-//    player_car = cars[0];//new Car(game->rosalila_graphics);
-//    track = new Pista(player_car, game->rosalila_graphics, game->receiver,"pista_1.xml");
-//
-//    bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
-//    bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
-//    back_button = new BackButton(100,100,bu,bd,game->rosalila_graphics);
-//    track->init();
 }
 
 PlayScreen::~PlayScreen()
@@ -30,17 +36,15 @@ void PlayScreen::show ()
     time=0;
     scr=new Scores();
     finish=false;
-//    loadCars("cars.xml");
+
     player_car = cars[((RaceGear*)game)->selected_car];
     player_car->initCar();
 
-    //player_car = new Car(game->rosalila_graphics);
-//    track = new Pista(player_car, game->rosalila_graphics, game->receiver,"pista_01.xml");
     track = new Pista(player_car, game->rosalila_graphics, game->receiver,((RaceGear*)game)->selected_track);
 
     bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
     bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
-    back_button = new BackButton(20,18,bu,bd,game->rosalila_graphics);
+    back_button = new BackButton(20,18,bu,bd,game->rosalila_graphics,game);
     track->init();
     n =((RaceGear*)game)->name_player;
     if(scr->seekUser(n)<0){
@@ -63,14 +67,14 @@ void PlayScreen::render (RosalilaGraphics*p)
     {
         finish=true;
         ((RaceGear*)game)->seg=track->seg;
-        //exit(11);
-       if(game->rosalila_graphics->frame%100==0)
+
+        if(game->rosalila_graphics->frame%100==0)
             game->setScreen(((RaceGear*)game)->STATISTICS);
 
     }
-//    back_button->update(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
-    if(back_button->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
-        game->setScreen(((RaceGear*)game)->MENU);
+    back_button->update(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
+//    if(back_button->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
+//        game->setScreen(((RaceGear*)game)->MENU);
     back_button->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
 
     display_laps->drawText("Laps: "+toString(track->laps),117,87);

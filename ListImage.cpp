@@ -1,3 +1,16 @@
+/**
+* Copyright (C) Kevin J. Estevez (kenystev) and Luis C. Isaula (lisaula)
+*
+* GNU GENERAL PUBLIC LICENSE Version 2
+* The licenses for most software are designed to take away your
+* freedom to share and change it.  By contrast, the GNU General Public
+* License is intended to guarantee your freedom to share and change free
+* software--to make sure the software is free for all its users.  This
+* General Public License applies to most of the Free Software
+* Foundation's software and to any other program whose authors commit to
+* using it.
+*/
+
 #include "ListImage.h"
 #include <cmath>
 
@@ -74,7 +87,7 @@ void ListImage::add(int hurt,string path)
     Step *temp = root;
     while(temp->next!=NULL)
         temp = temp->next;
-    temp->next = newStep;//new Step(painter,texturas[path]);//path);
+    temp->next = newStep;
     size++;
 }
 
@@ -85,12 +98,12 @@ void ListImage::add(std::string path)
         newStep->setHit_Left(true);
     if(strcmp(path.c_str(),"puas_right")==0)
         newStep->setHit_Right(true);
-    if(strcmp(path.c_str(),"puas_center")==0)//cout<<"-->>>>>>>>>>>>>>>>>>>paso el if "<<endl;
+    if(strcmp(path.c_str(),"puas_center")==0)
         newStep->setHit_Center(true);
 
     if(root==NULL)
     {
-        root = newStep;//new Step(painter,texturas[path]);//path);
+        root = newStep;
         double w, h, x, y;
         queryData(root, &w, &h, &x, &y);
 
@@ -101,7 +114,7 @@ void ListImage::add(std::string path)
     Step *temp = root;
     while(temp->next!=NULL)
         temp = temp->next;
-    temp->next = newStep;//new Step(painter,texturas[path]);//path);
+    temp->next = newStep;
 }
 
 void ListImage::add(Step *nuevo)
@@ -232,7 +245,6 @@ void ListImage::loadSteps(std::string path)
         step=step->NextSibling("step"))
         {
             string s = step->ToElement()->Attribute("path");
-            //cout<<s<<endl;
             texturas[s] = new Step(painter,assets_directory+s+".png");
         }
 }

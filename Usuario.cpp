@@ -1,3 +1,16 @@
+/**
+* Copyright (C) Kevin J. Estevez (kenystev) and Luis C. Isaula (lisaula)
+*
+* GNU GENERAL PUBLIC LICENSE Version 2
+* The licenses for most software are designed to take away your
+* freedom to share and change it.  By contrast, the GNU General Public
+* License is intended to guarantee your freedom to share and change free
+* software--to make sure the software is free for all its users.  This
+* General Public License applies to most of the Free Software
+* Foundation's software and to any other program whose authors commit to
+* using it.
+*/
+
 #include "Usuario.h"
 
 Usuario::Usuario(string name)
@@ -10,9 +23,7 @@ Usuario::Usuario(string name)
     promedio=0;
     font= new Font("font.ttf");
     font->setSize(40);
-//    font->setColor(255,204,0);
     font->setColor(255,255,255);
-    //ctor
 }
 
 Usuario::Usuario(string name, int p1,int p2,int p3,int p4,int pro){
@@ -24,7 +35,6 @@ Usuario::Usuario(string name, int p1,int p2,int p3,int p4,int pro){
     promedio=pro;
     font= new Font("font.ttf");
     font->setSize(40);
-    //font->setColor(255,204,0);
     font->setColor(255,255,255);
 }
 void Usuario::imprimir(){
@@ -72,5 +82,4 @@ Usuario::~Usuario()
     delete &pista3;
     delete &pista4;
     delete &promedio;
-    //dtor
 }

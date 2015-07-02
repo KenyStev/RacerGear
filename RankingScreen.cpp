@@ -1,3 +1,16 @@
+/**
+* Copyright (C) Kevin J. Estevez (kenystev) and Luis C. Isaula (lisaula)
+*
+* GNU GENERAL PUBLIC LICENSE Version 2
+* The licenses for most software are designed to take away your
+* freedom to share and change it.  By contrast, the GNU General Public
+* License is intended to guarantee your freedom to share and change free
+* software--to make sure the software is free for all its users.  This
+* General Public License applies to most of the Free Software
+* Foundation's software and to any other program whose authors commit to
+* using it.
+*/
+
 #include "RankingScreen.h"
 #include "RaceGear.h"
 
@@ -11,7 +24,7 @@ void RankingScreen:: show (){
     background = game->rosalila_graphics->getTexture(assets_directory+"Ranking_background.png");
     bu = game->rosalila_graphics->getTexture(assets_directory+"BACK_UP.png");
     bd = game->rosalila_graphics->getTexture(assets_directory+"BACK_DWN.png");
-    back_button = new BackButton(50,50,bu,bd,game->rosalila_graphics);
+    back_button = new BackButton(50,50,bu,bd,game->rosalila_graphics,game);
     ranking = new Scores();
     ranking->readFileBinary();
 

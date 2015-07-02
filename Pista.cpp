@@ -1,3 +1,16 @@
+/**
+* Copyright (C) Kevin J. Estevez (kenystev) and Luis C. Isaula (lisaula)
+*
+* GNU GENERAL PUBLIC LICENSE Version 2
+* The licenses for most software are designed to take away your
+* freedom to share and change it.  By contrast, the GNU General Public
+* License is intended to guarantee your freedom to share and change free
+* software--to make sure the software is free for all its users.  This
+* General Public License applies to most of the Free Software
+* Foundation's software and to any other program whose authors commit to
+* using it.
+*/
+
 #include "Pista.h"
 #include "ListImage.h"
 
@@ -9,7 +22,7 @@ Pista::Pista(Car*c,RosalilaGraphics*rg, Receiver*r,std::string path) : Pista(c, 
 Pista::Pista(Car *c, RosalilaGraphics *paint, Receiver* receiver)
 {
     road =new ListImage(paint);
-    miLista2 =new ListImage(paint);
+    flags =new ListImage(paint);
 
     this->receiver = receiver;
     off_set_y=0;
@@ -59,7 +72,7 @@ void Pista::init(){
     cont=-1;
     go=false;
     for(int i=0; i<90; i++)
-        miLista2->add("flags_2");
+        flags->add("flags_2");
 }
 
 void Pista::logica(){
@@ -77,12 +90,10 @@ void Pista::logica(){
             stop = clock();
             time +=(stop - start);
             seg = ((time)/300);
-            if(road->isMeta() && road->pops!=0)// && road->pops<=road->size*laps)
+            if(road->isMeta() && road->pops!=0)
             {
                 laps--;
                 road->add(road->pop());
-                //cout<<"Laps: "<<laps<<endl;
-    //            if(laps==0)exit(11);
             }
             if(laps==0){
                 if(off_set_y>0)
@@ -93,6 +104,7 @@ void Pista::logica(){
             }
             if(getLose()){
                     off_set_y=0;
+                    off_set_x=0;
             }
         }
         if(cont==4){
@@ -106,7 +118,7 @@ void Pista:: draw(){
 
     painter->draw2DImage(background,background->getWidth(),background->getHeight(),0,0,1,0,false,0,0,Color(255,255,255,255),0,0,false);
     road->draw(car,off_set_x,off_set_y);
-    miLista2->draw(off_set_x,off_set_y);
+    flags->draw(off_set_x,off_set_y);
     display_time->drawText("Time: "+ toString(seg)+" seg.",115,120);
     car->draw();
     if(!go){
@@ -116,7 +128,7 @@ void Pista:: draw(){
 Pista::~Pista()
 {
     delete road;
-    delete miLista2;
+    delete flags;
     delete receiver;
     delete background;
     delete display_time;
@@ -125,7 +137,7 @@ Pista::~Pista()
 void Pista::clear()
 {
     road->clear();
-    miLista2->clear();
+    flags->clear();
 }
 
 void Pista::loadTrack(std::string path)

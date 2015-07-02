@@ -1,3 +1,16 @@
+/**
+* Copyright (C) Kevin J. Estevez (kenystev) and Luis C. Isaula (lisaula)
+*
+* GNU GENERAL PUBLIC LICENSE Version 2
+* The licenses for most software are designed to take away your
+* freedom to share and change it.  By contrast, the GNU General Public
+* License is intended to guarantee your freedom to share and change free
+* software--to make sure the software is free for all its users.  This
+* General Public License applies to most of the Free Software
+* Foundation's software and to any other program whose authors commit to
+* using it.
+*/
+
 #include "StatisticsScreen.h"
 #include "RaceGear.h"
 
@@ -12,10 +25,10 @@ void StatisticsScreen::show (){
     background = game->rosalila_graphics->getTexture(assets_directory+"StaScreen.png");
     mu = game->rosalila_graphics->getTexture(assets_directory+"Menu_UP.png");
     md = game->rosalila_graphics->getTexture(assets_directory+"Menu_DOWN.png");
-    menu = new BackButton(1039,188,mu,md,game->rosalila_graphics);
+    menu = new BackButton(1039,188,mu,md,game->rosalila_graphics,game);
     ru = game->rosalila_graphics->getTexture(assets_directory+"Reiniciar_UP.png");
     rd = game->rosalila_graphics->getTexture(assets_directory+"Reiniciar_DOWN.png");
-    reiniciar = new BackButton(1039,264,ru,rd,game->rosalila_graphics);
+    reiniciar = new PlayButton(1039,264,ru,rd,game->rosalila_graphics,game);
 
     cars[0]= game->rosalila_graphics->getTexture(assets_directory+"gray_left.png");
     cars[1]= game->rosalila_graphics->getTexture(assets_directory+"blue_left.png");
@@ -72,13 +85,11 @@ void StatisticsScreen::render (RosalilaGraphics* painter){
     font->drawText(name,87,117);
     font->drawText(track,463,385);
 
-    if(menu->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
-            game->setScreen(((RaceGear*)game)->MENU);
-        menu->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
+    menu->update(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
+    menu->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
 
-    if(reiniciar->clicked(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown()))
-            game->setScreen(((RaceGear*)game)->PLAY);
-        reiniciar->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
+    reiniciar->update(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown())
+    reiniciar->draw(game->receiver->getMouse_X(),game->receiver->getMouse_Y(),game->receiver->isLeftClickDown());
 
 }
 void StatisticsScreen::pause (){
@@ -88,15 +99,7 @@ void StatisticsScreen::resume (){
 
 }
 void StatisticsScreen::hide (){
-////    delete reiniciar;
-////    delete menu;
-//    delete background;
-////    delete mu;
-////    delete md;
-////    delete ru;
-////    delete rd;
-//    delete carro;
-//    delete ranking;
+
 }
 void StatisticsScreen::dispose (){
 
@@ -193,5 +196,4 @@ StatisticsScreen::~StatisticsScreen()
     delete rd;
     delete carro;
     delete ranking;
-    //dtor
 }

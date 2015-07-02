@@ -1,3 +1,16 @@
+/**
+* @author: Kevin J. Estevez (kenystev)
+*
+* GNU GENERAL PUBLIC LICENSE Version 2
+* The licenses for most software are designed to take away your
+* freedom to share and change it.  By contrast, the GNU General Public
+* License is intended to guarantee your freedom to share and change free
+* software--to make sure the software is free for all its users.  This
+* General Public License applies to most of the Free Software
+* Foundation's software and to any other program whose authors commit to
+* using it.
+*/
+
 #ifndef GAME_H
 #define GAME_H
 #include "Screen.h"
@@ -22,7 +35,6 @@ class Game
         void render();
 
         void setScreen(Screen *screen);
-//        virtual void setScreen(int)=0;
         Screen* getScreen();
     protected:
     private:
