@@ -1,3 +1,16 @@
+/**
+* Copyright (C) Kevin J. Estevez (kenystev) and Luis C. Isaula (lisaula)
+*
+* GNU GENERAL PUBLIC LICENSE Version 2
+* The licenses for most software are designed to take away your
+* freedom to share and change it.  By contrast, the GNU General Public
+* License is intended to guarantee your freedom to share and change free
+* software--to make sure the software is free for all its users.  This
+* General Public License applies to most of the Free Software
+* Foundation's software and to any other program whose authors commit to
+* using it.
+*/
+
 #include "Step.h"
 
 
@@ -141,7 +154,6 @@ void Step::setHit_Left(bool hit_left)
     rect_left.y = getY();
     rect_left.w = getWidth()*0.35;
     rect_left.h = getHeight()*0.9;
-//    hurt=8;
 }
 
 void Step::setHit_Right(bool hit_right)
@@ -151,7 +163,6 @@ void Step::setHit_Right(bool hit_right)
     rect_right.w = getWidth()*0.25;
     rect_right.x = getX() + getWidth()*0.65;
     rect_right.h = getHeight()*0.9;
-//    hurt=8;
 }
 
 void Step::setHit_Center(bool hit_center)
@@ -161,7 +172,6 @@ void Step::setHit_Center(bool hit_center)
     rect_center.w = getWidth()*0.2;
     rect_center.x = getWidth()*0.5 - rect_center.w*0.5;
     rect_center.h = getHeight()*0.8;
-//    hurt=8;
 }
 
 void Step::setBorders()
@@ -179,29 +189,11 @@ void Step::setBorders()
     borders=true;
 }
 
-//void Step::init()
-//{
-////    scale*=0.66;//0.0826539;
-////    x=painter->screen_width*0.5 - width*0.5*scale;//621.629;
-////    y=y - height*scale;//456.558;
-//
-//    scale=0.0847309;
-//    x=621.629;
-//    y=456.558;
-//}
-//
-//void Step::init(double scale, double x, double y)
-//{
-//    this->scale=scale;
-//    this->x=x;
-//    this->y=y;
-//}
-
 void Step::init(Step *tmp)
 {
-    scale = tmp->scale*0.66;//0.0811825;//*0.66;//0.0826539;
-    x=painter->screen_width*0.5 - width*0.5*scale;//621.629;
-    y=tmp->y - height*scale;//456.558;
+    scale = tmp->scale*0.66;
+    x=painter->screen_width*0.5 - width*0.5*scale;
+    y=tmp->y - height*scale;
 }
 
 void Step::draw(RosalilaGraphics* painter)
@@ -217,6 +209,7 @@ void Step::draw(RosalilaGraphics* painter)
                             Color(255,255,255,255),
                             0,0,
                             false);
+    //Draw hitboxs
 //    if(hit_left)
 //        painter->drawRectangle(rect_left.x,rect_left.y,rect_left.w,rect_left.h,
 //                            0,255,0,0,100,false);
@@ -235,8 +228,6 @@ void Step::draw(RosalilaGraphics* painter)
 //        painter->drawRectangle(border_right.x,border_right.y,border_right.w,border_right.h,
 //                                0,255,0,0,100,false);
 //    }
-//    cout<<"x: "<<x<<endl;
-//    exit(0);
 }
 
 void queryData(Step *s, double *w, double *h, double *x, double *y)

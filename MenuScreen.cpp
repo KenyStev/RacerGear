@@ -1,3 +1,16 @@
+/**
+* Copyright (C) Kevin J. Estevez (kenystev) and Luis C. Isaula (lisaula)
+*
+* GNU GENERAL PUBLIC LICENSE Version 2
+* The licenses for most software are designed to take away your
+* freedom to share and change it.  By contrast, the GNU General Public
+* License is intended to guarantee your freedom to share and change free
+* software--to make sure the software is free for all its users.  This
+* General Public License applies to most of the Free Software
+* Foundation's software and to any other program whose authors commit to
+* using it.
+*/
+
 #include "MenuScreen.h"
 #include "RaceGear.h"
 
@@ -86,10 +99,8 @@ void MenuScreen::update(){
         mouse_x = game->receiver->getMouse_X();
         mouse_y = game->receiver->getMouse_Y();
         click = game->receiver->isLeftClickDown();
-//        Pb->update(mouse_x,mouse_y,click);
-        if(Pb->clicked(mouse_x,mouse_y,click)){
-            game->setScreen(((RaceGear*)game)->SELECT);//new PlayScreen(game));
-        }
+
+        Pb->update(mouse_x,mouse_y,click);
         Ib->update(mouse_x,mouse_y,click);
         Rb->update(mouse_x,mouse_y,click);
         Eb->update(mouse_x,mouse_y,click);

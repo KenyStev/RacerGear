@@ -1,3 +1,16 @@
+/**
+* Copyright (C) Kevin J. Estevez (kenystev) and Luis C. Isaula (lisaula)
+*
+* GNU GENERAL PUBLIC LICENSE Version 2
+* The licenses for most software are designed to take away your
+* freedom to share and change it.  By contrast, the GNU General Public
+* License is intended to guarantee your freedom to share and change free
+* software--to make sure the software is free for all its users.  This
+* General Public License applies to most of the Free Software
+* Foundation's software and to any other program whose authors commit to
+* using it.
+*/
+
 #include "Car.h"
 
 Car::Car(RosalilaGraphics *p, string image)
@@ -27,8 +40,8 @@ Car::Car(RosalilaGraphics *p, string image)
     y = p->screen_height - car->getHeight();
     scale=1;
     marker_x = 114;
-    marker_y = 614;//(140+velocimeter->getHeight())-marker->getHeight();
-    marker_y_max = 201;//((140+velocimeter->getHeight())-marker->getHeight())-413;
+    marker_y = 614;
+    marker_y_max = 201;
 
     wheels.w = car->getWidth()*0.9;
     wheels.h = car->getHeight()*0.15;
@@ -56,49 +69,30 @@ Car::Car(){
 Car::~Car()
 {
     delete painter;
-//    delete state["ahead"];
-//    delete state["left"];
-//    delete state["right"];
     delete car;
-//    delete velocimeter_state["first"];
-//    delete velocimeter_state["second"];
-//    delete velocimeter_state["third"];
-//    delete velocimeter_state["fourth"];
-//    delete velocimeter_state["fifth"];
     delete velocimeter;
     delete marker;
-//    delete warning[0];
-//    delete warning[1];
-//    delete warning[2];
-//    delete warning[3];
-//    delete &warning;
-//    delete &wheels;
-//    delete velocimeter_state;
-//    delete state;
+    delete G_over;
 }
 
 void Car::initCar()
 {
-    G_over=painter->getTexture(assets_directory+"Gameover.png");
     marker_speed =0;
     cambio =0;
     v=0;
     car = state["ahead"];
     velocimeter = velocimeter_state["first"];
-//    maximum = 15;
     v_max=0;
     first = false, second = false,third = false,fourth = false,fifth = false, speed_up = false,danger= false, lose = false;
     warning_actual=0;
     off_set_x=0;
-//    CHANGE_TURN=13;
     TURN=CHANGE_TURN;
     outOfRoad=false;
     hurt=0;
     time=0;
-    scale=1;
     marker_x = 114;
-    marker_y = 614;//(140+velocimeter->getHeight())-marker->getHeight();
-    marker_y_max = 201;//((140+velocimeter->getHeight())-marker->getHeight())-413;
+    marker_y = 614;
+    marker_y_max = 201;
 }
 
 void Car::warningAnimation(){
@@ -156,19 +150,16 @@ void Car::update(Receiver *r)
             v=0;
     }
 
-//    if(v>v_max){
-//        v-=a*2;
-//    }
     car = state["ahead"];
     if(r->isKeyPressed(SDLK_a)){
-        if(cambio<6){
+        if(cambio<5){
             cambio++;
         }
     }
 
 
     if(r->isKeyPressed(SDLK_z)){
-        if(cambio>0){
+        if(cambio>1){
             cambio--;
         }
     }
@@ -256,7 +247,7 @@ void Car::update(Receiver *r)
             off_set_x+=TURN;
             car = state["left"];
         }
-        if(outOfRoad) //off_set_x>LEFT_MAX || off_set_x<RIGHT_MAX)
+        if(outOfRoad)
         {
             if(v>a)
                 v-=a*2;
@@ -265,7 +256,6 @@ void Car::update(Receiver *r)
             outOfRoad=false;
         }
     }
-    //cout<<"-----> off_X-CAR: "<<off_set_x<<endl;
 }
 
 bool Car:: getLose(){
@@ -275,7 +265,6 @@ bool Car:: getLose(){
 void Car::draw()
 {
     wheels.x = (x+car->getWidth())*0.5 + wheels.w*0.465;
-//    wheels.y = (y+car->getHeight()) - wheels.h;
 
     painter->draw2DImage(   car,
                             car->getWidth(),car->getHeight(),
@@ -320,6 +309,8 @@ void Car::draw()
                         false);
             }else
                 danger = false;
+
+    //Draw hitbox's car
 //    painter->drawRectangle(wheels.x,wheels.y,wheels.w,wheels.h,
 //                            0,255,0,0,255,false);
 }

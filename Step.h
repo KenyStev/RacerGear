@@ -1,3 +1,16 @@
+/**
+* Copyright (C) Kevin J. Estevez (kenystev) and Luis C. Isaula (lisaula)
+*
+* GNU GENERAL PUBLIC LICENSE Version 2
+* The licenses for most software are designed to take away your
+* freedom to share and change it.  By contrast, the GNU General Public
+* License is intended to guarantee your freedom to share and change free
+* software--to make sure the software is free for all its users.  This
+* General Public License applies to most of the Free Software
+* Foundation's software and to any other program whose authors commit to
+* using it.
+*/
+
 #include <map>
 
 #ifndef STEP_H
@@ -13,7 +26,6 @@
 class Step : public Image
 {
     public:
-        //prueba step-nodo
         Step* next;
 
         double x, y, scale, off_set_x, off_set_y;
@@ -52,8 +64,6 @@ class Step : public Image
         void setHit_Center(bool);
         void setBorders();
 
-//        void init();
-//        void init(double scale, double x, double y);
         void init(Step *tmp);
 
 
