@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RaceGear : A PC Game Programmed with Rosalila Engine 2">
+    <meta name="author" content="KenyStev and Lisaula">
+
+    <title>RaceGear Game</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/half-slider.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/Logo.png">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+
+            <a id="forkme_banner" href="https://github.com/kenystev/racergear"><img src="images/blacktocat.png"></a>
+            
+            <section id="downloads">
+                <a class="zip_download_link" href="https://drive.google.com/file/d/1x8SSpTMUY60Ygo2uEFbFf2l7ugRZ0mWl/view?usp=sharing">Download this project as a .zip file</a >
+                <a class="tar_download_link" href="https://drive.google.com/file/d/1j_isci6aP1zWze1XMAFWot6QrrZoW19n/view?usp=sharing">Download this project as a tar.gz file</a>
+            </section>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Half Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+        		<div class="details_car"> <img src="images/details_reptileCar_2.png"/>
+
+        		</div>
+                <div class="carousel-caption">
+                    
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="details_car"> <img src="images/details_stormCar_2.png"/>
+
+                </div>
+                <div class="carousel-caption">
+                    
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="details_car"> <img src="images/details_psychoCar_2.png"/>
+
+                </div>
+                <div class="carousel-caption">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Description</h1>
+                <p>RaceGear is a 2D Game with a flight of fancy 3D programed in C++ using <a class="link_light" href="https://github.com/Rosalila/RosalilaEngine"/>Rosalila Engine 2</a> library. </p>
+
+                <p>Rosalila Engine 2 has some dependencies such as SDL2 library and OpenGL, you'll need them if you want to play our game.
+                SDL2 and OpenGL are easy to install typing this comands:</p>
+                <pre>apt-get install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev freeglut3-dev</pre>
+                <p>As next point, link the libraries:
+                In Code::Blocks: "Linker settings" -> "Other linker options" Add the following:</p>
+                <pre>
+        -lGL
+        -lglut
+        -lGLU
+        -lSDL2
+        -lSDL2_image
+        -lSDL2_ttf
+        -lSDL2_mixer</pre>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>License</h1>
+                <p>Our program has a free software license, this means, it can be redistributed and/or modified under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+
+                <p>We distribute our program hoping you'll find it funny, playable and entertaining, but WITHOUT ANY WARRANTY; Not even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+                <p>See the GNU General Public License for more details. </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Screenshots and Video gameplay</h1>
+
+                <div id="carousel_screenshots" class="carousel slide">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel_screenshots" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel_screenshots" data-slide-to="1"></li>
+                        <li data-target="#carousel_screenshots" data-slide-to="2"></li>
+                        <li data-target="#carousel_screenshots" data-slide-to="3"></li>
+                        <li data-target="#carousel_screenshots" data-slide-to="4"></li>
+                        <li data-target="#carousel_screenshots" data-slide-to="5"></li>
+                        <li data-target="#carousel_screenshots" data-slide-to="6"></li>
+                        <li data-target="#carousel_screenshots" data-slide-to="7"></li>
+                        <li data-target="#carousel_screenshots" data-slide-to="8"></li>
+                        <li data-target="#carousel_screenshots" data-slide-to="9"></li>
+                    </ol>
+
+                <!-- Wrapper for Slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <!-- Set the first background image using inline CSS below. -->
+                        <div class="screenshots"> <img src="images/screenshots/Menu.png"/>
+
+                        </div>
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="item">
+                        <!-- Set the second background image using inline CSS below. -->
+                        <div class="screenshots"> <img src="images/screenshots/Instrucciones.png"/>
+
+                        </div>
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="item">
+                        <!-- Set the third background image using inline CSS below. -->
+                        <div class="screenshots"> <img src="images/screenshots/SelectScreen.png"/>
+
+                        </div>
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="item">
+                        <!-- Set the third background image using inline CSS below. -->
+                        <div class="screenshots"> <img src="images/screenshots/Go.png"/>
+
+                        </div>
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="item">
+                        <!-- Set the third background image using inline CSS below. -->
+                        <div class="screenshots"> <img src="images/screenshots/race2.png"/>
+
+                        </div>
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                    <!-- 6 -->
+                    <div class="item">
+                        <!-- Set the third background image using inline CSS below. -->
+                        <div class="screenshots"> <img src="images/screenshots/Carrera.png"/>
+
+                        </div>
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                    <!-- 7 -->
+                    <div class="item">
+                        <!-- Set the third background image using inline CSS below. -->
+                        <div class="screenshots"> <img src="images/screenshots/EnmedioPuas.png"/>
+
+                        </div>
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="item">
+                        <!-- Set the third background image using inline CSS below. -->
+                        <div class="screenshots"> <img src="images/screenshots/Puas.png"/>
+
+                        </div>
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                    <!-- 9 -->
+                    <div class="item">
+                        <!-- Set the third background image using inline CSS below. -->
+                        <div class="screenshots"> <img src="images/screenshots/Statistics.png"/>
+
+                        </div>
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                    <!-- 10 -->
+                    <div class="item">
+                        <!-- Set the third background image using inline CSS below. -->
+                        <div class="screenshots"> <img src="images/screenshots/Scores.png"/>
+
+                        </div>
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel_screenshots" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel_screenshots" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+        </div>
+                <iframe id="video_gameplay" width="1140" height="600" src="https://www.youtube.com/embed/CmtvyZVPWDs" frameborder="0" allowfullscreen></iframe>
+                <iframe id="video_gameplay" width="1140" height="600" src="https://www.youtube.com/embed/DlKw_UEtp-A" frameborder="0" allowfullscreen></iframe>
+                
+            </div>
+
+        <hr>
+        
+        <div class="row">
+            <div class="col-lg-12">
+            <h1>Authors and Contributors</h1>
+            <p>Created, designed, programmed and distributed by <b>Luis C. Isaula</b> and <b>Kevin J. Estevez</b></p>
+            <p>Here is a list of the assets used during design phase, having in mind that all was handmade.</p>
+
+            <div class="row">
+              <!-- CAR -->
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/red_right.png" alt="...">
+                  <div class="caption">
+                    <h3>Fire Car</h3>
+                    <h6>Right face.</h6>
+                    <p>All the cars were made by KenyStev.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/red_ahead.png" alt="...">
+                  <div class="caption">
+                    <h3>Fire Car</h3>
+                    <h6>Back face.</h6>
+                    <p>All the cars were made by KenyStev.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/red_left.png" alt="...">
+                  <div class="caption">
+                    <h3>Fire Car</h3>
+                    <h6>Left facer.</h6>
+                    <p>All the cars were made by KenyStev.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BACKGROUNDS -->
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Menu.png" alt="...">
+                  <div class="caption">
+                    <h3>Menu screen</h3>
+                    <h6>Main menu.</h6>
+                    <p>All backgrounds and logo were made by Lisaula.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Ranking_background.png" alt="...">
+                  <div class="caption">
+                    <h3>Best Scores screen</h3>
+                    <h6>Ranking.</h6>
+                    <p>All backgrounds and logo were made by Lisaula.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Instrucciones.png" alt="...">
+                  <div class="caption">
+                    <h3>Instructions screen</h3>
+                    <h6>Instructions.</h6>
+                    <p>All backgrounds and logo were made by Lisaula.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEPS -->
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/puas_1-2.png" alt="...">
+                  <div class="caption">
+                    <h3>Barbed-racetrack</h3>
+                    <h6>Racecourse with tines on left.</h6>
+                    <p>All the racetracks were made by KenyStev.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/puas_1-3.png" alt="...">
+                  <div class="caption">
+                    <h3>Barbed-racetrack</h3>
+                    <h6>Racecourse with tines on borders.</h6>
+                    <p>All the racetracks were made by KenyStev.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/puas_2-3.png" alt="...">
+                  <div class="caption">
+                    <h3>Barbed-racetrack</h3>
+                    <h6>Racecourse with tines on right.</h6>
+                    <p>All the racetracks were made by KenyStev.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- WARNING -->
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Warnig_2.png" alt="...">
+                  <div class="caption">
+                    <h3>Warning</h3>
+                    <h6>Motion animation.</h6>
+                    <p>All motion animations were made by Lisaula.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Warnig_3.png" alt="...">
+                  <div class="caption">
+                    <h3>Warning</h3>
+                    <h6>Motion animation.</h6>
+                    <p>All motion animations were made by Lisaula.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Warnig_4.png" alt="...">
+                  <div class="caption">
+                    <h3>Warning</h3>
+                    <h6>Motion animation.</h6>
+                    <p>All motion animations were made by Lisaula.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BUTTONS -->
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/PLAY_DWN.png" alt="...">
+                  <div class="caption">
+                    <h3>Play buttom</h3>
+                    <p>All buttons were made by Lisaula.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/Menu_DOWN.png" alt="...">
+                  <div class="caption">
+                    <h3>Menu buttom</h3>
+                    <p>All buttons were made by Lisaula.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="images/BACK_DWN.png" alt="...">
+                  <div class="caption">
+                    <h3>Back buttom</h3>
+                    <p>All buttons were made by Lisaula.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Support or Contact</h1>
+                <p>If you're having any trouble while playing, feel free to create a new <a class="link_light" href="https://github.com/kenystev/racergear/issues">issue</a> and we'll fix it as soon as posible.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="well well-lg">
+                    <p>CopyRight &copy; RaceGear supported by <a id="kenystev" href="https://github.com/kenystev">KenyStev</a> and <a id="lisaula" href="https://github.com/lisaula">Lisaula</a></p>
+                </div>
+            </div>
+        </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
+</html>
